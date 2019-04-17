@@ -10,7 +10,7 @@
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>J2ee-web-dto</artifactId>
+  <artifactId>J2ee-web-model</artifactId>
 
 
 </project>

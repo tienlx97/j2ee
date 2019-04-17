@@ -15,6 +15,8 @@
     <module>J2ee-web-dao</module>
     <module>J2ee-web-utils</module>
     <module>J2ee-web-constant</module>
+    <module>J2ee-web-model</module>
+    <module>J2ee-web-service</module>
   </modules>
 
   <properties>
@@ -47,7 +49,18 @@
       <artifactId>jstl</artifactId>
       <version>${jstl.version}</version>
     </dependency>
-
+    <!--bean utils-->
+    <dependency>
+      <groupId>commons-beanutils</groupId>
+      <artifactId>commons-beanutils</artifactId>
+      <version>1.9.3</version>
+    </dependency>
+    <!--Dependency Injection-->
+    <dependency>
+      <groupId>javax.inject</groupId>
+      <artifactId>javax.inject</artifactId>
+      <version>1</version>
+    </dependency>
   </dependencies>
 
 
