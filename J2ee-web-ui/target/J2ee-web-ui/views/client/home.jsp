@@ -17,7 +17,7 @@
   <!-- Favicon -->
   <link rel="shortcut icon" type="image/x-icon" href="${pageContext.request.contextPath}/resources/assets/img/favicon.ico">
 
-  <!-- CSS 
+  <!-- CSS
     ========================= -->
 
   <!-- Plugins CSS -->

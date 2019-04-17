@@ -9,7 +9,7 @@
   <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
   <modules>
-    <module>J2ee-web-ui</module>
+    <module>J2ee-web-gui</module>
     <module>J2ee-web-logic</module>
     <module>J2ee-web-dto</module>
     <module>J2ee-web-dao</module>
