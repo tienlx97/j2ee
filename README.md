@@ -23,3 +23,8 @@ __[Using connection pool in tomcat](https://www.youtube.com/watch?v=m7bQT-jjlGg)
 __[Sample code 1](https://github.com/truonglam/exampletoeiconline/blob/master/toeic-core-serviceimpl/src/main/java/vn/myclass/core/service/impl/UserServiceImpl.java)__
 
 __[Sample code 2](https://github.com/lamtraining/jsp-servlet-jdbc/blob/master/src/main/java/com/laptrinhjavaweb/dao/impl/UserDAO.java)__
+
+## Other
+__[Sample model](https://raw.githubusercontent.com/ramortegui/e-commerce-db/master/ECommerceDB.png)__
+
+__[Sample database](https://data.world/promptcloud/fashion-products-on-amazon-com/workspace/file?filename=amazon_co-ecommerce_sample.csv)__
