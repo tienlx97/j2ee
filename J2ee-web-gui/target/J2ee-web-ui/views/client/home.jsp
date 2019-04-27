@@ -54,13 +54,9 @@
           <div class="col-lg-6 col-md-6">
             <div class="top_right text-right">
               <ul>
-<<<<<<< HEAD
                 <%String name = (String)request.getAttribute("name"); %>
                 <% if(name.length() > 0){ %>
                 <li class="top_links"><a href="#"><i class="ion-android-person"></i>Hello <%= request.getAttribute("name") %><i
-=======
-                <li class="top_links"><a href="#"><i class="ion-android-person"></i> My Account<i
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
                         class="ion-ios-arrow-down"></i></a>
                   <ul class="dropdown_links">
                     <li><a href="checkout.html">Checkout </a></li>
@@ -70,14 +66,11 @@
                     <li><a href="action/logout">Logout</a></li>
                   </ul>
                 </li>
-<<<<<<< HEAD
                 <% } else { %>
                   <li class="top_links"><a href="action/login"><i></i>Login<i></i></a>
                 <% } %>
                 <li class="language"><a href="#"><img src="${pageContext.request.contextPath}/resources/assets/img/logo/language.png" alt="">en-gb<i
-=======
-                <li class="language"><a href="#"><img src="${pageContext.request.contextPath}/resources/client/img/logo/language.png" alt="">en-gb<i
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
+
                         class="ion-ios-arrow-down"></i></a>
                   <ul class="dropdown_language">
                     <li><a href="#"><img src="${pageContext.request.contextPath}/resources/client/img/logo/language.png" alt=""> English</a></li>
@@ -230,11 +223,7 @@
                           <li><a href="#">Lighting & Studio</a></li>
                         </ul>
                         <div class="categorie_banner">
-<<<<<<< HEAD
-                          <a href="#"><img src="${pageContext.request.contextPath}/resources/assets/img/bg/banner2.jpg" alt=""></a>
-=======
                           <a href="#"><img src="${pageContext.request.contextPath}/resources/client/img/bg/banner2.jpg" alt=""></a>
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
                         </div>
                       </li>
 
@@ -428,11 +417,7 @@
                         </li>
                       </ul>
                       <div class="banner_static_menu">
-<<<<<<< HEAD
-                        <a href="shop.html"><img src="${pageContext.request.contextPath}/resources/assets/img/bg/banner1.jpg" alt=""></a>
-=======
                         <a href="shop.html"><img src="${pageContext.request.contextPath}/resources/client/img/bg/banner1.jpg" alt=""></a>
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
                       </div>
                     </div>
                   </li>
@@ -499,11 +484,7 @@
                   <li><a href="wishlist.html">Wishlist</a></li>
                 </ul>
               </li>
-<<<<<<< HEAD
-              <li class="language"><a href="#"><img src="${pageContext.request.contextPath}/resources/assets/img/logo/language.png" alt="">en-gb<i
-=======
               <li class="language"><a href="#"><img src="${pageContext.request.contextPath}/resources/client/img/logo/language.png" alt="">en-gb<i
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
                       class="ion-ios-arrow-down"></i></a>
                 <ul class="dropdown_language">
                   <li><a href="#"><img src="${pageContext.request.contextPath}/resources/client/img/logo/language.png" alt=""> English</a></li>
@@ -618,33 +599,21 @@
     <div class="row">
       <div class="col-lg-9 col-md-12">
         <div class="slider_area slider_three owl-carousel">
-<<<<<<< HEAD
-          <div class="single_slider d-flex align-items-center" data-bgimg="${pageContext.request.contextPath}/resources/assets/img/slider/slider7.jpg">
-=======
           <div class="single_slider d-flex align-items-center" data-bgimg="${pageContext.request.contextPath}/resources/client/img/slider/slider7.jpg">
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
             <div class="slider_content">
               <h2>GM 10 & 12</h2>
               <h1>Bolt Rear Disc Brake Conversions</h1>
               <a class="button" href="#">shopping now</a>
             </div>
           </div>
-<<<<<<< HEAD
-          <div class="single_slider d-flex align-items-center" data-bgimg="${pageContext.request.contextPath}/resources/assets/img/slider/slider8.jpg">
-=======
           <div class="single_slider d-flex align-items-center" data-bgimg="${pageContext.request.contextPath}/resources/client/img/slider/slider8.jpg">
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
             <div class="slider_content">
               <h2>Brade Wheels</h2>
               <h1>Total Alloy Wheels Protection</h1>
               <a class="button" href="#">shopping now</a>
             </div>
           </div>
-<<<<<<< HEAD
-          <div class="single_slider d-flex align-items-center" data-bgimg="${pageContext.request.contextPath}/resources/assets/img/slider/slider9.jpg">
-=======
           <div class="single_slider d-flex align-items-center" data-bgimg="${pageContext.request.contextPath}/resources/client/img/slider/slider9.jpg">
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
             <div class="slider_content">
               <h2>Top Quality</h2>
               <h1>Aftermarket Trobocharger Specialist</h1>
@@ -656,11 +625,7 @@
       <div class="col-lg-3 col-md-4 offset-md-4 offset-lg-0">
         <div class="sidebar_banner">
           <div class="banner_thumb">
-<<<<<<< HEAD
-            <a href="#"><img src="${pageContext.request.contextPath}/resources/assets/img/bg/banner6.jpg" alt=""></a>
-=======
             <a href="#"><img src="${pageContext.request.contextPath}/resources/client/img/bg/banner6.jpg" alt=""></a>
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
             <div class="banner_text">
               <h4>Jegs Oil</h4>
               <h3>Engine</h3>
@@ -742,15 +707,9 @@
               <p class="manufacture_product"><a href="#">Accessories</a></p>
             </div>
             <div class="product_thumb">
-<<<<<<< HEAD
-              <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product19.jpg"
-                                                                      alt=""></a>
-              <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product11.jpg"
-=======
               <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product19.jpg"
                                                                       alt=""></a>
               <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product11.jpg"
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
                                                                         alt=""></a>
               <div class="label_product">
                 <span class="label_sale">-57%</span>
@@ -799,15 +758,9 @@
               <p class="manufacture_product"><a href="#">Accessories</a></p>
             </div>
             <div class="product_thumb">
-<<<<<<< HEAD
-              <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product12.jpg"
-                                                                      alt=""></a>
-              <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product13.jpg"
-=======
               <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product12.jpg"
                                                                       alt=""></a>
               <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product13.jpg"
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
                                                                         alt=""></a>
               <div class="label_product">
                 <span class="label_sale">-47%</span>
@@ -857,15 +810,9 @@
               <p class="manufacture_product"><a href="#">Accessories</a></p>
             </div>
             <div class="product_thumb">
-<<<<<<< HEAD
-              <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product15.jpg"
-                                                                      alt=""></a>
-              <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product14.jpg"
-=======
               <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product15.jpg"
                                                                       alt=""></a>
               <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product14.jpg"
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
                                                                         alt=""></a>
               <div class="label_product">
                 <span class="label_sale">-57%</span>
@@ -914,15 +861,9 @@
               <p class="manufacture_product"><a href="#">Accessories</a></p>
             </div>
             <div class="product_thumb">
-<<<<<<< HEAD
-              <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product16.jpg"
-                                                                      alt=""></a>
-              <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product17.jpg"
-=======
               <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product16.jpg"
                                                                       alt=""></a>
               <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product17.jpg"
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
                                                                         alt=""></a>
               <div class="label_product">
                 <span class="label_sale">-57%</span>
@@ -971,15 +912,9 @@
               <p class="manufacture_product"><a href="#">Accessories</a></p>
             </div>
             <div class="product_thumb">
-<<<<<<< HEAD
-              <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product18.jpg"
-                                                                      alt=""></a>
-              <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product1.jpg"
-=======
               <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product18.jpg"
                                                                       alt=""></a>
               <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product1.jpg"
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
                                                                         alt=""></a>
               <div class="label_product">
                 <span class="label_sale">-07%</span>
@@ -1029,15 +964,9 @@
               <p class="manufacture_product"><a href="#">Accessories</a></p>
             </div>
             <div class="product_thumb">
-<<<<<<< HEAD
-              <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product2.jpg"
-                                                                      alt=""></a>
-              <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product3.jpg"
-=======
               <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product2.jpg"
                                                                       alt=""></a>
               <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product3.jpg"
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
                                                                         alt=""></a>
               <div class="label_product">
                 <span class="label_sale">-57%</span>
@@ -1087,15 +1016,9 @@
               <p class="manufacture_product"><a href="#">Accessories</a></p>
             </div>
             <div class="product_thumb">
-<<<<<<< HEAD
-              <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product4.jpg"
-                                                                      alt=""></a>
-              <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product5.jpg"
-=======
               <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product4.jpg"
                                                                       alt=""></a>
               <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product5.jpg"
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
                                                                         alt=""></a>
               <div class="label_product">
                 <span class="label_sale">-57%</span>
@@ -1181,15 +1104,9 @@
 
               </div>
               <div class="product_thumb">
-<<<<<<< HEAD
-                <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product6.jpg"
-                                                                        alt=""></a>
-                <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product7.jpg"
-=======
                 <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product6.jpg"
                                                                         alt=""></a>
                 <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product7.jpg"
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
                                                                           alt=""></a>
                 <div class="label_product">
                   <span class="label_sale">-57%</span>
@@ -1232,15 +1149,9 @@
 
               </div>
               <div class="product_thumb">
-<<<<<<< HEAD
-                <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product8.jpg"
-                                                                        alt=""></a>
-                <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product9.jpg"
-=======
                 <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product8.jpg"
                                                                         alt=""></a>
                 <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product9.jpg"
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
                                                                           alt=""></a>
                 <div class="label_product">
                   <span class="label_sale">-47%</span>
@@ -1265,7 +1176,6 @@
                     <li><a href="#"><i class="ion-star"></i></a></li>
                     <li><a href="#"><i class="ion-star"></i></a></li>
                   </ul>
-<<<<<<< HEAD
                 </div>
                 <div class="product_footer d-flex align-items-center">
                   <div class="price_box">
@@ -1278,70 +1188,6 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="single_product_list">
-            <div class="single_product">
-              <div class="product_name">
-                <h3><a href="product-details.html">Variable with soldout product for title</a></h3>
-
-              </div>
-              <div class="product_thumb">
-                <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product10.jpg"
-                                                                        alt=""></a>
-                <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product11.jpg"
-                                                                          alt=""></a>
-                <div class="label_product">
-                  <span class="label_sale">-57%</span>
-                </div>
-
-                <div class="action_links">
-                  <ul>
-                    <li class="quick_button"><a href="#" data-toggle="modal" data-target="#modal_box"
-                                                title="quick view"> <span class="lnr lnr-magnifier"></span></a></li>
-                    <li class="wishlist"><a href="wishlist.html" title="Add to Wishlist"><span
-                            class="lnr lnr-heart"></span></a></li>
-                    <li class="compare"><a href="#" title="compare"><span class="lnr lnr-sync"></span></a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="product_content">
-                <div class="product_ratings">
-                  <ul>
-                    <li><a href="#"><i class="ion-star"></i></a></li>
-                    <li><a href="#"><i class="ion-star"></i></a></li>
-                    <li><a href="#"><i class="ion-star"></i></a></li>
-                    <li><a href="#"><i class="ion-star"></i></a></li>
-                    <li><a href="#"><i class="ion-star"></i></a></li>
-                  </ul>
-                </div>
-                <div class="product_footer d-flex align-items-center">
-                  <div class="price_box">
-                    <span class="regular_price">$150.00</span>
-=======
-                </div>
-                <div class="product_footer d-flex align-items-center">
-                  <div class="price_box">
-                    <span class="current_price">$160.00</span>
-                    <span class="old_price">$3200.00</span>
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
-                  </div>
-                  <div class="add_to_cart">
-                    <a href="cart.html" title="add to cart"><span class="lnr lnr-cart"></span></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-<<<<<<< HEAD
-            <div class="single_product">
-              <div class="product_name">
-                <h3><a href="product-details.html">Lorem ipsum dolor sit amet, consectetur</a></h3>
-
-              </div>
-              <div class="product_thumb">
-                <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product12.jpg"
-                                                                        alt=""></a>
-                <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product7.jpg"
-=======
           </div>
           <div class="single_product_list">
             <div class="single_product">
@@ -1353,7 +1199,6 @@
                 <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product10.jpg"
                                                                         alt=""></a>
                 <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product11.jpg"
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
                                                                           alt=""></a>
                 <div class="label_product">
                   <span class="label_sale">-57%</span>
@@ -1381,11 +1226,7 @@
                 </div>
                 <div class="product_footer d-flex align-items-center">
                   <div class="price_box">
-<<<<<<< HEAD
-                    <span class="regular_price">$175.00</span>
-=======
                     <span class="regular_price">$150.00</span>
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
                   </div>
                   <div class="add_to_cart">
                     <a href="cart.html" title="add to cart"><span class="lnr lnr-cart"></span></a>
@@ -1393,22 +1234,6 @@
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-          </div>
-          <div class="single_product_list">
-            <div class="single_product">
-              <div class="product_name">
-                <h3><a href="product-details.html">JBL Flip 3 Splasroof Portable Bluetooth 2</a></h3>
-
-              </div>
-              <div class="product_thumb">
-                <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product13.jpg"
-                                                                        alt=""></a>
-                <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product14.jpg"
-                                                                          alt=""></a>
-                <div class="label_product">
-                  <span class="label_sale">-07%</span>
-=======
             <div class="single_product">
               <div class="product_name">
                 <h3><a href="product-details.html">Lorem ipsum dolor sit amet, consectetur</a></h3>
@@ -1421,7 +1246,6 @@
                                                                           alt=""></a>
                 <div class="label_product">
                   <span class="label_sale">-57%</span>
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
                 </div>
 
                 <div class="action_links">
@@ -1446,12 +1270,7 @@
                 </div>
                 <div class="product_footer d-flex align-items-center">
                   <div class="price_box">
-<<<<<<< HEAD
-                    <span class="current_price">$180.00</span>
-                    <span class="old_price">$420.00</span>
-=======
                     <span class="regular_price">$175.00</span>
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
                   </div>
                   <div class="add_to_cart">
                     <a href="cart.html" title="add to cart"><span class="lnr lnr-cart"></span></a>
@@ -1459,20 +1278,6 @@
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-            <div class="single_product">
-              <div class="product_name">
-                <h3><a href="product-details.html">Accusantium dolorem Security Camera</a></h3>
-
-              </div>
-              <div class="product_thumb">
-                <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product15.jpg"
-                                                                        alt=""></a>
-                <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product16.jpg"
-                                                                          alt=""></a>
-                <div class="label_product">
-                  <span class="label_sale">-57%</span>
-=======
           </div>
           <div class="single_product_list">
             <div class="single_product">
@@ -1487,7 +1292,6 @@
                                                                           alt=""></a>
                 <div class="label_product">
                   <span class="label_sale">-07%</span>
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
                 </div>
 
                 <div class="action_links">
@@ -1512,13 +1316,8 @@
                 </div>
                 <div class="product_footer d-flex align-items-center">
                   <div class="price_box">
-<<<<<<< HEAD
-                    <span class="current_price">$140.00</span>
-                    <span class="old_price">$320.00</span>
-=======
                     <span class="current_price">$180.00</span>
                     <span class="old_price">$420.00</span>
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
                   </div>
                   <div class="add_to_cart">
                     <a href="cart.html" title="add to cart"><span class="lnr lnr-cart"></span></a>
@@ -1526,8 +1325,6 @@
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-=======
             <div class="single_product">
               <div class="product_name">
                 <h3><a href="product-details.html">Accusantium dolorem Security Camera</a></h3>
@@ -1573,7 +1370,6 @@
                 </div>
               </div>
             </div>
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
           </div>
           <div class="single_product_list">
             <div class="single_product">
@@ -1582,15 +1378,9 @@
 
               </div>
               <div class="product_thumb">
-<<<<<<< HEAD
-                <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product17.jpg"
-                                                                        alt=""></a>
-                <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product18.jpg"
-=======
                 <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product17.jpg"
                                                                         alt=""></a>
                 <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product18.jpg"
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
                                                                           alt=""></a>
                 <div class="label_product">
                   <span class="label_sale">-57%</span>
@@ -1632,15 +1422,9 @@
 
               </div>
               <div class="product_thumb">
-<<<<<<< HEAD
-                <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product12.jpg"
-                                                                        alt=""></a>
-                <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product13.jpg"
-=======
                 <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product12.jpg"
                                                                         alt=""></a>
                 <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product13.jpg"
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
                                                                           alt=""></a>
                 <div class="label_product">
                   <span class="label_sale">-57%</span>
@@ -1684,15 +1468,9 @@
 
               </div>
               <div class="product_thumb">
-<<<<<<< HEAD
-                <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product2.jpg"
-                                                                        alt=""></a>
-                <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product1.jpg"
-=======
                 <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product2.jpg"
                                                                         alt=""></a>
                 <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product1.jpg"
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
                                                                           alt=""></a>
                 <div class="label_product">
                   <span class="label_sale">-57%</span>
@@ -1734,15 +1512,9 @@
 
               </div>
               <div class="product_thumb">
-<<<<<<< HEAD
-                <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product3.jpg"
-                                                                        alt=""></a>
-                <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product4.jpg"
-=======
                 <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product3.jpg"
                                                                         alt=""></a>
                 <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product4.jpg"
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
                                                                           alt=""></a>
                 <div class="label_product">
                   <span class="label_sale">-57%</span>
@@ -1775,37 +1547,6 @@
                   <div class="add_to_cart">
                     <a href="cart.html" title="add to cart"><span class="lnr lnr-cart"></span></a>
                   </div>
-<<<<<<< HEAD
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="single_product_list">
-            <div class="single_product">
-              <div class="product_name">
-                <h3><a href="product-details.html"> repellendus quas ratione voluptas.</a></h3>
-
-              </div>
-              <div class="product_thumb">
-                <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product5.jpg"
-                                                                        alt=""></a>
-                <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product6.jpg"
-                                                                          alt=""></a>
-                <div class="label_product">
-                  <span class="label_sale">-57%</span>
-                </div>
-
-                <div class="action_links">
-                  <ul>
-                    <li class="quick_button"><a href="#" data-toggle="modal" data-target="#modal_box"
-                                                title="quick view"> <span class="lnr lnr-magnifier"></span></a></li>
-                    <li class="wishlist"><a href="wishlist.html" title="Add to Wishlist"><span
-                            class="lnr lnr-heart"></span></a></li>
-                    <li class="compare"><a href="#" title="compare"><span class="lnr lnr-sync"></span></a></li>
-                  </ul>
-                </div>
-              </div>
-=======
                 </div>
               </div>
             </div>
@@ -1835,7 +1576,6 @@
                   </ul>
                 </div>
               </div>
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
               <div class="product_content">
                 <div class="product_ratings">
                   <ul>
@@ -1862,15 +1602,9 @@
 
               </div>
               <div class="product_thumb">
-<<<<<<< HEAD
-                <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product7.jpg"
-                                                                        alt=""></a>
-                <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product8.jpg"
-=======
                 <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product7.jpg"
                                                                         alt=""></a>
                 <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product8.jpg"
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
                                                                           alt=""></a>
                 <div class="label_product">
                   <span class="label_sale">-57%</span>
@@ -1914,15 +1648,9 @@
 
               </div>
               <div class="product_thumb">
-<<<<<<< HEAD
-                <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product9.jpg"
-                                                                        alt=""></a>
-                <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product10.jpg"
-=======
                 <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product9.jpg"
                                                                         alt=""></a>
                 <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product10.jpg"
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
                                                                           alt=""></a>
                 <div class="label_product">
                   <span class="label_sale">-57%</span>
@@ -1964,15 +1692,9 @@
 
               </div>
               <div class="product_thumb">
-<<<<<<< HEAD
-                <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product11.jpg"
-                                                                        alt=""></a>
-                <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product12.jpg"
-=======
                 <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product11.jpg"
                                                                         alt=""></a>
                 <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product12.jpg"
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
                                                                           alt=""></a>
                 <div class="label_product">
                   <span class="label_sale">-57%</span>
@@ -2020,15 +1742,9 @@
 
               </div>
               <div class="product_thumb">
-<<<<<<< HEAD
-                <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product1.jpg"
-                                                                        alt=""></a>
-                <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product2.jpg"
-=======
                 <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product1.jpg"
                                                                         alt=""></a>
                 <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product2.jpg"
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
                                                                           alt=""></a>
                 <div class="label_product">
                   <span class="label_sale">-57%</span>
@@ -2070,15 +1786,9 @@
 
               </div>
               <div class="product_thumb">
-<<<<<<< HEAD
-                <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product3.jpg"
-                                                                        alt=""></a>
-                <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product4.jpg"
-=======
                 <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product3.jpg"
                                                                         alt=""></a>
                 <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product4.jpg"
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
                                                                           alt=""></a>
                 <div class="label_product">
                   <span class="label_sale">-47%</span>
@@ -2123,15 +1833,9 @@
 
               </div>
               <div class="product_thumb">
-<<<<<<< HEAD
-                <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product5.jpg"
-                                                                        alt=""></a>
-                <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product6.jpg"
-=======
                 <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product5.jpg"
                                                                         alt=""></a>
                 <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product6.jpg"
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
                                                                           alt=""></a>
                 <div class="label_product">
                   <span class="label_sale">-57%</span>
@@ -2173,15 +1877,9 @@
 
               </div>
               <div class="product_thumb">
-<<<<<<< HEAD
-                <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product7.jpg"
-                                                                        alt=""></a>
-                <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product8.jpg"
-=======
                 <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product7.jpg"
                                                                         alt=""></a>
                 <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product8.jpg"
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
                                                                           alt=""></a>
                 <div class="label_product">
                   <span class="label_sale">-57%</span>
@@ -2225,15 +1923,9 @@
 
               </div>
               <div class="product_thumb">
-<<<<<<< HEAD
-                <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product9.jpg"
-                                                                        alt=""></a>
-                <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product10.jpg"
-=======
                 <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product9.jpg"
                                                                         alt=""></a>
                 <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product10.jpg"
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
                                                                           alt=""></a>
                 <div class="label_product">
                   <span class="label_sale">-07%</span>
@@ -2276,15 +1968,9 @@
 
               </div>
               <div class="product_thumb">
-<<<<<<< HEAD
-                <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product11.jpg"
-                                                                        alt=""></a>
-                <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product12.jpg"
-=======
                 <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product11.jpg"
                                                                         alt=""></a>
                 <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product12.jpg"
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
                                                                           alt=""></a>
                 <div class="label_product">
                   <span class="label_sale">-57%</span>
@@ -2329,15 +2015,9 @@
 
               </div>
               <div class="product_thumb">
-<<<<<<< HEAD
-                <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product13.jpg"
-                                                                        alt=""></a>
-                <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product14.jpg"
-=======
                 <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product13.jpg"
                                                                         alt=""></a>
                 <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product14.jpg"
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
                                                                           alt=""></a>
                 <div class="label_product">
                   <span class="label_sale">-57%</span>
@@ -2379,15 +2059,9 @@
 
               </div>
               <div class="product_thumb">
-<<<<<<< HEAD
-                <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product15.jpg"
-                                                                        alt=""></a>
-                <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product16.jpg"
-=======
                 <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product15.jpg"
                                                                         alt=""></a>
                 <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product16.jpg"
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
                                                                           alt=""></a>
                 <div class="label_product">
                   <span class="label_sale">-57%</span>
@@ -2431,15 +2105,9 @@
 
               </div>
               <div class="product_thumb">
-<<<<<<< HEAD
-                <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product17.jpg"
-                                                                        alt=""></a>
-                <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product18.jpg"
-=======
                 <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product17.jpg"
                                                                         alt=""></a>
                 <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product18.jpg"
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
                                                                           alt=""></a>
                 <div class="label_product">
                   <span class="label_sale">-57%</span>
@@ -2481,15 +2149,9 @@
 
               </div>
               <div class="product_thumb">
-<<<<<<< HEAD
-                <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product12.jpg"
-                                                                        alt=""></a>
-                <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product13.jpg"
-=======
                 <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product12.jpg"
                                                                         alt=""></a>
                 <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product13.jpg"
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
                                                                           alt=""></a>
                 <div class="label_product">
                   <span class="label_sale">-57%</span>
@@ -2533,15 +2195,9 @@
 
               </div>
               <div class="product_thumb">
-<<<<<<< HEAD
-                <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product19.jpg"
-                                                                        alt=""></a>
-                <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product1.jpg"
-=======
                 <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product19.jpg"
                                                                         alt=""></a>
                 <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product1.jpg"
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
                                                                           alt=""></a>
                 <div class="label_product">
                   <span class="label_sale">-57%</span>
@@ -2583,15 +2239,9 @@
 
               </div>
               <div class="product_thumb">
-<<<<<<< HEAD
-                <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product18.jpg"
-                                                                        alt=""></a>
-                <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product2.jpg"
-=======
                 <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product18.jpg"
                                                                         alt=""></a>
                 <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product2.jpg"
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
                                                                           alt=""></a>
                 <div class="label_product">
                   <span class="label_sale">-57%</span>
@@ -2635,15 +2285,9 @@
 
               </div>
               <div class="product_thumb">
-<<<<<<< HEAD
-                <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product17.jpg"
-                                                                        alt=""></a>
-                <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product3.jpg"
-=======
                 <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product17.jpg"
                                                                         alt=""></a>
                 <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product3.jpg"
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
                                                                           alt=""></a>
                 <div class="label_product">
                   <span class="label_sale">-57%</span>
@@ -2685,15 +2329,9 @@
 
               </div>
               <div class="product_thumb">
-<<<<<<< HEAD
-                <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product16.jpg"
-                                                                        alt=""></a>
-                <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product4.jpg"
-=======
                 <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product16.jpg"
                                                                         alt=""></a>
                 <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product4.jpg"
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
                                                                           alt=""></a>
                 <div class="label_product">
                   <span class="label_sale">-57%</span>
@@ -2741,15 +2379,9 @@
 
               </div>
               <div class="product_thumb">
-<<<<<<< HEAD
-                <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product10.jpg"
-                                                                        alt=""></a>
-                <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product11.jpg"
-=======
                 <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product10.jpg"
                                                                         alt=""></a>
                 <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product11.jpg"
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
                                                                           alt=""></a>
                 <div class="label_product">
                   <span class="label_sale">-57%</span>
@@ -2791,15 +2423,9 @@
 
               </div>
               <div class="product_thumb">
-<<<<<<< HEAD
-                <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product12.jpg"
-                                                                        alt=""></a>
-                <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product11.jpg"
-=======
                 <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product12.jpg"
                                                                         alt=""></a>
                 <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product11.jpg"
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
                                                                           alt=""></a>
                 <div class="label_product">
                   <span class="label_sale">-47%</span>
@@ -2844,15 +2470,9 @@
 
               </div>
               <div class="product_thumb">
-<<<<<<< HEAD
-                <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product13.jpg"
-                                                                        alt=""></a>
-                <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product14.jpg"
-=======
                 <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product13.jpg"
                                                                         alt=""></a>
                 <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product14.jpg"
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
                                                                           alt=""></a>
                 <div class="label_product">
                   <span class="label_sale">-57%</span>
@@ -2894,15 +2514,9 @@
 
               </div>
               <div class="product_thumb">
-<<<<<<< HEAD
-                <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product15.jpg"
-                                                                        alt=""></a>
-                <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product16.jpg"
-=======
                 <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product15.jpg"
                                                                         alt=""></a>
                 <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product16.jpg"
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
                                                                           alt=""></a>
                 <div class="label_product">
                   <span class="label_sale">-57%</span>
@@ -2946,15 +2560,9 @@
 
               </div>
               <div class="product_thumb">
-<<<<<<< HEAD
-                <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product17.jpg"
-                                                                        alt=""></a>
-                <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product18.jpg"
-=======
                 <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product17.jpg"
                                                                         alt=""></a>
                 <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product18.jpg"
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
                                                                           alt=""></a>
                 <div class="label_product">
                   <span class="label_sale">-07%</span>
@@ -2997,15 +2605,9 @@
 
               </div>
               <div class="product_thumb">
-<<<<<<< HEAD
-                <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product1.jpg"
-                                                                        alt=""></a>
-                <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product2.jpg"
-=======
                 <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product1.jpg"
                                                                         alt=""></a>
                 <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product2.jpg"
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
                                                                           alt=""></a>
                 <div class="label_product">
                   <span class="label_sale">-57%</span>
@@ -3050,15 +2652,9 @@
 
               </div>
               <div class="product_thumb">
-<<<<<<< HEAD
-                <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product3.jpg"
-                                                                        alt=""></a>
-                <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product4.jpg"
-=======
                 <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product3.jpg"
                                                                         alt=""></a>
                 <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product4.jpg"
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
                                                                           alt=""></a>
                 <div class="label_product">
                   <span class="label_sale">-57%</span>
@@ -3100,15 +2696,9 @@
 
               </div>
               <div class="product_thumb">
-<<<<<<< HEAD
-                <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product5.jpg"
-                                                                        alt=""></a>
-                <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product6.jpg"
-=======
                 <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product5.jpg"
                                                                         alt=""></a>
                 <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product6.jpg"
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
                                                                           alt=""></a>
                 <div class="label_product">
                   <span class="label_sale">-57%</span>
@@ -3152,15 +2742,9 @@
 
               </div>
               <div class="product_thumb">
-<<<<<<< HEAD
-                <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product7.jpg"
-                                                                        alt=""></a>
-                <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product8.jpg"
-=======
                 <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product7.jpg"
                                                                         alt=""></a>
                 <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product8.jpg"
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
                                                                           alt=""></a>
                 <div class="label_product">
                   <span class="label_sale">-57%</span>
@@ -3202,15 +2786,9 @@
 
               </div>
               <div class="product_thumb">
-<<<<<<< HEAD
-                <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product9.jpg"
-                                                                        alt=""></a>
-                <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product10.jpg"
-=======
                 <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product9.jpg"
                                                                         alt=""></a>
                 <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product10.jpg"
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
                                                                           alt=""></a>
                 <div class="label_product">
                   <span class="label_sale">-57%</span>
@@ -3254,15 +2832,9 @@
 
               </div>
               <div class="product_thumb">
-<<<<<<< HEAD
-                <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product11.jpg"
-                                                                        alt=""></a>
-                <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product12.jpg"
-=======
                 <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product11.jpg"
                                                                         alt=""></a>
                 <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product12.jpg"
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
                                                                           alt=""></a>
                 <div class="label_product">
                   <span class="label_sale">-57%</span>
@@ -3304,15 +2876,9 @@
 
               </div>
               <div class="product_thumb">
-<<<<<<< HEAD
-                <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product13.jpg"
-                                                                        alt=""></a>
-                <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product14.jpg"
-=======
                 <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product13.jpg"
                                                                         alt=""></a>
                 <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product14.jpg"
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
                                                                           alt=""></a>
                 <div class="label_product">
                   <span class="label_sale">-57%</span>
@@ -3356,15 +2922,9 @@
 
               </div>
               <div class="product_thumb">
-<<<<<<< HEAD
-                <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product15.jpg"
-                                                                        alt=""></a>
-                <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product16.jpg"
-=======
                 <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product15.jpg"
                                                                         alt=""></a>
                 <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product16.jpg"
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
                                                                           alt=""></a>
                 <div class="label_product">
                   <span class="label_sale">-57%</span>
@@ -3406,15 +2966,9 @@
 
               </div>
               <div class="product_thumb">
-<<<<<<< HEAD
-                <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product17.jpg"
-                                                                        alt=""></a>
-                <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product18.jpg"
-=======
                 <a class="primary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product17.jpg"
                                                                         alt=""></a>
                 <a class="secondary_img" href="product-details.html"><img src="${pageContext.request.contextPath}/resources/client/img/product/product18.jpg"
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
                                                                           alt=""></a>
                 <div class="label_product">
                   <span class="label_sale">-57%</span>
@@ -3471,11 +3025,7 @@
         <div class="banner_container">
           <div class="single_banner">
             <div class="banner_thumb">
-<<<<<<< HEAD
-              <a href="#"><img src="${pageContext.request.contextPath}/resources/assets/img/bg/banner3.jpg" alt=""></a>
-=======
               <a href="#"><img src="${pageContext.request.contextPath}/resources/client/img/bg/banner3.jpg" alt=""></a>
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
               <div class="banner_text">
                 <h3>Car Audio</h3>
                 <h2>Super Natural Sound</h2>
@@ -3485,11 +3035,7 @@
           </div>
           <div class="single_banner">
             <div class="banner_thumb">
-<<<<<<< HEAD
-              <a href="#"><img src="${pageContext.request.contextPath}/resources/assets/img/bg/banner4.jpg" alt=""></a>
-=======
               <a href="#"><img src="${pageContext.request.contextPath}/resources/client/img/bg/banner4.jpg" alt=""></a>
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
               <div class="banner_text">
                 <h3>All - New</h3>
                 <h2>Perfomance Parts</h2>
@@ -3511,11 +3057,7 @@
       <div class="col-12">
         <div class="single_banner banner_fullwidth">
           <div class="banner_thumb">
-<<<<<<< HEAD
-            <a href="#"><img src="${pageContext.request.contextPath}/resources/assets/img/bg/banner5.jpg" alt=""></a>
-=======
             <a href="#"><img src="${pageContext.request.contextPath}/resources/client/img/bg/banner5.jpg" alt=""></a>
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
             <div class="banner_text">
               <h2>Win the cost of your</h2>
               <h3>Tyres back</h3>
@@ -3537,24 +3079,6 @@
       <div class="col-12">
         <div class="brand_container owl-carousel">
           <div class="single_brand">
-<<<<<<< HEAD
-            <a href="#"><img src="${pageContext.request.contextPath}/resources/assets/img/brand/brand.png" alt=""></a>
-          </div>
-          <div class="single_brand">
-            <a href="#"><img src="${pageContext.request.contextPath}/resources/assets/img/brand/brand1.png" alt=""></a>
-          </div>
-          <div class="single_brand">
-            <a href="#"><img src="${pageContext.request.contextPath}/resources/assets/img/brand/brand2.png" alt=""></a>
-          </div>
-          <div class="single_brand">
-            <a href="#"><img src="${pageContext.request.contextPath}/resources/assets/img/brand/brand3.png" alt=""></a>
-          </div>
-          <div class="single_brand">
-            <a href="#"><img src="${pageContext.request.contextPath}/resources/assets/img/brand/brand4.png" alt=""></a>
-          </div>
-          <div class="single_brand">
-            <a href="#"><img src="${pageContext.request.contextPath}/resources/assets/img/brand/brand2.png" alt=""></a>
-=======
             <a href="#"><img src="${pageContext.request.contextPath}/resources/client/img/brand/brand.png" alt=""></a>
           </div>
           <div class="single_brand">
@@ -3571,7 +3095,6 @@
           </div>
           <div class="single_brand">
             <a href="#"><img src="${pageContext.request.contextPath}/resources/client/img/brand/brand2.png" alt=""></a>
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
           </div>
         </div>
       </div>
@@ -3730,21 +3253,6 @@
                   <ul class="nav product_navactive owl-carousel" role="tablist">
                     <li>
                       <a class="nav-link active" data-toggle="tab" href="#tab1" role="tab" aria-controls="tab1"
-<<<<<<< HEAD
-                         aria-selected="false"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product1.jpg" alt=""></a>
-                    </li>
-                    <li>
-                      <a class="nav-link" data-toggle="tab" href="#tab2" role="tab" aria-controls="tab2"
-                         aria-selected="false"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product2.jpg" alt=""></a>
-                    </li>
-                    <li>
-                      <a class="nav-link button_three" data-toggle="tab" href="#tab3" role="tab" aria-controls="tab3"
-                         aria-selected="false"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product3.jpg" alt=""></a>
-                    </li>
-                    <li>
-                      <a class="nav-link" data-toggle="tab" href="#tab4" role="tab" aria-controls="tab4"
-                         aria-selected="false"><img src="${pageContext.request.contextPath}/resources/assets/img/product/product5.jpg" alt=""></a>
-=======
                          aria-selected="false"><img src="${pageContext.request.contextPath}/resources/client/img/product/product1.jpg" alt=""></a>
                     </li>
                     <li>
@@ -3758,7 +3266,6 @@
                     <li>
                       <a class="nav-link" data-toggle="tab" href="#tab4" role="tab" aria-controls="tab4"
                          aria-selected="false"><img src="${pageContext.request.contextPath}/resources/client/img/product/product5.jpg" alt=""></a>
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
                     </li>
 
                   </ul>

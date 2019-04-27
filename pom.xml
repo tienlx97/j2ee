@@ -49,12 +49,6 @@
       <artifactId>jstl</artifactId>
       <version>${jstl.version}</version>
     </dependency>
-<<<<<<< HEAD
-    <dependency>
-      <groupId>org.apache.logging.log4j</groupId>
-      <artifactId>log4j-web</artifactId>
-      <version>2.11.1</version>
-=======
     <!--bean utils-->
     <dependency>
       <groupId>commons-beanutils</groupId>
@@ -66,7 +60,6 @@
       <groupId>javax.inject</groupId>
       <artifactId>javax.inject</artifactId>
       <version>1</version>
->>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
     </dependency>
   </dependencies>
 

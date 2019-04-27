@@ -10,16 +10,16 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="${pageContext.request.contextPath}/resources/assets/img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="${pageContext.request.contextPath}/resources/client/img/favicon.ico">
     
     <!-- CSS 
     ========================= -->
 
     <!-- Plugins CSS -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/assets/css/plugins.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/client/css/plugins.css">
     
     <!-- Main Style CSS -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/assets/css/style.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/client/css/style.css">
 
 </head>
 
