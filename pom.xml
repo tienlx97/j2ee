@@ -15,6 +15,8 @@
     <module>J2ee-web-dao</module>
     <module>J2ee-web-utils</module>
     <module>J2ee-web-constant</module>
+    <module>J2ee-web-model</module>
+    <module>J2ee-web-service</module>
   </modules>
 
   <properties>
@@ -47,10 +49,24 @@
       <artifactId>jstl</artifactId>
       <version>${jstl.version}</version>
     </dependency>
+<<<<<<< HEAD
     <dependency>
       <groupId>org.apache.logging.log4j</groupId>
       <artifactId>log4j-web</artifactId>
       <version>2.11.1</version>
+=======
+    <!--bean utils-->
+    <dependency>
+      <groupId>commons-beanutils</groupId>
+      <artifactId>commons-beanutils</artifactId>
+      <version>1.9.3</version>
+    </dependency>
+    <!--Dependency Injection-->
+    <dependency>
+      <groupId>javax.inject</groupId>
+      <artifactId>javax.inject</artifactId>
+      <version>1</version>
+>>>>>>> 8b5f4fbb521fdf6a82799472598b766cd9954920
     </dependency>
   </dependencies>
 
