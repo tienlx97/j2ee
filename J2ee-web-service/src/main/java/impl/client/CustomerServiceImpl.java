@@ -3,7 +3,7 @@ package impl.client;
 import BeanUtils.CustomerBeanUtil;
 import client.CustomerDTO;
 import client.CustomerModel;
-import core.client.ICustomerDAO;
+import core.ICustomerDAO;
 import core.client.ICustomerService;
 
 

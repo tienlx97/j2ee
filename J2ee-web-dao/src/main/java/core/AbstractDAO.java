@@ -20,10 +20,10 @@ public class AbstractDAO<T> implements IGenericDAO<T> {
         ResultSet rs = null;
         boolean rowCreated = false;
         try {
-            conn = MysqlConnection.getDataSource().getConnection();
+            conn = MysqlConnection.getInstance().connectByDatasource().getConnection();
             conn.setAutoCommit(false);
             stm = conn.prepareStatement(query);
-            MysqlConnection.addParameters(stm, params);
+            MysqlConnection.getInstance().addParameters(stm, params);
             rowCreated = stm.executeUpdate() > 0;
             conn.commit();
         } catch (SQLException e) {
@@ -38,20 +38,20 @@ public class AbstractDAO<T> implements IGenericDAO<T> {
         return rowCreated;
     }
 
-    public <T1> List<T1> read(String query, IRowMapper<T1> IRowMapper, Object... params) {
+    public <T> List<T> read(String query, IRowMapper<T> IRowMapper, Object... params) {
         List<T> results = new ArrayList<T>();
         Connection conn = null;
         ResultSet rs = null;
         PreparedStatement  stm = null;
         try {
-            conn = MysqlConnection.getDataSource().getConnection();
+            conn = MysqlConnection.getInstance().connectByDatasource().getConnection();
             stm = conn.prepareStatement(query);
-            MysqlConnection.addParameters(stm, params);
+            MysqlConnection.getInstance().addParameters(stm, params);
             rs = stm.executeQuery();
             while (rs.next()) {
                 results.add((T) IRowMapper.mapRow(rs));
             }
-            return (List<T1>) results;
+            return (List<T>) results;
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -65,10 +65,10 @@ public class AbstractDAO<T> implements IGenericDAO<T> {
         PreparedStatement  stm = null;
         boolean rowCreated = false;
         try {
-            conn = MysqlConnection.getDataSource().getConnection();
+            conn = MysqlConnection.getInstance().connectByDatasource().getConnection();
             conn.setAutoCommit(false);
             stm = conn.prepareStatement(query);
-            MysqlConnection.addParameters(stm, params);
+            MysqlConnection.getInstance().addParameters(stm, params);
             rowCreated = stm.executeUpdate() > 0;
             conn.commit();
         } catch (SQLException e) {
@@ -85,5 +85,25 @@ public class AbstractDAO<T> implements IGenericDAO<T> {
 
     public boolean delete(String query, Object... params) {
         return  false;
+    }
+
+    public int count(String query, Object... params) {
+        Connection conn = null;
+        PreparedStatement  stm = null;
+        ResultSet rs = null;
+        int count = 0;
+        try {
+            conn = MysqlConnection.getInstance().connectByDatasource().getConnection();
+            stm = conn.prepareStatement(query);
+            MysqlConnection.getInstance().addParameters(stm, params);
+            rs = stm.executeQuery();
+            while (rs.next()) {
+                count = rs.getInt(1);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return count;
     }
 }

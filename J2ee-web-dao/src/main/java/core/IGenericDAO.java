@@ -41,4 +41,12 @@ public interface IGenericDAO<T>  { // CRUD
      * @param params
      */
     boolean delete(final String query,final Object... params);
+
+    /**
+     * Count something
+     * @param query
+     * @param params
+     * @return
+     */
+    int count(final  String query, final Object... params);
 }

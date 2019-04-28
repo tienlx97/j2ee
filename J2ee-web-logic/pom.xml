@@ -17,5 +17,20 @@
       <artifactId>J2ee-web-constant</artifactId>
       <version>1.0-SNAPSHOT</version>
     </dependency>
+    <dependency>
+      <groupId>com.shinigami</groupId>
+      <artifactId>J2ee-web-utils</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>com.shinigami</groupId>
+      <artifactId>J2ee-web-dto</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>com.shinigami</groupId>
+      <artifactId>J2ee-web-service</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
   </dependencies>
 </project>

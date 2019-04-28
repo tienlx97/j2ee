@@ -2,7 +2,8 @@ package impl.client;
 
 import client.CustomerModel;
 import core.AbstractDAO;
-import core.client.ICustomerDAO;
+import core.ICustomerDAO;
+import impl.CustomerMapper;
 
 import java.util.List;
 

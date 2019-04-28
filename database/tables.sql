@@ -5,9 +5,9 @@ USE J2EE;
 
 DROP TABLE IF EXISTS j2_category;
 CREATE TABLE j2_category (
-	cat_id 				integer 		not null auto_increment ,
-    cat_name 				varchar(254)	not null,
-    cat_parent_id			integer,
+	cat_id 				bigint(20) 		not null auto_increment ,
+    cat_name 			varchar(100)	not null,
+    cat_parent_id		bigint(20),
     cat_created_at		timestamp 		not null,
     cat_updated_at 		timestamp		not null,    
     
@@ -16,16 +16,16 @@ CREATE TABLE j2_category (
 
 DROP TABLE IF EXISTS j2_product;
 CREATE TABLE j2_product (
-	prd_id 				integer 			not null auto_increment,
+	prd_id 					bigint(20) 			not null auto_increment,
     prd_sku 				varchar(20) 		not null, 
-    prd_name				varchar(255)		not null,
-    prd_description 		text					,
-    prd_status			enum ('0','1','2') 	default '0',
+    prd_name				varchar(100)		not null,
+    prd_description 		text,
+    prd_status				integer 			default 0,
     prd_price				decimal(18,4) 		default 0,
-    prd_discount_price 	decimal(18,4) 		default 0,
+    prd_discount_price 		decimal(18,4) 		default 0,
     prd_quantity			integer				default 0,
     prd_taxabled			bool				default false,
-	prd_image				varchar(100)		default 'url',     
+	prd_image				varchar(200)		default 'url',     
 	prd_detail_images		varchar(1000)		default 'url1,url2,url3',     
     
     prd_created_at		timestamp 		not null,
@@ -36,8 +36,8 @@ CREATE TABLE j2_product (
 
 DROP TABLE IF EXISTS j2_product_category;
 CREATE TABLE j2_product_category (
-	cat_id 	integer 		not null,
-    prd_id 		integer			not null,
+	cat_id 				bigint(20) 		not null,
+    prd_id 				bigint(20)		not null,
     prc_created_at		timestamp 		not null,
     prc_updated_at 		timestamp		not null,
     
@@ -46,8 +46,8 @@ CREATE TABLE j2_product_category (
 
 DROP TABLE IF EXISTS j2_tag;
 CREATE TABLE j2_tag (
-	tag_id 				integer 		not null auto_increment, 
-    tag_name 			varchar(255)	not null,
+	tag_id 				bigint(20) 		not null auto_increment, 
+    tag_name 			varchar(50)		not null,
     tag_created_at		timestamp 		not null,
     tag_updated_at 		timestamp		not null,
     
@@ -56,8 +56,8 @@ CREATE TABLE j2_tag (
 
 DROP TABLE IF EXISTS j2_product_tag;
 CREATE TABLE j2_product_tag (
-	tag_id 			integer 		not null,
-	prd_id		integer			not null, 		
+	tag_id 				bigint(20) 		not null,
+	prd_id				bigint(20)		not null, 		
     prt_created_at		timestamp 		not null,
     prt_updated_at 		timestamp		not null,
     constraint fk_product_tag primary key (tag_id,prd_id)
@@ -65,31 +65,31 @@ CREATE TABLE j2_product_tag (
 
 DROP TABLE IF EXISTS j2_city;
 CREATE TABLE j2_city (
-	cit_id			integer 	not null auto_increment,
+	cit_id				bigint(20) 	not null auto_increment,
     cit_name			varchar(20)	not null,
     constraint fk_city primary key(cit_id)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 DROP TABLE IF EXISTS j2_ward;
 CREATE TABLE j2_ward (
-	war_id			integer 		not null auto_increment,
+	war_id				bigint(20) 		not null auto_increment,
     war_name			varchar(20)		not null,
 	constraint fk_ward primary key(war_id)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 DROP TABLE IF EXISTS j2_district;
 CREATE TABLE j2_district (
-	dis_id			integer 		not null auto_increment,
+	dis_id				bigint(20) 		not null auto_increment,
     dis_name			varchar(20)		not null,
 	constraint fk_district primary key(dis_id)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 DROP TABLE IF EXISTS j2_address;
 CREATE TABLE j2_address (
-	add_id 				integer 	not null auto_increment,
-    cit_id 			integer		not null, 
-    dis_id 		integer		not null, 
-    war_id			integer		not null, 
+	add_id 				bigint(20) 		not null auto_increment,
+    cit_id 				bigint(20)		not null, 
+    dis_id 				bigint(20)		not null, 
+    war_id				bigint(20)		not null, 
     add_address			varchar(100)	not null,
     
     constraint fk_address primary key(add_id),
@@ -100,19 +100,19 @@ CREATE TABLE j2_address (
 
 DROP TABLE IF EXISTS j2_customer;
 CREATE TABLE j2_customer (
-	cus_id 				integer 		not null auto_increment,
-	cus_email			varchar(255)	not null,
-    cus_username		varchar(20)		not null,
+	cus_id 				bigint(20) 		not null auto_increment,
+	cus_email			varchar(50)	not null,
+    cus_username		varchar(15)		not null,
     cus_password 		varchar(255)	not null,
     cus_firstname		nvarchar(20)	not null,
     cus_lastname		nvarchar(20)	not null,    
     cus_dob				date			not null,
 	cus_image			varchar(100)	default 'url image',     
-    cus_gender			enum('0','1','2')	default '2',
+    cus_gender			bit				default 0,
     cus_phone 			varchar(11)		not null,
-    cus_status			enum('0','1')	not null,
+    cus_status			integer			default 0,
     
-    add_id		integer			not null, /**/
+    add_id				bigint(20)			not null, /**/
     
 	cus_created_at		timestamp 		not null,
     cus_updated_at 		timestamp		not null,
@@ -136,11 +136,11 @@ CREATE TABLE CUSTOMER_LOG(
 
 DROP TABLE IF EXISTS j2_order_product;
 CREATE TABLE j2_order_product(
-	orp_id 				integer			not null auto_increment,
-    cus_id		integer			not null, /**/
-    orp_total			numeric			not null,
-	orp_is_delivery		bool			default false,
-    orp_delivery_at		date			not null,
+	orp_id 				bigint(20)		not null auto_increment,
+    cus_id				bigint(20)		not null, /**/
+    orp_total			decimal(18,4)	default 0,
+	orp_is_delivery		bit				default 0,
+    orp_delivery_at		timestamp		not null,
     
     orp_createdAt		timestamp 		not null,
     orp_updatedAt 		timestamp		not null,
@@ -151,10 +151,10 @@ CREATE TABLE j2_order_product(
 
 DROP TABLE IF EXISTS j2_order_detail;
 CREATE TABLE j2_order_detail(
-	ord_id 				integer			not null auto_increment,
-    orp_id			integer			not null, /**/
-    prd_id		integer			not null, /**/
-    ord_quantity		int(10)			not null, 
+	ord_id 				bigint(20)		not null auto_increment,
+    orp_id				bigint(20)		not null, /**/
+    prd_id				bigint(20)		not null, /**/
+    ord_quantity		int(5)			default 1, 
     
     ord_created_at		timestamp 		not null,
     ord_updated_at 		timestamp		not null,
@@ -166,19 +166,19 @@ CREATE TABLE j2_order_detail(
 
 DROP TABLE IF EXISTS j2_employee;
 CREATE TABLE j2_employee(
-	emp_id 				integer			not null auto_increment,
-    emp_username		varchar(15)		not null,
-    emp_password		varchar(100)	not null,
-	emp_firstname		varchar(20)		not null,
-    emp_lastname		varchar(20)		not null,    
-    emp_dob				date			not null,
+	emp_id 				bigint(20)		not null auto_increment,
+	add_id				bigint(20)		not null, /**/
+    
+    emp_username		varchar(15)		default null,
+    emp_password		varchar(255)	default null,
+	emp_firstname		varchar(20)		default null,
+    emp_lastname		varchar(20)		default null,    
+    emp_dob				date			default null,
 	emp_image			varchar(100)	default 'url image',     
-    emp_gender			enum('0','1','2')	default '2',
-    emp_phone 			varchar(11)		not null,
-    emp_status			enum('0','1')	not null,
-    
-    add_id				integer			not null, /**/
-    
+    emp_gender			bit				default 0,
+    emp_phone 			varchar(11)		default null,
+    emp_status			integer			default 0,
+        
 	emp_created_at		timestamp 		not null,
     emp_updated_at 		timestamp		not null,
     
@@ -188,7 +188,7 @@ CREATE TABLE j2_employee(
 
 DROP TABLE IF EXISTS j2_role;
 CREATE TABLE j2_role(
-	rol_id 				integer			not null auto_increment,
+	rol_id 				bigint(20)		not null auto_increment,
     rol_name			varchar(50)	    not null,
     
     rol_created_at		timestamp 		not null,
@@ -199,8 +199,8 @@ CREATE TABLE j2_role(
 
 DROP TABLE IF EXISTS j2_employee_role;
 CREATE TABLE j2_employee_role(
-	rol_id 				integer			not null,
-    emp_id			varchar(50)	    not null,
+	rol_id 				bigint(20)		not null,
+    emp_id				bigint(20)	    not null,
     
     emr_created_at		timestamp 		not null,
     emr_updated_at 		timestamp		not null,

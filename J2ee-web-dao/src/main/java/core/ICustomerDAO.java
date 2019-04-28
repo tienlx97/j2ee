@@ -1,4 +1,4 @@
-package core.client;
+package core;
 
 import client.CustomerModel;
 import core.IGenericDAO;

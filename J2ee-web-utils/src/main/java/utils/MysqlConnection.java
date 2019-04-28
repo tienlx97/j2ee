@@ -14,45 +14,30 @@ import java.util.ResourceBundle;
  * https://minhbxn.wordpress.com/2011/03/17/k%E1%BB%B9-thu%E1%BA%ADt-batch-update-trong-jdbc/
  * https://www.youtube.com/watch?v=m7bQT-jjlGg // connection pool
  */
-public class MysqlConnection {
-    // Get database properties in resources/database.properties
-    private static ResourceBundle resourceBundle = ResourceBundle.getBundle("database");
+public class MysqlConnection implements IDatabaseConnection {
 
-    /**
-     * This is for Connection pool
-     */
-    private static DataSource dataSource;
-    static{
-        try {
-            String JNDI_LOOKUP_SERVICE = resourceBundle.getString("JNDI_LOOKUP_SERVICE");
-            Context context = new InitialContext();
-            Object lookup = context.lookup(JNDI_LOOKUP_SERVICE);
-            if(lookup != null){
-                dataSource =(DataSource)lookup;
-            }else{
-                new RuntimeException("JNDI look up issue.");
-            }
-        } catch (NamingException e) {
-            e.printStackTrace();
+    ResourceBundle resourceBundle = ResourceBundle.getBundle("database");
+    DataSource dataSource;
+
+    private static MysqlConnection instance;
+    private MysqlConnection() {
+    }
+
+    public static MysqlConnection getInstance() {
+        if(instance == null) {
+            instance = new MysqlConnection();
         }
+        return instance;
     }
 
-    public static DataSource getDataSource(){
-        return dataSource;
-    }
-
-    /**
-     *
-     * @return
-     */
-    public static Connection getConnection() {
+    public Connection connect() {
         try {
             Class.forName(resourceBundle.getString("driverName"));
             String url = resourceBundle.getString("url");
             String user = resourceBundle.getString("user");
             String password = resourceBundle.getString("password");
             Connection conn = DriverManager.getConnection(url,user, password);
-            conn.setAutoCommit(false);
+          //  conn.setAutoCommit(false);
             return conn;
         } catch (ClassNotFoundException  e) {
             e.printStackTrace();
@@ -62,13 +47,29 @@ public class MysqlConnection {
         return null;
     }
 
-    /**
-     *
-     * @param connection
-     * @param stm
-     * @param rs
-     */
-    public static void closeConnection(final Connection connection, final PreparedStatement stm, final ResultSet rs) {
+    public DataSource connectByDatasource() {
+        try {
+            String JNDI_LOOKUP_SERVICE = resourceBundle.getString("JNDI_LOOKUP_SERVICE");
+            Context context = new InitialContext();
+            Object lookup = context.lookup(JNDI_LOOKUP_SERVICE);
+
+            //Context envContext = (Context) context.lookup("java:/comp/env");
+            // Look up a data source
+            //javax.sql.DataSource ds
+            //        = (javax.sql.DataSource) envContext.lookup ("jdbc/j2ee");
+
+            if(lookup != null){
+                dataSource =(DataSource)lookup;
+            }else{
+                new RuntimeException("JNDI look up issue.");
+            }
+        } catch (NamingException e) {
+            e.printStackTrace();
+        }
+        return dataSource;
+    }
+
+    public void disconnect(final Connection connection, final PreparedStatement stm, final ResultSet rs) {
         try {
             if(connection != null) {
                 connection.close();
@@ -86,13 +87,7 @@ public class MysqlConnection {
         }
     }
 
-    /**
-     *
-     * @param stm
-     * @param params
-     * @throws SQLException
-     */
-    public static void addParameters(PreparedStatement stm, Object... params) throws SQLException {
+    public void addParameters(PreparedStatement stm, Object... params) throws SQLException {
         for (int i = 0; i < params.length ; i++) {
             Object param = params[i];
             if(param == null) {
@@ -132,15 +127,8 @@ public class MysqlConnection {
         }
     }
 
-    /**
-     *
-     * @param stm
-     * @param params
-     * @throws SQLException
-     */
-    private static void addBatchUpdate(PreparedStatement stm, Object... params) throws SQLException {
+    public void addBatchUpdate(PreparedStatement stm, Object... params) throws SQLException {
         addParameters(stm, params);
         stm.addBatch();
     }
-
 }
