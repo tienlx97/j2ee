@@ -11,6 +11,9 @@ public class UrlConstant {
     public static final String URL_ADMIN_DASHBOARD = "/admin/dashboard";
     public static final String ADMIN_DASHBOARD_JSP = "/views/admin/dashboard.jsp";
 
+    public static final String URL_ADMIN_PURCHASE_ORDER = "/admin/purchase-order";
+    public static final String ADMIN_PURCHASE_ORDER_JSP = "/views/admin/purchase-order.jsp";
+
 
 }
 

@@ -22,22 +22,27 @@
   <link href="${pageContext.request.contextPath}/resources/admin/build/css/custom.min.css" rel="stylesheet">
 </head>
 <body class="nav-md">
-  <div class="container body">
-    <div class="main_container">
+<div class="container body">
+  <div class="main_container">
 
-      <jsp:include page="slide-bar.jsp"></jsp:include>
+    <jsp:include page="slide-bar.jsp"></jsp:include>
 
-      <div class="right_col" role="main">
-
+    <%-- include dashboard page later--%>
+    <div class="right_col" role="main">
+      <div>
+        purchase order
       </div>
-
     </div>
+
+
+
   </div>
-  <!-- jQuery -->
-  <script src="${pageContext.request.contextPath}/resources/admin/vendors/jquery/dist/jquery.min.js"></script>
-  <!-- Bootstrap -->
-  <script src="${pageContext.request.contextPath}/resources/admin/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-  <!-- Custom Theme Scripts -->
-  <script src="${pageContext.request.contextPath}/resources/admin/build/js/custom.min.js"></script>
+</div>
+<!-- jQuery -->
+<script src="${pageContext.request.contextPath}/resources/admin/vendors/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="${pageContext.request.contextPath}/resources/admin/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- Custom Theme Scripts -->
+<script src="${pageContext.request.contextPath}/resources/admin/build/js/custom.min.js"></script>
 </body>
 </html>
