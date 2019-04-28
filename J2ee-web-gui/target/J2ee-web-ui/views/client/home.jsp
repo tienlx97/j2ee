@@ -54,16 +54,23 @@
           <div class="col-lg-6 col-md-6">
             <div class="top_right text-right">
               <ul>
-                <li class="top_links"><a href="#"><i class="ion-android-person"></i> My Account<i
+                <%String name = (String)request.getAttribute("name"); %>
+                <% if(name.length() > 0){ %>
+                <li class="top_links"><a href="#"><i class="ion-android-person"></i>Hello <%= request.getAttribute("name") %><i
                         class="ion-ios-arrow-down"></i></a>
                   <ul class="dropdown_links">
                     <li><a href="checkout.html">Checkout </a></li>
                     <li><a href="my-account.html">My Account </a></li>
                     <li><a href="cart.html">Shopping Cart</a></li>
                     <li><a href="wishlist.html">Wishlist</a></li>
+                    <li><a href="action/logout">Logout</a></li>
                   </ul>
                 </li>
-                <li class="language"><a href="#"><img src="${pageContext.request.contextPath}/resources/client/img/logo/language.png" alt="">en-gb<i
+                <% } else { %>
+                  <li class="top_links"><a href="action/login"><i></i>Login<i></i></a>
+                <% } %>
+                <li class="language"><a href="#"><img src="${pageContext.request.contextPath}/resources/assets/img/logo/language.png" alt="">en-gb<i
+
                         class="ion-ios-arrow-down"></i></a>
                   <ul class="dropdown_language">
                     <li><a href="#"><img src="${pageContext.request.contextPath}/resources/client/img/logo/language.png" alt=""> English</a></li>
