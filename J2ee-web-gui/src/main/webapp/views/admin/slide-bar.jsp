@@ -31,7 +31,7 @@
           <ul class="nav side-menu">
             <li><a><i class="fa fa-home"></i>Transaction<span class="fa fa-chevron-down"></span></a>
               <ul class="nav child_menu">
-                <li><a href="<%=request.getContextPath() + UrlConstant.URL_ADMIN_PURCHASE_ORDER%>">Purchase Order</a></li>
+                <li ><a href="<%=request.getContextPath() + UrlConstant.URL_ADMIN_PURCHASE_ORDER%>">Purchase Order</a></li>
                 <li><a href="index2.html">Invoices</a></li>
               </ul>
             </li>
