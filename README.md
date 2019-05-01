@@ -19,6 +19,11 @@ __[Using batch update in JDBC](https://minhbxn.wordpress.com/2011/03/17/k%E1%BB%
 
 __[Using connection pool in tomcat](https://www.youtube.com/watch?v=m7bQT-jjlGg)__
 
+
+## CDI
+__[How to use producer](https://www.byteslounge.com/tutorials/java-ee-cdi-producer-methods-tutorial)__
+__[CDI tutorial VN](https://stackjava.com/cdi/java-cdi-inject-nhieu-kieu-vao-cung-mot-bean-annotation-qualifier.html)__
+
 ## Sample code 
 __[Sample code 1](https://github.com/truonglam/exampletoeiconline/blob/master/toeic-core-serviceimpl/src/main/java/vn/myclass/core/service/impl/UserServiceImpl.java)__
 
