@@ -4,9 +4,11 @@ import admin.EmployeeModel;
 import client.CustomerModel;
 import core.IRowMapper;
 
+import javax.enterprise.inject.Default;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+@Default
 public class EmployeeMapper implements IRowMapper<EmployeeModel> {
     public EmployeeModel mapRow(ResultSet rs) {
         try {

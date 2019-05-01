@@ -21,6 +21,23 @@
   <link href="${pageContext.request.contextPath}/resources/admin/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <!-- Custom Theme Style -->
   <link href="${pageContext.request.contextPath}/resources/admin/build/css/custom.min.css" rel="stylesheet">
+  <style>
+    input[type="text"],
+    select.u-input {
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #000000;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      border-radius: 0;
+    }
+
+    input[type="text"]:focus,
+    select.u-input:focus {
+      -webkit-box-shadow: none;
+      box-shadow: none;
+    }
+  </style>
 </head>
 <body class="nav-md">
 <div class="container body">
@@ -38,7 +55,7 @@
                 <div style="font-size: 26px;">Import</div>
                 <div class="col-sm-12" style="margin-left: 10px; display: flex; align-items: center;" >
                   <input type="text" class="form-control" placeholder="Search product by Id | Name">
-                  <span class="fa fa-align-justify" style="font-size: x-large; margin-left: 5px;" aria-hidden="true"></span>
+                  <span class="fa fa-pencil-square" style="font-size: x-large; margin-left: 5px;" aria-hidden="true"></span>
                   <span class="fa fa-filter" style="font-size: x-large; margin-left: 10px;" aria-hidden="true"></span>
                   <div class="col-sm-3">
                     <input type="text" class="form-control" placeholder="Quality">
@@ -74,13 +91,49 @@
                   Date create purchase
                   <div class="form-group">
                     <div class="input-group date" id="current-date">
-                      <input type="text" class="form-control" readonly="readonly">
+                      <input type="text" class="form-control u-input" readonly="readonly">
                       <span class="input-group-addon">
                                <span class="glyphicon glyphicon-calendar"></span>
                             </span>
                     </div>
                   </div>
                 </div>
+                <div class="col-sm-12">
+                  Purchase Id
+                  <div class="form-group" style="display: flex;align-items: center">
+                    <input type="text" class="form-control u-input" readonly="readonly">
+                  </div>
+                </div>
+
+                <div class="col-sm-12" style="align-items: center;display: flex;">
+                  <div class="col-sm-4" style="padding-left: 0px;">
+                    Total qualities
+                    <div class="form-group">
+                      <input type="text" class="form-control u-input" value="150" readonly="readonly">
+                    </div>
+                  </div>
+                  <div class="col-sm-8" style="padding-right: 0px;">
+                    Total prices
+                    <div class="form-group">
+                      <input type="text" class="form-control u-input" value="15,000,000" readonly="readonly">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-12">
+                  Note
+                  <div class="form-group" style="display: flex;align-items: center">
+                    <input type="text" class="form-control u-input">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="col-sm-12">
+                    <button class="btn btn-primary" type="reset">Reset</button>
+                    <button type="submit" class="btn btn-success">Save</button>
+                  </div>
+                </div>
+
               </form>
             </div>
           </div>

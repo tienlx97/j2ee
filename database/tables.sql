@@ -22,7 +22,7 @@ CREATE TABLE j2_product (
     prd_description 		text,
     prd_status				integer 			default 0,
     prd_price				decimal(18,4) 		default 0,
-    prd_discount_price 		decimal(18,4) 		default 0,
+	prd_purchase_price		decimal(18,4) 		default 0,
     prd_quantity			integer				default 0,
     prd_taxabled			bool				default false,
 	prd_image				varchar(200)		default 'url',     

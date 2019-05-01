@@ -17,6 +17,11 @@ public class UrlConstant {
     public static final String URL_ADMIN_PURCHASE_ORDER_NEW = "/admin/purchase-order/new";
     public static final String ADMIN_PURCHASE_ORDER_NEW_JSP = "/views/admin/purchase-new.jsp";
 
+    public static final String URL_ADMIN_PRODUCT = "/admin/products";
+    public static final String ADMIN_PRODUCT_JSP = "/views/admin/products.jsp";
+
+    public static final String URL_ADMIN_PRODUCT_NEW = "/admin/products/new";
+    public static final String ADMIN_PRODUCT_NEW_JSP = "/views/admin/products-new.jsp";
 
 }
 

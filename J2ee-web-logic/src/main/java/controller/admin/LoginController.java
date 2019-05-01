@@ -8,6 +8,7 @@ import core.admin.IEmployeeService;
 import impl.admin.EmployeeServiceImpl;
 import utils.FormUtil;
 
+import javax.inject.Inject;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -19,6 +20,7 @@ import java.io.IOException;
 @WebServlet(urlPatterns = "/admin/login")
 public class LoginController extends HttpServlet {
 
+    @Inject
     private IEmployeeService iEmployeeService;
 
     @Override
@@ -30,7 +32,7 @@ public class LoginController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
         EmployeeDTO employeeDTO = FormUtil.toDTO(EmployeeDTO.class, req);
-        iEmployeeService = new EmployeeServiceImpl(); // fail when using CDI in j2ee, don't know why
+       // iEmployeeService = new EmployeeServiceImpl(); // fail when using CDI in j2ee, don't know why
         boolean success = iEmployeeService.checkEmployeeLogin(employeeDTO);
 
         if(success == true) {

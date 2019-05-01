@@ -34,22 +34,13 @@
         <div class="col-md-3">
           <div class="x_panel" style="padding-left: 3px;">
             <div class="x_title">
-              <h2>Search purchase order</h2>
+              <h2>Search product</h2>
               <div class="clearfix"></div>
             </div>
             <div>
               <form>
 
 
-
-                <div class="col-sm-12">
-                  Purchase id
-                  <div class="form-group">
-                    <div>
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                </div>
 
                 <div class="col-sm-12">
                   Product id | name
@@ -61,52 +52,41 @@
                 </div>
 
                 <div class="col-sm-12">
-                  Emp id | name create | modify
-                  <div class="form-group">
-                    <div >
-                      <input type="text" class="form-control">
+                  <div class="col-sm-6" style="padding-left: 0px;">
+                    Sel.pri from
+                    <div class="form-group">
+                      <div>
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6" style="padding-right: 0px;">
+                    Sel.pri to
+                    <div class="form-group">
+                      <div>
+                        <input type="text" class="form-control">
+                      </div>
                     </div>
                   </div>
                 </div>
 
                 <div class="col-sm-12">
-                  Date create from
-                  <div class="form-group">
-                    <div class="input-group date" id="date-create-from">
-                      <input type="text" class="form-control">
-                      <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar"></span>
-                      </span>
+                  <div class="col-sm-6" style="padding-left: 0px;">
+                    Pur.pri from
+                    <div class="form-group">
+                      <div>
+                        <input type="text" class="form-control">
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div class="col-sm-12">
-                  Date create to
-                  <div class="form-group">
-                    <div class="input-group date" id="date-create-to">
-                      <input type="text" class="form-control">
-                      <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar"></span>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-sm-12">
-                  Total money from
-                  <div class="form-group">
-                    <div>
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-sm-12">
-                  Total money to
-                  <div class="form-group">
-                    <div>
-                      <input type="text" class="form-control">
+                  <div class="col-sm-6" style="padding-right: 0px;">
+                    Pur.pri to
+                    <div class="form-group">
+                      <div>
+                        <input type="text" class="form-control">
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -131,12 +111,25 @@
                   </div>
                 </div>
 
+                <div class="col-sm-12">
+                  Status
+                  <div class="form-group">
+                    <select class="form-control">
+                      <option>All</option>
+                      <option>Stock</option>
+                      <option>Deleted</option>
+                    </select>
+                  </div>
+                </div>
+
                 <div class="form-group">
                   <div class="col-sm-12">
                     <button class="btn btn-primary" type="reset">Reset</button>
                     <button type="submit" class="btn btn-success">Submit</button>
                   </div>
                 </div>
+
+
 
               </form>
             </div>
@@ -146,10 +139,10 @@
         <div class="col-md-9">
           <div class="x_panel" style="padding-left: 3px;">
             <div class="x_title">
-              <h2>Purchase order</h2>
+              <h2>Products</h2>
               <div class="nav navbar-right panel_toolbox">
-                <div class="btn-group">
-                  <a href="<%=request.getContextPath() + UrlConstant.URL_ADMIN_PURCHASE_ORDER_NEW%>" type="button" class="btn btn-success">Import</a>
+                <div class="btn-group" >
+                  <a href="<%=request.getContextPath() + UrlConstant.URL_ADMIN_PRODUCT_NEW%>" type="button" class="btn btn-success">Import</a>
                 </div>
                 <div class="btn-group ">
                   <button type="button" class="btn btn-success">Export File</button>
@@ -171,12 +164,12 @@
                 <thead>
                 <tr>
                   <th>#</th>
-                  <th>Purchase Id</th>
-                  <th>Employee name</th>
-                  <th>Total money</th>
-                  <th>Total quantity</th>
-                  <th>Date created</th>
-                  <th>Date modify</th>
+                  <th>Image</th>
+                  <th>Product Id</th>
+                  <th>Product name</th>
+                  <th>Sell price</th>
+                  <th>Purchase</th>
+                  <th>Quality</th>
                 </tr>
                 </thead>
                 <tbody>

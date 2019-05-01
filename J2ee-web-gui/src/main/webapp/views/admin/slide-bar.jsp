@@ -39,7 +39,7 @@
           <ul class="nav side-menu">
             <li><a><i class="fa fa-home"></i>Products<span class="fa fa-chevron-down"></span></a>
               <ul class="nav child_menu">
-                <li><a href="index.html">Product detail</a></li>
+                <li><a href="<%=request.getContextPath() + UrlConstant.URL_ADMIN_PRODUCT%>">Product detail</a></li>
                 <li><a href="index2.html">Categories</a></li>
               </ul>
             </li>
