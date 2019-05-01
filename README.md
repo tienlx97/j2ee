@@ -22,6 +22,7 @@ __[Using connection pool in tomcat](https://www.youtube.com/watch?v=m7bQT-jjlGg)
 
 ## CDI
 __[How to use producer](https://www.byteslounge.com/tutorials/java-ee-cdi-producer-methods-tutorial)__
+
 __[CDI tutorial VN](https://stackjava.com/cdi/java-cdi-inject-nhieu-kieu-vao-cung-mot-bean-annotation-qualifier.html)__
 
 ## Sample code 
