@@ -23,5 +23,8 @@ public class UrlConstant {
     public static final String URL_ADMIN_PRODUCT_NEW = "/admin/products/new";
     public static final String ADMIN_PRODUCT_NEW_JSP = "/views/admin/products-new.jsp";
 
+    public static final String URL_ADMIN_CATEGORY = "/admin/category";
+    public static final String ADMIN_CATEGORY_JSP = "/views/admin/category.jsp";
+
 }
 

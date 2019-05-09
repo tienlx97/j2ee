@@ -33,19 +33,27 @@
     <div class="right_col" role="main">
       <div class="row">
 
-        <div class="col-md-3">
+        <div class="col-md-5">
           <div class="x_panel" style="padding-left: 3px;">
             <div class="x_title">
-              <h2>Search product</h2>
+              <h2>Add category</h2>
               <div class="clearfix"></div>
             </div>
             <div>
               <form>
 
 
+                <div class="col-sm-12">
+                  Id
+                  <div class="form-group">
+                    <div>
+                      <input readonly="readonly" type="text" class="form-control">
+                    </div>
+                  </div>
+                </div>
 
                 <div class="col-sm-12">
-                  Product id | name
+                  Name
                   <div class="form-group">
                     <div>
                       <input type="text" class="form-control">
@@ -54,82 +62,30 @@
                 </div>
 
                 <div class="col-sm-12">
-                  <div class="col-sm-6" style="padding-left: 0px;">
-                    Sel.pri from
-                    <div class="form-group">
-                      <div>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-sm-6" style="padding-right: 0px;">
-                    Sel.pri to
-                    <div class="form-group">
-                      <div>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-sm-12">
-                  <div class="col-sm-6" style="padding-left: 0px;">
-                    Pur.pri from
-                    <div class="form-group">
-                      <div>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-sm-6" style="padding-right: 0px;">
-                    Pur.pri to
-                    <div class="form-group">
-                      <div>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-sm-12">
-                  <div class="col-sm-6" style="padding-left: 0px;">
-                    Qualities from
-                    <div class="form-group">
-                      <div>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-sm-6" style="padding-right: 0px;">
-                    Qualities to
-                    <div class="form-group">
-                      <div>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-sm-12">
-                    Category
-                    <select id="category" multiple data-live-search="true" name="categories" class="selectpicker form-control col-md-7 col-xs-12">
-                      <option>cow</option>
-                      <option data-subtext="option subtext">bull</option>
-                      <option class="get-class" disabled>ox</option>
-                    </select>
-                </div>
-
-                <div class="col-sm-12">
-                  Status
+                  Description
                   <div class="form-group">
-                    <select class="form-control">
-                      <option>All</option>
-                      <option>Stock</option>
-                      <option>Deleted</option>
-                    </select>
+                    <div>
+                      <textarea class="form-control" rows="5"></textarea>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="col-sm-12" style="margin-bottom: 10px;">
+                  Parent
+                  <select id="category" multiple data-live-search="true" name="categories" class="selectpicker form-control col-md-7 col-xs-12">
+                    <option>cow</option>
+                    <option data-subtext="option subtext">bull</option>
+                    <option class="get-class" disabled>ox</option>
+                  </select>
+                </div>
+
+                <div class="col-sm-12">
+                  Image
+                  <div class="form-group">
+                    <div>
+                      <input type="text" class="form-control">
+                    </div>
                   </div>
                 </div>
 
@@ -141,32 +97,37 @@
                 </div>
 
 
-
               </form>
             </div>
           </div>
         </div>
 
-        <div class="col-md-9">
+        <div class="col-md-7">
           <div class="x_panel" style="padding-left: 3px;">
-            <div class="x_title">
-              <h2>Products</h2>
-              <div class="nav navbar-right panel_toolbox">
-                <div class="btn-group" >
-                  <a href="<%=request.getContextPath() + UrlConstant.URL_ADMIN_PRODUCT_NEW%>" type="button" class="btn btn-success">Import</a>
+            <div style="display: flex;">
+              <div style="font-size: 23px;">List</div>
+              <div class="col-sm-12" style="margin-left: 10px; display: flex; align-items: center;" >
+                <input type="text" class="form-control" placeholder="Search by name">
+                <div>
+                  <input type="button" class="form-control" value="Search">
                 </div>
-                <div class="btn-group ">
-                  <button type="button" class="btn btn-success">Export File</button>
-                  <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <span class="caret"></span>
-                  </button>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="#">Export detail</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">Export overview</a>
-                    </li>
-                  </ul>
-                </div>
+                <%--<span class="fa fa-search" style="font-size: x-large; margin-left: 5px;" aria-hidden="true"></span>--%>
+                <div class="col-sm-9">
+                  <div class="navbar-right">
+                    <div class="btn-group ">
+                      <button type="button" class="btn btn-success">Export File</button>
+                      <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Export detail</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Export overview</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                 </div>
               </div>
               <div class="clearfix"></div>
             </div>
@@ -176,11 +137,9 @@
                 <tr>
                   <th>#</th>
                   <th>Image</th>
-                  <th>Product Id</th>
-                  <th>Product name</th>
-                  <th>Sell price</th>
-                  <th>Purchase</th>
-                  <th>Quality</th>
+                  <th>Id</th>
+                  <th>Name</th>
+                  <th>Description</th>
                 </tr>
                 </thead>
                 <tbody>

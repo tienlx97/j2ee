@@ -20,6 +20,8 @@
   <link href="${pageContext.request.contextPath}/resources/admin/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <!-- Custom Theme Style -->
   <link href="${pageContext.request.contextPath}/resources/admin/build/css/custom.min.css" rel="stylesheet">
+  <%--bootrap select--%>
+  <link href="${pageContext.request.contextPath}/resources/admin/build/css/bootstrap-select.min.css" rel="stylesheet">
 </head>
 <body class="nav-md">
 <div class="container body">
@@ -44,7 +46,7 @@
                 <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
                   <li role="presentation" class="active"><a href="#tab_content1" id="home-tab" role="tab" data-toggle="tab" aria-expanded="true">Information</a>
                   </li>
-                  <li role="presentation" class=""><a href="#tab_content2" role="tab" id="profile-tab" data-toggle="tab" aria-expanded="false">Discription</a>
+                  <li role="presentation" class=""><a href="#tab_content2" role="tab" id="profile-tab" data-toggle="tab" aria-expanded="false">Description</a>
                   </li>
                   <li role="presentation" class=""><a href="#tab_content3" role="tab" id="profile-tab2" data-toggle="tab" aria-expanded="false">Images</a>
                   </li>
@@ -74,15 +76,16 @@
                           <label class="control-label col-md-3 col-sm-3 col-xs-12" for="category">Category name <span class="required">*</span>
                           </label>
                           <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" id="category" name="categories" required="required" class="form-control col-md-7 col-xs-12">
-                          </div>
-                        </div>
-
-                        <div class="form-group">
-                          <label class="control-label col-md-3 col-sm-3 col-xs-12">Categories</label>
-                          <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input id="tags_1" type="text" class="tags form-control" readonly="readonly" />
-                            <div id="suggestions-container" style="position: relative; float: left; width: 250px; margin: 10px;"></div>
+                            <select id="category" multiple data-live-search="true" name="categories" class="selectpicker form-control col-md-7 col-xs-12">
+                              <option>cow</option>
+                              <option data-subtext="option subtext">bull</option>
+                              <option class="get-class" disabled>ox</option>
+                              <%--<optgroup label="test" data-subtext="optgroup subtext">--%>
+                                <%--<option>ASD</option>--%>
+                                <%--<option selected>Bla</option>--%>
+                                <%--<option>Ble</option>--%>
+                              <%--</optgroup>--%>
+                            </select>
                           </div>
                         </div>
 
@@ -229,10 +232,48 @@
         <div class="col-md-3">
           <div class="x_panel" style="padding-left: 3px;">
             <div class="x_title">
-              <h2>Import categories</h2>
+              <h2>Short import categories</h2>
               <div class="clearfix"></div>
             </div>
             <div class="x_content">
+
+              <div class="col-sm-12">
+                Category Id
+                <div class="form-group">
+                  <div>
+                    <input readonly="readonly" type="text" class="form-control">
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-12">
+                Category name
+                <div class="form-group">
+                  <div>
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-12">
+                Parent
+                <div class="form-group">
+                  <div>
+                    <select multiple data-live-search="true" name="categories" class="imp-category form-control">
+                      <option>cow</option>
+                      <option data-subtext="option subtext">bull</option>
+                      <option class="get-class" disabled>ox</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="ln_solid"></div>
+              <div class="form-group">
+                <button class="btn btn-primary" type="button">Cancel</button>
+                <button class="btn btn-primary" type="reset">Reset</button>
+                <button type="submit" class="btn btn-success">Submit</button>
+              </div>
 
             </div>
           </div>
@@ -247,6 +288,8 @@
 </div>
 <!-- jQuery -->
 <script src="${pageContext.request.contextPath}/resources/admin/vendors/jquery/dist/jquery.min.js"></script>
+<%--bootrap select--%>
+<script src="${pageContext.request.contextPath}/resources/admin/js/bootstrap-select.min.js"></script>
 <!-- Bootstrap -->
 <script src="${pageContext.request.contextPath}/resources/admin/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- bootstrap-daterangepicker -->
@@ -266,6 +309,17 @@
 <script src="${pageContext.request.contextPath}/resources/admin/vendors/google-code-prettify/src/prettify.js"></script>
 
 <script src="${pageContext.request.contextPath}/resources/admin/vendors/jquery.tagsinput/src/jquery.tagsinput.js"></script>
+
+  <script>
+      $('.selectpicker').selectpicker({
+          // options here
+      });
+
+      $('.imp-category').selectpicker({
+
+      });
+
+  </script>
 
 </body>
 </html>
