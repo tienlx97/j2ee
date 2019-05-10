@@ -1,6 +1,6 @@
-package impl.client;
+package impl;
 
-import client.CustomerModel;
+import core.CustomerModel;
 import core.AbstractDAO;
 import core.ICustomerDAO;
 import impl.CustomerMapper;

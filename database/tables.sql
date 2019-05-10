@@ -5,28 +5,29 @@ USE J2EE;
 
 DROP TABLE IF EXISTS j2_category;
 CREATE TABLE j2_category (
-	cat_id 				bigint(20) 		not null auto_increment ,
-    cat_name 			varchar(100)	not null,
-    cat_parent_id		bigint(20),
+	cat_id 				varchar(64) 	not null ,
+	cat_parent_id		varchar(64),
+    cat_name 			varchar(30)	    not null,
+	cat_description 	text			not null,
+    
     cat_created_at		timestamp 		not null,
     cat_updated_at 		timestamp		not null,    
-    
     constraint fk_category primary key(cat_id)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 DROP TABLE IF EXISTS j2_product;
 CREATE TABLE j2_product (
-	prd_id 					bigint(20) 			not null auto_increment,
-    prd_sku 				varchar(20) 		not null, 
+	prd_id 					varchar(64) 		not null,
+--    prd_sku 				varchar(20) 		not null, 
     prd_name				varchar(100)		not null,
     prd_description 		text,
     prd_status				integer 			default 0,
     prd_price				decimal(18,4) 		default 0,
 	prd_purchase_price		decimal(18,4) 		default 0,
     prd_quantity			integer				default 0,
-    prd_taxabled			bool				default false,
-	prd_image				varchar(200)		default 'url',     
-	prd_detail_images		varchar(1000)		default 'url1,url2,url3',     
+--    prd_taxabled			bool				default false,
+	prd_image				text, 
+	prd_image_gallery		text,     
     
     prd_created_at		timestamp 		not null,
     prd_updated_at 		timestamp		not null,
@@ -36,14 +37,16 @@ CREATE TABLE j2_product (
 
 DROP TABLE IF EXISTS j2_product_category;
 CREATE TABLE j2_product_category (
-	cat_id 				bigint(20) 		not null,
-    prd_id 				bigint(20)		not null,
+	cat_id 				varchar(64) 	not null,
+    prd_id 				varchar(64)		not null,
+
     prc_created_at		timestamp 		not null,
     prc_updated_at 		timestamp		not null,
     
     constraint fk_product_category primary key(cat_id,prd_id)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+/*
 DROP TABLE IF EXISTS j2_tag;
 CREATE TABLE j2_tag (
 	tag_id 				bigint(20) 		not null auto_increment, 
@@ -62,6 +65,7 @@ CREATE TABLE j2_product_tag (
     prt_updated_at 		timestamp		not null,
     constraint fk_product_tag primary key (tag_id,prd_id)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+*/
 
 DROP TABLE IF EXISTS j2_city;
 CREATE TABLE j2_city (

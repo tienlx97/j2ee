@@ -1,10 +1,10 @@
-package impl.admin;
+package impl;
 
 import BeanUtils.EmployeeBeanUtil;
-import admin.EmployeeDTO;
-import admin.EmployeeModel;
-import core.admin.IEmployeeDAO;
-import core.admin.IEmployeeService;
+import core.EmployeeDTO;
+import core.EmployeeModel;
+import core.IEmployeeDAO;
+import core.IEmployeeService;
 
 import javax.enterprise.inject.Default;
 import javax.inject.Inject;

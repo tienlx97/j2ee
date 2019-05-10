@@ -1,7 +1,7 @@
 package core;
 
 import java.util.List;
-
+import java.lang.reflect.Method;
 /**
  * Using Data Access Object Pattern - DA0
  * @param <T> Using generic type to reuse
@@ -27,6 +27,8 @@ public interface IGenericDAO<T>  { // CRUD
      * @return
      */
     <T> List<T> read(final String query, final IRowMapper<T> IRowMapper, final Object... params);
+
+    <T> List<T> read2(final String query, final Class clazz,final Object instance, final String methodName, final Object... params);
 
     /**
      * Update data

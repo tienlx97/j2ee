@@ -1,7 +1,7 @@
 package BeanUtils;
 
-import admin.EmployeeDTO;
-import admin.EmployeeModel;
+import core.EmployeeDTO;
+import core.EmployeeModel;
 
 public class EmployeeBeanUtil {
     public static EmployeeModel convert2ModelLoginPage(EmployeeDTO dto) {

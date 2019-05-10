@@ -1,6 +1,6 @@
 package impl;
 
-import client.CustomerModel;
+import core.CustomerModel;
 import core.IRowMapper;
 
 import java.sql.ResultSet;

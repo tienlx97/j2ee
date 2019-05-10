@@ -1,7 +1,6 @@
 package impl;
 
-import admin.EmployeeModel;
-import client.CustomerModel;
+import core.EmployeeModel;
 import core.IRowMapper;
 
 import javax.enterprise.inject.Default;
@@ -9,8 +8,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 @Default
-public class EmployeeMapper implements IRowMapper<EmployeeModel> {
-    public EmployeeModel mapRow(ResultSet rs) {
+public class EmployeeMapper {
+    public EmployeeModel checkEmployeeLogin(ResultSet rs) {
         try {
             EmployeeModel employee = new EmployeeModel();
             employee.setFirstname(rs.getString("emp_firstname"));

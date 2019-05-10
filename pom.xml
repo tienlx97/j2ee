@@ -24,6 +24,9 @@
     <jsp.api.version>2.3.1</jsp.api.version>
     <mysql.connector.version>5.1.31</mysql.connector.version>
     <jstl.version>1.2</jstl.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
 
   <dependencies>

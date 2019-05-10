@@ -40,14 +40,13 @@
               <div class="clearfix"></div>
             </div>
             <div>
-              <form>
-
+              <form method="post" action="<%=request.getContextPath() + UrlConstant.URL_ADMIN_CATEGORY%>">
 
                 <div class="col-sm-12">
                   Id
                   <div class="form-group">
                     <div>
-                      <input readonly="readonly" type="text" class="form-control">
+                      <input name="catId" id="catId" readonly="readonly" type="text" class="form-control">
                     </div>
                   </div>
                 </div>
@@ -56,7 +55,7 @@
                   Name
                   <div class="form-group">
                     <div>
-                      <input type="text" class="form-control">
+                      <input name="catName" id="catName" type="text" class="form-control">
                     </div>
                   </div>
                 </div>
@@ -65,7 +64,7 @@
                   Description
                   <div class="form-group">
                     <div>
-                      <textarea class="form-control" rows="5"></textarea>
+                      <textarea name="catDescription" id="catDescription" class="form-control" rows="5"></textarea>
                     </div>
                   </div>
                 </div>
@@ -73,7 +72,7 @@
 
                 <div class="col-sm-12" style="margin-bottom: 10px;">
                   Parent
-                  <select id="category" multiple data-live-search="true" name="categories" class="selectpicker form-control col-md-7 col-xs-12">
+                  <select multiple data-live-search="true" id="catParent" name="catParent" class="select-cat-parent form-control col-md-7 col-xs-12">
                     <option>cow</option>
                     <option data-subtext="option subtext">bull</option>
                     <option class="get-class" disabled>ox</option>
@@ -84,7 +83,7 @@
                   Image
                   <div class="form-group">
                     <div>
-                      <input type="text" class="form-control">
+                      <input type="text" id="catImgUrl" name="catImgUrl" class="form-control">
                     </div>
                   </div>
                 </div>
@@ -95,7 +94,6 @@
                     <button type="submit" class="btn btn-success">Submit</button>
                   </div>
                 </div>
-
 
               </form>
             </div>
@@ -181,7 +179,7 @@
     $('#date-create-to').datetimepicker({
         format: 'DD/MM/YYYY'
     });
-    $('.selectpicker').selectpicker({
+    $('.select-cat-parent').selectpicker({
         // options here
     });
 </script>

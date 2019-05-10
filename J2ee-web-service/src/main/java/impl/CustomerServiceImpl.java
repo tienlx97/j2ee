@@ -1,10 +1,10 @@
-package impl.client;
+package impl;
 
 import BeanUtils.CustomerBeanUtil;
 import client.CustomerDTO;
-import client.CustomerModel;
+import core.CustomerModel;
 import core.ICustomerDAO;
-import core.client.ICustomerService;
+import core.ICustomerService;
 
 
 import javax.inject.Inject;

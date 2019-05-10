@@ -4,7 +4,7 @@ import Constant.CssConstant;
 import Constant.ErrorConstant;
 import Constant.UrlConstant;
 import Constant.VariableConstant;
-import admin.EmployeeDTO;
+import core.EmployeeDTO;
 import utils.FormUtil;
 
 import javax.servlet.*;
