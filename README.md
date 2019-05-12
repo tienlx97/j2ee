@@ -7,6 +7,8 @@ __[Transfer object design pattern](https://gpcoder.com/5156-huong-dan-java-desig
 
 __[Data access object design pattern](https://gpcoder.com/4935-huong-dan-java-design-pattern-dao/)__
 
+__[Singleton pattern](https://gpcoder.com/4190-huong-dan-java-design-pattern-singleton/)__
+
 ## Filters
 __[Java validation filter](http://zetcode.com/java/validationfilter/)__
 
