@@ -11,6 +11,11 @@
   long catId = (long) request.getAttribute(VariableConstant.CATEGORY_ID);
 
   String error = (String) request.getAttribute(VariableConstant.ERROR_CATEGORY);
+  CategoryDTO categoryDTO = (CategoryDTO) request.getAttribute(VariableConstant.CATEGORY_DTO);
+
+  String eId = (String) request.getAttribute(VariableConstant.EMPTY_CATEGORY_ID);
+  String eName = (String) request.getAttribute(VariableConstant.EMPTY_CATEGORY_NAME);
+  String eParent = (String) request.getAttribute(VariableConstant.EMPTY_CATEGORY_PARENT);
 
 %>
 
@@ -61,6 +66,11 @@
                   Id
                   <div class="form-group">
                     <div>
+                      <%if(eId != null){%>
+                        <ul class="parsley-errors-list filled" id="parsley-id-6" style="text-align: left;margin: auto;">
+                          <li class="parsley-required"><%=eId%></li>
+                        </ul>
+                      <%}%>
                       <input name="catId" id="catId" value="<%=catId%>" readonly="readonly" type="text" class="form-control">
                     </div>
                   </div>
@@ -70,7 +80,12 @@
                   Name
                   <div class="form-group">
                     <div>
-                      <input name="catName" id="catName" type="text" class="form-control">
+                      <%if(eName != null){%>
+                        <ul class="parsley-errors-list filled" id="parsley-id-6" style="text-align: left;margin: auto;">
+                          <li class="parsley-required"><%=eName%></li>
+                        </ul>
+                      <%}%>
+                      <input name="catName" id="catName" type="text" class="form-control" <%= categoryDTO != null ? "value=" + categoryDTO.getCatName(): "" %>>
                     </div>
                   </div>
                 </div>
@@ -79,7 +94,7 @@
                   Description
                   <div class="form-group">
                     <div>
-                      <textarea name="catDescription" id="catDescription" class="form-control" rows="5"></textarea>
+                      <textarea name="catDescription" id="catDescription" class="form-control" rows="5"><%= categoryDTO != null ? categoryDTO.getCatDescription(): "" %></textarea>
                     </div>
                   </div>
                 </div>
@@ -87,22 +102,29 @@
 
                 <div class="col-sm-12" style="margin-bottom: 10px;">
                   Parent
-                  <select data-live-search="true" id="catParent" name="catParent" class="select-cat-parent form-control col-md-7 col-xs-12">
-                    <% if(categories.size() != 0) {
-                      for (int i =0; i<categories.size(); i++) {
+                  <div>
+                    <%if(eParent != null){%>
+                      <ul class="parsley-errors-list filled" id="parsley-id-6" style="text-align: left;margin: auto;">
+                        <li class="parsley-required"><%=eParent%></li>
+                      </ul>
+                    <%}%>
+                    <select title="Please select a parent category" data-live-search="true" id="catParent" name="catParent" class="select-cat-parent form-control col-md-7 col-xs-12">
+                      <% if(categories.size() != 0) {
+                        for (int i =0; i<categories.size(); i++) {
                           CategoryDTO cat = categories.get(i);
-                    %>
+                      %>
                       <option value="<%=cat.getCatId()%>"><%=cat.getCatName()%></option>
-                    <%}
-                    }%>
-                  </select>
+                      <%}
+                      }%>
+                    </select>
+                  </div>
                 </div>
 
                 <div class="col-sm-12">
                   Image
                   <div class="form-group">
                     <div>
-                      <input type="text" id="catImgUrl" name="catImgUrl" class="form-control">
+                      <input type="text" id="catImgUrl" name="catImgUrl" class="form-control" <%= categoryDTO != null ? "value=" + categoryDTO.getCatImgUrl(): "" %>>
                     </div>
                   </div>
                 </div>

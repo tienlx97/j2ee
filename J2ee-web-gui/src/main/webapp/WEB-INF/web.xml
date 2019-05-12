@@ -23,9 +23,19 @@
     <filter-class>filter.LoginFilter</filter-class>
   </filter>
 
+  <filter>
+    <filter-name>CategoryFilter</filter-name>
+    <filter-class>filter.CategoryFilter</filter-class>
+  </filter>
+<!--               -->
   <filter-mapping>
     <filter-name>AdminLoginFilter</filter-name>
-    <url-pattern>/core/login</url-pattern>
+    <url-pattern>/admin/login</url-pattern>
+  </filter-mapping>
+
+  <filter-mapping>
+    <filter-name>CategoryFilter</filter-name>
+    <url-pattern>/admin/category</url-pattern>
   </filter-mapping>
 
 </web-app>
