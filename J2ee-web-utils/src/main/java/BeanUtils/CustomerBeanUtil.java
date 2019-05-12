@@ -1,6 +1,6 @@
 package BeanUtils;
 
-import client.CustomerDTO;
+import core.CustomerDTO;
 import core.CustomerModel;
 
 /**

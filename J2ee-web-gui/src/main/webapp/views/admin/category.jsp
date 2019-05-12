@@ -1,7 +1,19 @@
 <%@ page import="Constant.UrlConstant" %>
+<%@ page import="Constant.VariableConstant" %>
+<%@ page import="core.CategoryDTO" %>
+<%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@include file="../../common/tablib.jsp"%>
 <%@page isELIgnored="false" %>
+
+<%
+  List<CategoryDTO> categories = (List<CategoryDTO>) request.getAttribute(VariableConstant.CATEGORIES);
+  long catId = (long) request.getAttribute(VariableConstant.CATEGORY_ID);
+
+  String error = (String) request.getAttribute(VariableConstant.ERROR_CATEGORY);
+
+%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,8 +39,11 @@
 <div class="container body">
   <div class="main_container">
 
-    <jsp:include page="slide-bar.jsp"></jsp:include>
+    <% if(error != null){ %>
+      <script>alert("<%=error%>")</script>
+    <%}%>
 
+    <jsp:include page="slide-bar.jsp"></jsp:include>
 
     <div class="right_col" role="main">
       <div class="row">
@@ -46,7 +61,7 @@
                   Id
                   <div class="form-group">
                     <div>
-                      <input name="catId" id="catId" readonly="readonly" type="text" class="form-control">
+                      <input name="catId" id="catId" value="<%=catId%>" readonly="readonly" type="text" class="form-control">
                     </div>
                   </div>
                 </div>
@@ -72,10 +87,14 @@
 
                 <div class="col-sm-12" style="margin-bottom: 10px;">
                   Parent
-                  <select multiple data-live-search="true" id="catParent" name="catParent" class="select-cat-parent form-control col-md-7 col-xs-12">
-                    <option>cow</option>
-                    <option data-subtext="option subtext">bull</option>
-                    <option class="get-class" disabled>ox</option>
+                  <select data-live-search="true" id="catParent" name="catParent" class="select-cat-parent form-control col-md-7 col-xs-12">
+                    <% if(categories.size() != 0) {
+                      for (int i =0; i<categories.size(); i++) {
+                          CategoryDTO cat = categories.get(i);
+                    %>
+                      <option value="<%=cat.getCatId()%>"><%=cat.getCatName()%></option>
+                    <%}
+                    }%>
                   </select>
                 </div>
 

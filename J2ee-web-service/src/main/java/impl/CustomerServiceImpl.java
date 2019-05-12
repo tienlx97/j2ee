@@ -1,7 +1,7 @@
 package impl;
 
 import BeanUtils.CustomerBeanUtil;
-import client.CustomerDTO;
+import core.CustomerDTO;
 import core.CustomerModel;
 import core.ICustomerDAO;
 import core.ICustomerService;

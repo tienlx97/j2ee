@@ -5,4 +5,6 @@ public class ErrorConstant {
     public static final String ERROR_ADMIN_PASSWORD_EMPTY = "Password is empty";
     public static final String ERROR_ADMIN_USERNAME_NOTFOUND = "Username or password not correct";
 
+    public static final String ERROR_CATEGORY = "There is some error, please reload the website";
+    public static final String SUCCESS_CATEGORY = "Add category success";
 }
