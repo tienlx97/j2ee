@@ -1,6 +1,4 @@
-package core.client;
-
-import client.CustomerDTO;
+package core;
 
 public interface ICustomerService {
     CustomerDTO checkCustomerLogin(CustomerDTO customerDTO);

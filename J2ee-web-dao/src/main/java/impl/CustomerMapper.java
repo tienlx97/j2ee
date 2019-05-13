@@ -1,6 +1,10 @@
 package impl;
 
+<<<<<<< HEAD
 import model.CustomerModel;
+=======
+import core.CustomerModel;
+>>>>>>> ac5115a88709d05b80a8bb08d62cf5a5b44f666d
 import core.IRowMapper;
 
 import java.sql.ResultSet;

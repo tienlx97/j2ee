@@ -25,7 +25,7 @@ public class SecurityUtils {
 
     // Kiểm tra 'request' này có vai trò phù hợp hay không?
     public static boolean hasPermission(HttpServletRequest request) {
-        String urlPattern = UrlPatternUtils.getUrlPattern(request);
+ hay        String urlPattern = UrlPatternUtils.getUrlPattern(request);
 
         Set<String> allRoles = SecurityConfig.getAllAppRoles();
 

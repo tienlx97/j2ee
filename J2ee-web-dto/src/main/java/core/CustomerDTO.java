@@ -1,4 +1,4 @@
-package client;
+package core;
 
 import java.io.Serializable;
 import java.sql.Date;

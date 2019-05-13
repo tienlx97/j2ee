@@ -1,6 +1,6 @@
-package core.admin;
+package core;
 
-import admin.EmployeeDTO;
+import core.EmployeeDTO;
 
 public interface IEmployeeService {
     EmployeeDTO checkEmployeeLogin(EmployeeDTO employeeDTO);

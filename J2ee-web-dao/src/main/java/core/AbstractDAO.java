@@ -1,14 +1,16 @@
 package core;
 
+import impl.CategoryMapper;
 import utils.MysqlConnection;
 
+import java.lang.reflect.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-
+import java.lang.reflect.Method;
 
 public class AbstractDAO<T> implements IGenericDAO<T> {
 
@@ -59,6 +61,39 @@ public class AbstractDAO<T> implements IGenericDAO<T> {
         return null;
     }
 
+    @Override
+    public <T> List<T> read2(String query, Class clazz, Object instance, String methodName, Object... params) {
+        List<T> results = new ArrayList<T>();
+        Connection conn = null;
+        ResultSet rs = null;
+        PreparedStatement  stm = null;
+        try {
+            conn = MysqlConnection.getInstance().connectByDatasource().getConnection();
+            stm = conn.prepareStatement(query);
+            MysqlConnection.getInstance().addParameters(stm, params);
+            rs = stm.executeQuery();
+
+            Method method = clazz.getMethod(methodName,ResultSet.class);
+
+            while (rs.next()) {
+                results.add((T) method.invoke(instance,rs));
+            }
+
+            return (List<T>) results;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
+
     @SuppressWarnings("Duplicates")
     public boolean update(String query, Object... params) {
         Connection conn = null;
@@ -106,4 +141,5 @@ public class AbstractDAO<T> implements IGenericDAO<T> {
         }
         return count;
     }
+
 }

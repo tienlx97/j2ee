@@ -1,8 +1,14 @@
 package BeanUtils;
 
+<<<<<<< HEAD
 import admin.EmployeeDTO;
 import model.EmployeeModel;
 import java.util.*;
+=======
+import core.EmployeeDTO;
+import core.EmployeeModel;
+
+>>>>>>> ac5115a88709d05b80a8bb08d62cf5a5b44f666d
 public class EmployeeBeanUtil {
     public static EmployeeModel convert2ModelLoginPage(EmployeeDTO dto) {
         EmployeeModel model = new EmployeeModel();

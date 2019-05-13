@@ -1,13 +1,15 @@
 package impl;
 
-import model.EmployeeModel;
+import core.EmployeeModel;
 import core.IRowMapper;
 
+import javax.enterprise.inject.Default;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class EmployeeMapper implements IRowMapper<EmployeeModel> {
-    public EmployeeModel mapRow(ResultSet rs) {
+@Default
+public class EmployeeMapper {
+    public EmployeeModel checkEmployeeLogin(ResultSet rs) {
         try {
             EmployeeModel employee = new EmployeeModel();
             employee.setFirstname(rs.getString("emp_firstname"));
