@@ -1,12 +1,6 @@
 package BeanUtils;
-
-<<<<<<< HEAD
-import client.CustomerDTO;
-import model.CustomerModel;
-=======
 import core.CustomerDTO;
 import core.CustomerModel;
->>>>>>> ac5115a88709d05b80a8bb08d62cf5a5b44f666d
 
 /**
  * https://gpcoder.com/5156-huong-dan-java-design-pattern-transfer-object/

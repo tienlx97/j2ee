@@ -3,12 +3,12 @@ package controller;
 import Constant.ErrorConstant;
 import Constant.UrlConstant;
 import Constant.VariableConstant;
-import admin.EmployeeDTO;
-import client.CustomerDTO;
-import core.admin.IEmployeeService;
-import core.client.ICustomerService;
-import impl.admin.EmployeeServiceImpl;
-import impl.client.CustomerServiceImpl;
+import core.EmployeeDTO;
+import core.CustomerDTO;
+import core.IEmployeeService;
+import core.ICustomerService;
+import impl.EmployeeServiceImpl;
+import impl.CustomerServiceImpl;
 import utils.FormUtil;
 
 import javax.servlet.RequestDispatcher;

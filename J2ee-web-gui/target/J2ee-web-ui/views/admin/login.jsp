@@ -1,5 +1,5 @@
 <%@ page import="Constant.UrlConstant" %>
-<%@ page import="admin.EmployeeDTO" %>
+<%@ page import="core.EmployeeDTO" %>
 <%@ page import="Constant.VariableConstant" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@include file="../../common/tablib.jsp"%>

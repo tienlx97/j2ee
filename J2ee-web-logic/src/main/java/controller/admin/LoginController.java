@@ -31,10 +31,10 @@ public class LoginController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
         EmployeeDTO employeeDTO = FormUtil.toDTO(EmployeeDTO.class, req);
-       // iEmployeeService = new EmployeeServiceImpl(); // fail when using CDI in j2ee, don't know why
-        boolean success = iEmployeeService.checkEmployeeLogin(employeeDTO);
+        iEmployeeService = new impl.EmployeeServiceImpl(); // fail when using CDI in j2ee, don't know why
+        EmployeeDTO user = iEmployeeService.checkEmployeeLogin(employeeDTO);
 
-        if(success == true) {
+        if(user != null) {
             resp.sendRedirect(req.getContextPath() + UrlConstant.URL_ADMIN_DASHBOARD);
         } else {
             req.setAttribute(VariableConstant.ERROR_PASSWORD, ErrorConstant.ERROR_ADMIN_USERNAME_NOTFOUND);

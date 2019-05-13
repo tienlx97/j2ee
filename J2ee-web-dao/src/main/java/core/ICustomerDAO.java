@@ -1,6 +1,6 @@
 package core;
 
-import model.CustomerModel;
+import core.CustomerModel;
 
 public interface ICustomerDAO extends IGenericDAO<CustomerModel> {
     CustomerModel checkCustomerLogin(CustomerModel customerModel);

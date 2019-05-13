@@ -7,35 +7,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce14e883-2815-4193-8f39-78acdf609549" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/J2ee-web-constant/src/main/java/Constant/UrlConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2ee-web-constant/src/main/java/Constant/UrlConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/J2ee-web-dao/src/main/java/core/ICustomerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2ee-web-dao/src/main/java/core/ICustomerDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/J2ee-web-dao/src/main/java/core/admin/IEmployeeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2ee-web-dao/src/main/java/core/admin/IEmployeeDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/J2ee-web-dao/src/main/java/core/IEmployeeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2ee-web-dao/src/main/java/core/IEmployeeDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/J2ee-web-dao/src/main/java/impl/CustomerDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2ee-web-dao/src/main/java/impl/CustomerDAOImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/J2ee-web-dao/src/main/java/impl/CustomerMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2ee-web-dao/src/main/java/impl/CustomerMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/J2ee-web-dao/src/main/java/impl/EmployeeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2ee-web-dao/src/main/java/impl/EmployeeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/J2ee-web-dao/src/main/java/impl/admin/EmployeeDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2ee-web-dao/src/main/java/impl/admin/EmployeeDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/J2ee-web-dao/src/main/java/impl/client/CustomerDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2ee-web-dao/src/main/java/impl/client/CustomerDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/J2ee-web-dao/src/main/java/user/Validation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/J2ee-web-dto/src/main/java/admin/EmployeeDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2ee-web-dto/src/main/java/admin/EmployeeDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/J2ee-web-dto/src/main/java/client/CustomerDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2ee-web-dto/src/main/java/client/CustomerDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/J2ee-web-gui/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/J2ee-web-gui/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/J2ee-web-gui/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/J2ee-web-gui/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/J2ee-web-gui/src/main/webapp/views/admin/slide-bar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/J2ee-web-gui/src/main/webapp/views/admin/slide-bar.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/J2ee-web-gui/src/main/webapp/views/client/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/J2ee-web-gui/src/main/webapp/views/client/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/J2ee-web-gui/src/main/webapp/views/client/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/J2ee-web-gui/src/main/webapp/views/client/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/J2ee-web-logic/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/J2ee-web-logic/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/J2ee-web-logic/src/main/java/config/SecurityConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/J2ee-web-logic/src/main/java/controller/ActionController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/J2ee-web-logic/src/main/java/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2ee-web-logic/src/main/java/controller/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/J2ee-web-logic/src/main/java/controller/admin/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2ee-web-logic/src/main/java/controller/admin/DashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/J2ee-web-logic/src/main/java/controller/admin/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2ee-web-logic/src/main/java/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/J2ee-web-model/src/main/java/admin/EmployeeModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2ee-web-model/src/main/java/model/EmployeeModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/J2ee-web-model/src/main/java/client/CustomerModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2ee-web-model/src/main/java/model/CustomerModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/J2ee-web-service/src/main/java/core/admin/IEmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2ee-web-service/src/main/java/core/admin/IEmployeeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/J2ee-web-service/src/main/java/impl/admin/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2ee-web-service/src/main/java/impl/admin/EmployeeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/J2ee-web-service/src/main/java/impl/client/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2ee-web-service/src/main/java/impl/client/CustomerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/J2ee-web-dao/src/main/java/impl/EmployeeDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2ee-web-dao/src/main/java/impl/EmployeeDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/J2ee-web-dao/target/classes/core/AbstractDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/J2ee-web-dao/target/classes/core/AbstractDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/J2ee-web-dao/target/classes/core/ICustomerDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/J2ee-web-dao/target/classes/core/ICustomerDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/J2ee-web-dao/target/classes/core/IGenericDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/J2ee-web-dao/target/classes/core/IGenericDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/J2ee-web-dao/target/classes/core/IRowMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/J2ee-web-dao/target/classes/core/IRowMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/J2ee-web-dao/target/classes/core/admin/IEmployeeDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/J2ee-web-dao/target/classes/impl/CustomerMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/J2ee-web-dao/target/classes/impl/CustomerMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/J2ee-web-dao/target/classes/impl/EmployeeMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/J2ee-web-dao/target/classes/impl/EmployeeMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/J2ee-web-dao/target/classes/impl/admin/EmployeeDAOImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/J2ee-web-dao/target/classes/impl/client/CustomerDAOImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/J2ee-web-dto/target/classes/admin/EmployeeDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/J2ee-web-dto/target/classes/both/UserAccount$TYPEUSER.class" beforeDir="false" afterPath="$PROJECT_DIR$/J2ee-web-dto/target/classes/both/UserAccount$TYPEUSER.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/J2ee-web-dto/target/classes/both/UserAccount.class" beforeDir="false" afterPath="$PROJECT_DIR$/J2ee-web-dto/target/classes/both/UserAccount.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/J2ee-web-dto/target/classes/client/CustomerDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/J2ee-web-logic/src/main/java/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2ee-web-logic/src/main/java/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/J2ee-web-logic/src/main/java/controller/admin/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2ee-web-logic/src/main/java/controller/admin/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/J2ee-web-model/target/classes/model/CustomerModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/J2ee-web-model/target/classes/model/CustomerModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/J2ee-web-model/target/classes/model/EmployeeModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/J2ee-web-model/target/classes/model/EmployeeModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/J2ee-web-service/src/main/java/impl/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2ee-web-service/src/main/java/impl/CustomerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/J2ee-web-service/src/main/java/impl/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2ee-web-service/src/main/java/impl/EmployeeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/J2ee-web-service/target/classes/core/admin/IEmployeeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/J2ee-web-service/target/classes/core/client/ICustomerService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/J2ee-web-service/target/classes/impl/admin/EmployeeServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/J2ee-web-service/target/classes/impl/client/CustomerServiceImpl.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/J2ee-web-utils/src/main/java/BeanUtils/CustomerBeanUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2ee-web-utils/src/main/java/BeanUtils/CustomerBeanUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/J2ee-web-utils/src/main/java/BeanUtils/EmployeeBeanUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2ee-web-utils/src/main/java/BeanUtils/EmployeeBeanUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/J2ee-web-utils/src/main/java/Security/SecurityUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/J2ee-web-utils/src/main/java/Security/SecurityUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/J2ee-web-utils/target/classes/BeanUtils/CustomerBeanUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/J2ee-web-utils/target/classes/BeanUtils/CustomerBeanUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/J2ee-web-utils/target/classes/BeanUtils/EmployeeBeanUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/J2ee-web-utils/target/classes/BeanUtils/EmployeeBeanUtil.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -78,53 +84,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/J2ee-web-logic/src/main/java/controller/LoginController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="68" selection-start-line="68" selection-end-line="68" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/J2ee-web-service/src/main/java/impl/admin/EmployeeServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/J2ee-web-utils/src/main/java/BeanUtils/EmployeeBeanUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="28" selection-start-line="28" selection-end-line="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/J2ee-web-dao/src/main/java/impl/admin/EmployeeDAOImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="34" column="18" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="-762">
+              <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/J2ee-web-utils/src/main/java/Security/SecurityUtils.java">
+        <entry file="file://$PROJECT_DIR$/J2ee-web-logic/src/main/java/controller/admin/LoginController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="263">
+              <caret line="36" column="19" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -133,19 +103,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/J2ee-web-utils/src/main/java/utils/UrlPatternUtils.java">
+        <entry file="file://$PROJECT_DIR$/J2ee-web-service/src/main/java/core/IEmployeeService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="59" selection-start-line="59" selection-end-line="59" />
+            <state relative-caret-position="75">
+              <caret line="5" column="15" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="15" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/J2ee-web-logic/src/main/java/filter/SecurityFilter.java">
+        <entry file="file://$PROJECT_DIR$/J2ee-web-dao/src/main/java/impl/CustomerDAOImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="912">
-              <caret line="100" column="30" selection-start-line="100" selection-start-column="30" selection-end-line="100" selection-end-column="30" />
+            <state relative-caret-position="105">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -154,10 +124,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/J2ee-web-logic/src/main/java/filter/AdminFilter.java">
+        <entry file="file://$PROJECT_DIR$/J2ee-web-dao/src/main/java/core/ICustomerDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="52" selection-start-line="52" selection-end-line="52" />
+            <state relative-caret-position="60">
+              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/J2ee-web-service/src/main/java/impl/EmployeeServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -166,15 +145,40 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/J2ee-web-utils/src/main/java/Security/SecurityConfig.java">
+        <entry file="file://$PROJECT_DIR$/J2ee-web-dao/src/main/java/impl/EmployeeMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="60" column="49" selection-start-line="60" selection-start-column="33" selection-end-line="60" selection-end-column="49" />
+            <state relative-caret-position="150">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2605#2606#0" expanded="true" />
-                <element signature="e#2647#2648#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/J2ee-web-service/src/main/java/impl/CustomerServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/J2ee-web-model/src/main/java/core/CustomerModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/J2ee-web-model/src/main/java/model/CustomerModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -212,6 +216,7 @@
       <find>logout</find>
       <find>log</find>
       <find>loginedUserEmployee</find>
+      <find>CustomerModel</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;${pageContext.request.contextPath}/resources/assets</replace>
@@ -225,18 +230,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/J2ee-web-constant/pom.xml" />
-        <option value="$PROJECT_DIR$/J2ee-web-dao/src/main/java/user/Validation.java" />
-        <option value="$PROJECT_DIR$/J2ee-web-gui/src/main/webapp/views/client/profile.jsp" />
-        <option value="$PROJECT_DIR$/J2ee-web-logic/src/main/java/controller/Login_Logout.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/J2ee-web-utils/src/main/java/logger/Logger_Server.java" />
-        <option value="$PROJECT_DIR$/database/insert.sql" />
         <option value="$PROJECT_DIR$/J2ee-web-utils/src/main/java/utils/UrlPatternUtils.java" />
         <option value="$PROJECT_DIR$/J2ee-web-dto/src/main/java/UserAccountDTO.java" />
         <option value="$PROJECT_DIR$/J2ee-web-model/src/main/java/client/CustomerModel.java" />
         <option value="$PROJECT_DIR$/J2ee-web-logic/src/main/java/config/SecurityConfig.java" />
-        <option value="$PROJECT_DIR$/J2ee-web-utils/src/main/java/Security/SecurityUtils.java" />
         <option value="$PROJECT_DIR$/J2ee-web-dto/src/main/java/UserAccount.java" />
         <option value="$PROJECT_DIR$/J2ee-web-logic/src/main/java/controller/ActionController.java" />
         <option value="$PROJECT_DIR$/J2ee-web-service/src/main/java/core/client/ICustomerService.java" />
@@ -248,10 +245,8 @@
         <option value="$PROJECT_DIR$/J2ee-web-utils/src/main/java/utils/FormUtil.java" />
         <option value="$PROJECT_DIR$/J2ee-web-gui/src/main/webapp/views/client/login.jsp" />
         <option value="$PROJECT_DIR$/J2ee-web-dto/src/main/java/client/CustomerDTO.java" />
-        <option value="$PROJECT_DIR$/J2ee-web-utils/src/main/java/BeanUtils/CustomerBeanUtil.java" />
         <option value="$PROJECT_DIR$/J2ee-web-dao/src/main/Source/META-INF/beans.xml" />
         <option value="$PROJECT_DIR$/J2ee-web-dao/src/main/java/impl/client/CustomerDAOImpl.java" />
-        <option value="$PROJECT_DIR$/J2ee-web-dao/src/main/java/impl/CustomerMapper.java" />
         <option value="$PROJECT_DIR$/J2ee-web-gui/src/main/webapp/views/client/home.jsp" />
         <option value="$PROJECT_DIR$/J2ee-web-service/src/main/java/impl/client/CustomerServiceImpl.java" />
         <option value="$PROJECT_DIR$/J2ee-web-dto/src/main/java/both/UserAccount.java" />
@@ -266,16 +261,26 @@
         <option value="$PROJECT_DIR$/J2ee-web-gui/target/J2ee-web-ui/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/J2ee-web-gui/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/J2ee-web-logic/src/main/java/filter/LogFilter.java" />
-        <option value="$PROJECT_DIR$/J2ee-web-utils/src/main/java/BeanUtils/EmployeeBeanUtil.java" />
         <option value="$PROJECT_DIR$/J2ee-web-service/src/main/java/core/admin/IEmployeeService.java" />
         <option value="$PROJECT_DIR$/J2ee-web-service/src/main/java/impl/admin/EmployeeServiceImpl.java" />
         <option value="$PROJECT_DIR$/J2ee-web-dao/src/main/java/core/admin/IEmployeeDAO.java" />
         <option value="$PROJECT_DIR$/J2ee-web-dao/src/main/java/impl/EmployeeMapper.java" />
-        <option value="$PROJECT_DIR$/J2ee-web-logic/src/main/java/controller/LoginController.java" />
         <option value="$PROJECT_DIR$/J2ee-web-utils/src/main/java/Security/SecurityConfig.java" />
         <option value="$PROJECT_DIR$/J2ee-web-dao/src/main/java/impl/admin/EmployeeDAOImpl.java" />
         <option value="$PROJECT_DIR$/J2ee-web-logic/src/main/java/filter/SecurityFilter.java" />
         <option value="$PROJECT_DIR$/J2ee-web-logic/src/main/java/filter/AdminFilter.java" />
+        <option value="$PROJECT_DIR$/J2ee-web-utils/src/main/java/Security/SecurityUtils.java" />
+        <option value="$PROJECT_DIR$/J2ee-web-utils/src/main/java/BeanUtils/CustomerBeanUtil.java" />
+        <option value="$PROJECT_DIR$/J2ee-web-utils/src/main/java/BeanUtils/EmployeeBeanUtil.java" />
+        <option value="$PROJECT_DIR$/J2ee-web-dao/src/main/java/impl/CustomerMapper.java" />
+        <option value="$PROJECT_DIR$/J2ee-web-dao/src/main/java/impl/EmployeeDAOImpl.java" />
+        <option value="$PROJECT_DIR$/J2ee-web-dao/src/main/java/impl/CustomerDAOImpl.java" />
+        <option value="$PROJECT_DIR$/J2ee-web-dao/src/main/java/core/IEmployeeDAO.java" />
+        <option value="$PROJECT_DIR$/J2ee-web-dao/src/main/java/core/ICustomerDAO.java" />
+        <option value="$PROJECT_DIR$/J2ee-web-service/src/main/java/impl/EmployeeServiceImpl.java" />
+        <option value="$PROJECT_DIR$/J2ee-web-service/src/main/java/impl/CustomerServiceImpl.java" />
+        <option value="$PROJECT_DIR$/J2ee-web-logic/src/main/java/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/J2ee-web-logic/src/main/java/controller/admin/LoginController.java" />
       </list>
     </option>
   </component>
@@ -306,8 +311,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -318,30 +323,25 @@
             <path>
               <item name="J2EE" type="b2602c69:ProjectViewProjectNode" />
               <item name="j2ee" type="462c0819:PsiDirectoryNode" />
-              <item name="J2ee-web-constant" type="462c0819:PsiDirectoryNode" />
+              <item name="J2ee-web-dto" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="J2EE" type="b2602c69:ProjectViewProjectNode" />
               <item name="j2ee" type="462c0819:PsiDirectoryNode" />
-              <item name="J2ee-web-dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="J2EE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="j2ee" type="462c0819:PsiDirectoryNode" />
-              <item name="J2ee-web-dao" type="462c0819:PsiDirectoryNode" />
+              <item name="J2ee-web-dto" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="J2EE" type="b2602c69:ProjectViewProjectNode" />
               <item name="j2ee" type="462c0819:PsiDirectoryNode" />
-              <item name="J2ee-web-dao" type="462c0819:PsiDirectoryNode" />
+              <item name="J2ee-web-dto" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="J2EE" type="b2602c69:ProjectViewProjectNode" />
               <item name="j2ee" type="462c0819:PsiDirectoryNode" />
-              <item name="J2ee-web-dao" type="462c0819:PsiDirectoryNode" />
+              <item name="J2ee-web-dto" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -349,7 +349,16 @@
             <path>
               <item name="J2EE" type="b2602c69:ProjectViewProjectNode" />
               <item name="j2ee" type="462c0819:PsiDirectoryNode" />
-              <item name="J2ee-web-dao" type="462c0819:PsiDirectoryNode" />
+              <item name="J2ee-web-dto" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="both" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="J2EE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="j2ee" type="462c0819:PsiDirectoryNode" />
+              <item name="J2ee-web-dto" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -358,181 +367,37 @@
             <path>
               <item name="J2EE" type="b2602c69:ProjectViewProjectNode" />
               <item name="j2ee" type="462c0819:PsiDirectoryNode" />
-              <item name="J2ee-web-dao" type="462c0819:PsiDirectoryNode" />
+              <item name="J2ee-web-model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="J2EE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="j2ee" type="462c0819:PsiDirectoryNode" />
+              <item name="J2ee-web-model" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="J2EE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="j2ee" type="462c0819:PsiDirectoryNode" />
+              <item name="J2ee-web-model" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="J2EE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="j2ee" type="462c0819:PsiDirectoryNode" />
+              <item name="J2ee-web-model" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="J2EE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="j2ee" type="462c0819:PsiDirectoryNode" />
+              <item name="J2ee-web-model" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="J2EE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="j2ee" type="462c0819:PsiDirectoryNode" />
-              <item name="J2ee-web-dao" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="J2EE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="j2ee" type="462c0819:PsiDirectoryNode" />
-              <item name="J2ee-web-dao" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="J2EE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="j2ee" type="462c0819:PsiDirectoryNode" />
-              <item name="J2ee-web-dto" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="J2EE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="j2ee" type="462c0819:PsiDirectoryNode" />
-              <item name="J2ee-web-dto" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="J2EE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="j2ee" type="462c0819:PsiDirectoryNode" />
-              <item name="J2ee-web-dto" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="J2EE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="j2ee" type="462c0819:PsiDirectoryNode" />
-              <item name="J2ee-web-dto" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="J2EE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="j2ee" type="462c0819:PsiDirectoryNode" />
-              <item name="J2ee-web-dto" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="J2EE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="j2ee" type="462c0819:PsiDirectoryNode" />
-              <item name="J2ee-web-gui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="J2EE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="j2ee" type="462c0819:PsiDirectoryNode" />
-              <item name="J2ee-web-gui" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="J2EE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="j2ee" type="462c0819:PsiDirectoryNode" />
-              <item name="J2ee-web-gui" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="J2EE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="j2ee" type="462c0819:PsiDirectoryNode" />
-              <item name="J2ee-web-gui" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="J2EE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="j2ee" type="462c0819:PsiDirectoryNode" />
-              <item name="J2ee-web-gui" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="J2EE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="j2ee" type="462c0819:PsiDirectoryNode" />
-              <item name="J2ee-web-logic" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="J2EE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="j2ee" type="462c0819:PsiDirectoryNode" />
-              <item name="J2ee-web-logic" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="J2EE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="j2ee" type="462c0819:PsiDirectoryNode" />
-              <item name="J2ee-web-logic" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="J2EE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="j2ee" type="462c0819:PsiDirectoryNode" />
-              <item name="J2ee-web-logic" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="J2EE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="j2ee" type="462c0819:PsiDirectoryNode" />
-              <item name="J2ee-web-logic" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="J2EE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="j2ee" type="462c0819:PsiDirectoryNode" />
-              <item name="J2ee-web-logic" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="J2EE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="j2ee" type="462c0819:PsiDirectoryNode" />
-              <item name="J2ee-web-logic" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="filter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="J2EE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="j2ee" type="462c0819:PsiDirectoryNode" />
-              <item name="J2ee-web-model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="J2EE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="j2ee" type="462c0819:PsiDirectoryNode" />
-              <item name="J2ee-web-model" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="J2EE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="j2ee" type="462c0819:PsiDirectoryNode" />
-              <item name="J2ee-web-model" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="J2EE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="j2ee" type="462c0819:PsiDirectoryNode" />
-              <item name="J2ee-web-model" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="J2EE" type="b2602c69:ProjectViewProjectNode" />
@@ -585,91 +450,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="J2EE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="j2ee" type="462c0819:PsiDirectoryNode" />
-              <item name="J2ee-web-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="J2EE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="j2ee" type="462c0819:PsiDirectoryNode" />
-              <item name="J2ee-web-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="J2EE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="j2ee" type="462c0819:PsiDirectoryNode" />
-              <item name="J2ee-web-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="J2EE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="j2ee" type="462c0819:PsiDirectoryNode" />
-              <item name="J2ee-web-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="J2EE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="j2ee" type="462c0819:PsiDirectoryNode" />
-              <item name="J2ee-web-utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="J2EE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="j2ee" type="462c0819:PsiDirectoryNode" />
-              <item name="J2ee-web-utils" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="J2EE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="j2ee" type="462c0819:PsiDirectoryNode" />
-              <item name="J2ee-web-utils" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="J2EE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="j2ee" type="462c0819:PsiDirectoryNode" />
-              <item name="J2ee-web-utils" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="J2EE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="j2ee" type="462c0819:PsiDirectoryNode" />
-              <item name="J2ee-web-utils" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Security" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="J2EE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="j2ee" type="462c0819:PsiDirectoryNode" />
-              <item name="J2ee-web-utils" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -806,27 +587,38 @@
       <workItem from="1557632261514" duration="1782000" />
       <workItem from="1557672417573" duration="2446000" />
       <workItem from="1557720065464" duration="19351000" />
+      <workItem from="1557763093076" duration="1017000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82492000" />
+    <option name="totallyTimeSpent" value="83509000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
       <window_info id="Capture Tool" order="1" />
       <window_info id="UI Designer" order="2" />
-      <window_info id="Favorites" order="3" sideWeight="0.17937219" side_tool="true" visible="true" weight="0.29960158" />
+      <window_info id="Favorites" order="3" sideWeight="0.17937219" side_tool="true" weight="0.29960158" />
       <window_info id="Web" order="4" side_tool="true" />
       <window_info id="Designer" order="5" />
-      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.8206278" visible="true" weight="0.29960158" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" sideWeight="0.8206278" visible="true" weight="0.30438247" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.32884902" />
       <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="3" weight="0.406577" />
+      <window_info anchor="bottom" id="Messages" order="3" visible="true" weight="0.406577" />
       <window_info anchor="bottom" id="Java Enterprise" order="4" weight="0.32884902" />
       <window_info anchor="bottom" id="Database Changes" order="5" />
       <window_info anchor="bottom" id="Application Servers" order="6" weight="0.32884902" />
@@ -836,7 +628,7 @@
       <window_info anchor="bottom" id="Debug" order="10" weight="0.38714498" />
       <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="13" />
+      <window_info anchor="bottom" id="TODO" order="13" weight="0.32884902" />
       <window_info anchor="bottom" id="Version Control" order="14" weight="0.32884902" />
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
@@ -878,123 +670,30 @@
         </entry>
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/J2ee-web-dao/src/main/java/core/IGenericDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/J2ee-web-utils/src/main/java/BeanUtils/CustomerBeanUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3">
-          <caret line="8" column="31" lean-forward="true" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/J2ee-web-dao/src/main/Source/META-INF/beans.xml" />
-    <entry file="file://$PROJECT_DIR$/J2ee-web-dao/src/main/java/core/ICustomerDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/J2ee-web-dao/src/main/java/impl/client/CustomerDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="13" column="112" selection-start-line="13" selection-start-column="98" selection-end-line="13" selection-end-column="112" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/J2ee-web-utils/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/J2ee-web-service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/J2ee-web-model/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/J2ee-web-gui/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/J2ee-web-dto/src/main/java/client/CustomerDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="51" column="24" selection-start-line="51" selection-start-column="24" selection-end-line="51" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/J2ee-web-constant/src/main/java/Constant/ErrorConstant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="60" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/J2ee-web-dto/src/main/java/both/UserAccount.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="24" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/J2ee-web-logic/src/main/java/controller/admin/PurchaseOrderController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/J2ee-web-gui/src/main/webapp/views/admin/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="61" column="15" lean-forward="true" selection-start-line="61" selection-start-column="15" selection-end-line="61" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/J2ee-web-gui/src/main/webapp/views/admin/purchase-order.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/J2ee-web-gui/src/main/webapp/views/client/home.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
           <caret line="68" column="30" lean-forward="true" selection-start-line="68" selection-start-column="30" selection-end-line="68" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/J2ee-web-dao/src/main/java/impl/CustomerMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -1084,16 +783,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/J2ee-web-logic/src/main/java/filter/LoginFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="31" column="27" lean-forward="true" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/J2ee-web-utils/src/main/java/utils/UserRoleRequestWrapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1153,16 +842,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/J2ee-web-dao/src/main/java/impl/EmployeeMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/J2ee-web-dao/src/main/java/core/admin/IEmployeeDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -1180,37 +859,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/J2ee-web-model/src/main/java/model/EmployeeModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/J2ee-web-service/src/main/java/core/admin/IEmployeeService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/J2ee-web-logic/src/main/java/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="68" selection-start-line="68" selection-end-line="68" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/J2ee-web-utils/src/main/java/BeanUtils/EmployeeBeanUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1221,42 +873,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/J2ee-web-logic/src/main/java/filter/SecurityFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="912">
-          <caret line="100" column="30" selection-start-line="100" selection-start-column="30" selection-end-line="100" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/J2ee-web-dao/src/main/java/impl/admin/EmployeeDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
+        <state relative-caret-position="390">
           <caret line="34" column="18" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/J2ee-web-utils/src/main/java/Security/SecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="60" column="49" selection-start-line="60" selection-start-column="33" selection-end-line="60" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2605#2606#0" expanded="true" />
-            <element signature="e#2647#2648#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/J2ee-web-logic/src/main/java/filter/AdminFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="52" selection-start-line="52" selection-end-line="52" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1265,15 +885,222 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/J2ee-web-utils/src/main/java/utils/UrlPatternUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
+        <state relative-caret-position="810">
           <caret line="59" selection-start-line="59" selection-end-line="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/J2ee-web-logic/src/main/java/filter/SecurityFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1290">
+          <caret line="100" column="30" selection-start-line="100" selection-start-column="30" selection-end-line="100" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/J2ee-web-logic/src/main/java/filter/AdminFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="52" selection-start-line="52" selection-end-line="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/J2ee-web-utils/src/main/java/Security/SecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="60" column="49" selection-start-line="60" selection-start-column="33" selection-end-line="60" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/J2ee-web-model/src/main/java/core/CategoryModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/J2ee-web-logic/src/main/java/filter/LoginFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="31" column="27" lean-forward="true" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/J2ee-web-utils/src/main/java/Security/SecurityUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="289">
+          <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/J2ee-web-utils/src/main/java/BeanUtils/CustomerBeanUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="18" selection-start-column="18" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/J2ee-web-utils/src/main/java/BeanUtils/EmployeeBeanUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/J2ee-web-dao/src/main/java/impl/CustomerMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/J2ee-web-dao/src/main/java/impl/EmployeeDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/J2ee-web-dao/src/main/java/core/ICategoryDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/J2ee-web-dao/src/main/java/core/IEmployeeDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/J2ee-web-model/src/main/java/model/EmployeeModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/J2ee-web-model/src/main/java/core/CustomerModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/J2ee-web-dao/src/main/java/core/AbstractDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="24" column="63" lean-forward="true" selection-start-line="24" selection-start-column="63" selection-end-line="24" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/J2ee-web-model/src/main/java/model/CustomerModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/lang/StringBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="75" column="19" selection-start-line="75" selection-start-column="19" selection-end-line="75" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/J2ee-web-dao/src/main/java/impl/CustomerDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/J2ee-web-dao/src/main/java/core/ICustomerDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/J2ee-web-service/src/main/java/impl/EmployeeServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/J2ee-web-dao/src/main/java/impl/EmployeeMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/J2ee-web-service/src/main/java/impl/CustomerServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/J2ee-web-logic/src/main/java/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-762">
+          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/J2ee-web-service/src/main/java/core/IEmployeeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="15" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/J2ee-web-logic/src/main/java/controller/admin/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="36" column="19" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1330,7 +1157,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>J2ee-web-utils</last-edited>
+          <last-edited>J2ee-web-dao</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

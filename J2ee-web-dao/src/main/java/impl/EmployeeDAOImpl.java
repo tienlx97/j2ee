@@ -1,10 +1,6 @@
 package impl;
 
-<<<<<<< HEAD:J2ee-web-dao/src/main/java/impl/admin/EmployeeDAOImpl.java
-import model.EmployeeModel;
-=======
 import core.EmployeeModel;
->>>>>>> ac5115a88709d05b80a8bb08d62cf5a5b44f666d:J2ee-web-dao/src/main/java/impl/EmployeeDAOImpl.java
 import core.AbstractDAO;
 import core.IEmployeeDAO;
 
