@@ -2,7 +2,7 @@ package impl.client;
 
 import BeanUtils.CustomerBeanUtil;
 import client.CustomerDTO;
-import client.CustomerModel;
+import model.CustomerModel;
 import core.ICustomerDAO;
 import core.client.ICustomerService;
 
@@ -16,6 +16,7 @@ public class CustomerServiceImpl implements ICustomerService {
 
     public CustomerDTO checkCustomerLogin(CustomerDTO customerDTO) {
         CustomerModel model = CustomerBeanUtil.convert2Model(customerDTO);
+        ICustomerDAO iCustomerDAO=new CustomerDAOImpl();
         model = iCustomerDAO.checkCustomerLogin(model);
         return CustomerBeanUtil.convert2DTO(model);
     }

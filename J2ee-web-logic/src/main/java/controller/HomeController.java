@@ -10,25 +10,24 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
+
+import both.UserAccount;
+import utils.SessionHelper;
+
+
 @WebServlet(urlPatterns = "/home/*")
 public class HomeController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        HttpSession session = request.getSession(false);
-        if (session != null) {
-            String name = (String) session.getAttribute("name");
-            if (name != null) {
-                request.setAttribute("name", name);
-                request.getRequestDispatcher(UrlConstant.CLIENT_HOME_JSP).forward(request, response);
-            }
-            else{
-                request.setAttribute("name", "");
-                request.getRequestDispatcher(UrlConstant.CLIENT_HOME_JSP).forward(request, response);
-            }
-        }
-        else{
-            request.setAttribute("name", "");
+        UserAccount user = SessionHelper.getLoginedUserCustomer(request.getSession(false));
+        if (user != null) {
+            System.out.println("name "+user.getUserName());
+            request.setAttribute("name", user.getUserName());
             request.getRequestDispatcher(UrlConstant.CLIENT_HOME_JSP).forward(request, response);
+            return;
         }
+        request.setAttribute("name", "");
+        request.getRequestDispatcher(UrlConstant.CLIENT_HOME_JSP).forward(request, response);
+        return;
     }
 }

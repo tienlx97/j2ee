@@ -2,6 +2,7 @@ package admin;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 public class EmployeeDTO implements Serializable {
     String id;
@@ -13,7 +14,15 @@ public class EmployeeDTO implements Serializable {
     String image;
     boolean gender;
     String phone;
+    List<String> roles;
 
+    public List<String> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(List<String> roles) {
+        this.roles = roles;
+    }
 
     public String getUsername() {
         return username;

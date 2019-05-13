@@ -1,7 +1,6 @@
 package impl;
 
-import admin.EmployeeModel;
-import client.CustomerModel;
+import model.EmployeeModel;
 import core.IRowMapper;
 
 import java.sql.ResultSet;
@@ -19,4 +18,6 @@ public class EmployeeMapper implements IRowMapper<EmployeeModel> {
             return null;
         }
     }
+
+
 }

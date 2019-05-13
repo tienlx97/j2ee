@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="J2ee-web-constant" />
+        <module name="J2ee-web-model" />
+        <module name="J2ee-web-dao" />
+        <module name="J2ee-web-utils" />
+        <module name="J2ee-web-service" />
+        <module name="J2ee-web-gui" />
+        <module name="J2ee-web-dto" />
+        <module name="J2ee-web-logic" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>
