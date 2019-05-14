@@ -59,6 +59,7 @@ public class SecurityConfig {
         List<String> urlPatterns3 = new ArrayList<String>();
 
         urlPatterns3.add("/admin/manager_employee");
+        urlPatterns3.add("/admin/category");
 
         mapConfig.put(FUNC_3, urlPatterns3);
 

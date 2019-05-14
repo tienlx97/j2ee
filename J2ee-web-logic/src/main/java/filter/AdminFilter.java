@@ -63,7 +63,7 @@ public class AdminFilter implements Filter {
         }
         else{
             String requestUri = request.getRequestURI();
-            response.sendRedirect(request.getContextPath() + "/login");
+            response.sendRedirect(request.getContextPath() + "/login/admin");
             return;
         }
 

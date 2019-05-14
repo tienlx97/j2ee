@@ -11,6 +11,7 @@ import impl.EmployeeServiceImpl;
 import impl.CustomerServiceImpl;
 import utils.FormUtil;
 
+import javax.inject.Inject;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -24,8 +25,10 @@ import both.UserAccount;
 
 @WebServlet(urlPatterns = "/login/*")
 public class LoginController extends HttpServlet {
-
+    @Inject
     private IEmployeeService iEmployeeService;
+
+    @Inject
     private ICustomerService iCustomerService;
 
     @Override
@@ -63,7 +66,7 @@ public class LoginController extends HttpServlet {
         // If it is intent on logging with employee role
         if (urlRequest.endsWith("/admin")) {
             EmployeeDTO employeeDTO = FormUtil.toDTO(EmployeeDTO.class, request);
-            iEmployeeService = new EmployeeServiceImpl(); // fail when using CDI in j2ee, don't know why
+//            iEmployeeService = new EmployeeServiceImpl(); // fail when using CDI in j2ee, don't know why
             EmployeeDTO user = iEmployeeService.checkEmployeeLogin(employeeDTO);
             if (user != null) {
                 SessionHelper.storeLoginedUserEmployee(request.getSession(), new UserAccount(user.getLastname() + " "+user.getFirstname(),user.getRoles()));
@@ -78,7 +81,7 @@ public class LoginController extends HttpServlet {
         // If it is intent on logging with customer role
         if (urlRequest.endsWith("/login")) {
             CustomerDTO customerDTO = FormUtil.toDTO(CustomerDTO.class, request);
-            iCustomerService = new CustomerServiceImpl(); // fail when using CDI in j2ee, don't know why
+//            iCustomerService = new CustomerServiceImpl(); // fail when using CDI in j2ee, don't know why
             CustomerDTO user = iCustomerService.checkCustomerLogin(customerDTO);
             if (user != null) {
                 SessionHelper.storeLoginedUserCustomer(request.getSession(), new UserAccount(user.getUsername(), null));

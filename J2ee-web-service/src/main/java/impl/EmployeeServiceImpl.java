@@ -23,7 +23,7 @@ public class EmployeeServiceImpl implements IEmployeeService {
         if(employeeModel==null) {
             return null;
         }
-            return EmployeeBeanUtil.convert2DTO(employeeModel, iEmployeeDAO.getRoles(employeeModel));
+        return EmployeeBeanUtil.convert2DTO(employeeModel, iEmployeeDAO.getRoles(employeeModel));
 
     }
 }

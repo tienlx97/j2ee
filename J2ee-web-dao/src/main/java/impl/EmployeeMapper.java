@@ -14,8 +14,16 @@ public class EmployeeMapper {
             EmployeeModel employee = new EmployeeModel();
             employee.setFirstname(rs.getString("emp_firstname"));
             employee.setLastname(rs.getString("emp_lastname"));
-            employee.setImage(rs.getString("emp_image"));
+            employee.setId(rs.getString("emp_id"));
             return employee;
+        } catch (SQLException e) {
+            return null;
+        }
+    }
+
+    public String getRoles(ResultSet rs) {
+        try {
+            return rs.getString("function_id");
         } catch (SQLException e) {
             return null;
         }

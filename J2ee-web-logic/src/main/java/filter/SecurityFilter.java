@@ -47,7 +47,6 @@ public class SecurityFilter implements Filter {
 
         // Moving to next filter ( AdminFilter ) in chain
         if(request.getServletPath().startsWith("/admin")){
-            System.out.printf("admin filter");
             chain.doFilter(request, response);
             return;
         }
