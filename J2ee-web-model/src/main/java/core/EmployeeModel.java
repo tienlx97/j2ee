@@ -9,10 +9,21 @@ public class EmployeeModel {
     String firstname;
     String lastname;
     Date dob;
+    Date date_created;
+    Date date_updated;
     String image;
-    boolean gender;
+    int gender;
     String phone;
 
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
+    }
+
+    int status;
 
     public String getUsername() {
         return username;
@@ -70,11 +81,11 @@ public class EmployeeModel {
         this.image = image;
     }
 
-    public boolean isGender() {
+    public int getGender() {
         return gender;
     }
 
-    public void setGender(boolean gender) {
+    public void setGender(int gender) {
         this.gender = gender;
     }
 
@@ -84,5 +95,21 @@ public class EmployeeModel {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public Date getDate_created() {
+        return date_created;
+    }
+
+    public void setDate_created(Date date_created) {
+        this.date_created = date_created;
+    }
+
+    public Date getDate_updated() {
+        return date_updated;
+    }
+
+    public void setDate_updated(Date date_updated) {
+        this.date_updated = date_updated;
     }
 }

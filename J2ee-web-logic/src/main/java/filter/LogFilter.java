@@ -15,6 +15,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
+
+import Constant.UrlConstant;
 import org.apache.log4j.Logger;
 
 import both.UserAccount;
@@ -38,9 +40,39 @@ public class LogFilter implements Filter {
         HttpServletResponse response = (HttpServletResponse) resp;
 
         String servletPath = request.getServletPath();
+        // Moving to next filter ( AdminFilter ) in chain
+        if(request.getServletPath().startsWith("/admin")){
+            UserAccount user = SessionHelper.getLoginedUserEmployee(request.getSession(false));
+            if (user != null) {
 
-        System.out.println("#INFO " +new java.util.Date() + " - ServletPath :" + servletPath //
-                + ", URL =" + request.getRequestURL());
+                // User Name
+                String userName = user.getUserName();
+
+                // Các vai trò (Role).
+                List<String> roles = user.getRoles();
+
+                System.out.println("#INFO " + new java.util.Date() +"- Admin: " + userName + "- Roles: "+roles
+                        +" - ServletPath :" + servletPath //
+                        + ", URL =" + request.getRequestURL());
+            }
+            else{
+                System.out.println("#INFO " +new java.util.Date()+"- Anonymous" + " - ServletPath :" + servletPath //
+                        + ", URL =" + request.getRequestURL());
+            }
+        }
+        else{
+            UserAccount user = SessionHelper.getLoginedUserCustomer(request.getSession(false));
+            if (user != null) {
+                System.out.println("#INFO " + new java.util.Date() +"- User: " + user.getUserName()
+                        +" - ServletPath :" + servletPath //
+                        + ", URL =" + request.getRequestURL());
+
+            }
+            else{
+                System.out.println("#INFO " +new java.util.Date()+"- Anonymous" + " - ServletPath :" + servletPath //
+                        + ", URL =" + request.getRequestURL());
+            }
+        }
 
         // Go to the next element (filter or target) in chain.
         chain.doFilter(req, resp);

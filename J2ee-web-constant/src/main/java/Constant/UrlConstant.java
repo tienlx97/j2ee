@@ -30,5 +30,12 @@ public class UrlConstant {
     public static final String URL_ADMIN_CATEGORY = "/admin/category";
     public static final String ADMIN_CATEGORY_JSP = "/views/admin/category.jsp";
 
+    public static final String URL_ADMIN_EMPLOYEE_DETAIL = "/admin/views/employee";
+    public static final String URL_ADMIN_EMPLOYEE_DETAIL_JSP = "/views/admin/detail-employee.jsp";
+
+    public static final String URL_ADMIN_EMPLOYEE_MODIFYING = "/admin/modify/employee";
+    public static final String URL_ADMIN_EMPLOYEE_MODIFYING_JSP = "/views/admin/modify-employee.jsp";
+
+
 }
 

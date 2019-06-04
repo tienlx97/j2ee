@@ -12,9 +12,20 @@ public class EmployeeDTO implements Serializable {
     String lastname;
     Date dob;
     String image;
-    boolean gender;
+    int gender;
     String phone;
+    Date date_created;
+    Date date_updated;
     List<String> roles;
+    int status;
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
+    }
 
     public List<String> getRoles() {
         return roles;
@@ -80,11 +91,11 @@ public class EmployeeDTO implements Serializable {
         this.image = image;
     }
 
-    public boolean isGender() {
+    public int getGender() {
         return gender;
     }
 
-    public void setGender(boolean gender) {
+    public void setGender(int gender) {
         this.gender = gender;
     }
 
@@ -94,5 +105,34 @@ public class EmployeeDTO implements Serializable {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public Date getDate_created() {
+        return date_created;
+    }
+
+    public void setDate_created(Date date_created) {
+        this.date_created = date_created;
+    }
+
+    public Date getDate_updated() {
+        return date_updated;
+    }
+
+    public void setDate_updated(Date date_updated) {
+        this.date_updated = date_updated;
+    }
+
+    public String convertGender(){
+        return this.gender==1 ? "Male":"Female";
+    }
+
+    public String getStatusColor(){
+        if(this.status==0){
+            return "background-color:#ef5350; font;color:white";
+        }
+        else{
+            return "background-color:white; font;color:black";
+        }
     }
 }

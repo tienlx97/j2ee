@@ -23,10 +23,16 @@ public class EmployeeBeanUtil {
         if(model==null)
             return null;
         EmployeeDTO dto = new EmployeeDTO();
+        dto.setId(model.getId());
+        dto.setUsername(model.getUsername());
+        dto.setDate_created(model.getDate_created());
+        dto.setDate_updated(model.getDate_updated());
+        dto.setGender(model.getGender());
         dto.setFirstname(model.getFirstname());
         dto.setLastname(model.getLastname());
         dto.setImage(model.getImage());
         dto.setRoles(role);
+        dto.setStatus(model.getStatus());
         return dto;
     }
 

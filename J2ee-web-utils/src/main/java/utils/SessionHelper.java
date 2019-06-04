@@ -19,7 +19,6 @@ public class SessionHelper {
     public static UserAccount getLoginedUserCustomer(HttpSession session) {
         if (session==null) return null;
         UserAccount loginedUser = (UserAccount) session.getAttribute("loginedUserCustomer");
-        System.out.println("loginedUser "+loginedUser);
         return loginedUser;
     }
 

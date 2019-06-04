@@ -2,6 +2,7 @@ package impl;
 
 import core.EmployeeModel;
 import core.AbstractDAO;
+import core.FunctionRoleModel;
 import core.IEmployeeDAO;
 
 import java.util.*;
@@ -21,6 +22,18 @@ public class EmployeeDAOImpl extends AbstractDAO<EmployeeModel> implements IEmpl
         StringBuilder query = new StringBuilder("SELECT function_id from j2_employee_function where emp_id = ?");
         List<String> datas = read2(query.toString(),EmployeeMapper.class,new EmployeeMapper(),"getRoles",employeeModel.getId() );
 
-        return datas;
+        return datas.isEmpty()?null:datas;
+    }
+
+    public List<EmployeeModel> getAllEmployee(){
+        StringBuilder query = new StringBuilder("SELECT * from j2ee.j2_employee");
+        List<EmployeeModel> employees = read2(query.toString(),EmployeeMapper.class,new EmployeeMapper(),"getAllEmployee" );
+        return employees.isEmpty() ? null : employees;
+    }
+
+    public List<FunctionRoleModel> getAllFunctionRole(){
+        StringBuilder query = new StringBuilder("SELECT * FROM j2ee.j2_function");
+        List<FunctionRoleModel> functionroles = read2(query.toString(),EmployeeMapper.class,new EmployeeMapper(),"getAllFunctionRoles" );
+        return functionroles.isEmpty() ? null : functionroles;
     }
 }

@@ -68,7 +68,7 @@ public class AbstractDAO<T> implements IGenericDAO<T> {
         ResultSet rs = null;
         PreparedStatement  stm = null;
         try {
-            conn = MysqlConnection.getInstance().connectByDatasource().getConnection();
+            conn = MysqlConnection.getInstance().connect();
             stm = conn.prepareStatement(query);
             MysqlConnection.getInstance().addParameters(stm, params);
             rs = stm.executeQuery();
