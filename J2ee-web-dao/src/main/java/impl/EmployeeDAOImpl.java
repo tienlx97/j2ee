@@ -36,4 +36,43 @@ public class EmployeeDAOImpl extends AbstractDAO<EmployeeModel> implements IEmpl
         List<FunctionRoleModel> functionroles = read2(query.toString(),EmployeeMapper.class,new EmployeeMapper(),"getAllFunctionRoles" );
         return functionroles.isEmpty() ? null : functionroles;
     }
+    public EmployeeModel getEmployeeById(int id) {
+        StringBuilder query = new StringBuilder("SELECT * FROM j2_employee WHERE emp_id = ? ");
+
+        List<EmployeeModel> employees =  read2(query.toString(),EmployeeMapper.class,new EmployeeMapper(),"getAllEmployee", id);
+
+        return employees.isEmpty() ? null : employees.get(0);
+    }
+
+    public String saveNewPassword(String id,String newpassword) {
+        StringBuilder query = new StringBuilder("call update_newpassword(?,?)");
+
+        List<String> result =  read2(query.toString(),EmployeeMapper.class,new EmployeeMapper(),"getResult",id, newpassword);
+
+        return result.isEmpty() ? "0" : result.get(0);
+    }
+
+    public String activeEmployee(String id) {
+        StringBuilder query = new StringBuilder("call active_employee(?)");
+
+        List<String> result = read2(query.toString(), EmployeeMapper.class, new EmployeeMapper(), "getResult", id);
+
+        return result.isEmpty() ? "0" : result.get(0);
+    }
+    public String disableEmployee(String id) {
+        StringBuilder query = new StringBuilder("call disable_employee(?)");
+
+        List<String> result = read2(query.toString(), EmployeeMapper.class, new EmployeeMapper(), "getResult", id);
+
+        return result.isEmpty() ? "0" : result.get(0);
+    }
+
+    public String removeEmployee(String id) {
+        StringBuilder query = new StringBuilder("call remove_employee(?)");
+
+        List<String> result = read2(query.toString(), EmployeeMapper.class, new EmployeeMapper(), "getResult", id);
+
+        return result.isEmpty() ? "0" : result.get(0);
+    }
+
 }

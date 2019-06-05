@@ -22,11 +22,20 @@ public class EmployeeMapper {
         }
     }
 
+
     public String getRoles(ResultSet rs) {
         try {
             return rs.getString("function_id");
         } catch (SQLException e) {
             return null;
+        }
+    }
+
+    public String getResult(ResultSet rs) {
+        try {
+            return rs.getString("result");
+        } catch (SQLException e) {
+            return "0";
         }
     }
 
@@ -41,6 +50,7 @@ public class EmployeeMapper {
             employee.setDate_updated(rs.getDate("emp_updated_at"));
             employee.setUsername(rs.getString("emp_username"));
             employee.setStatus(rs.getInt("emp_status"));
+            employee.setDob(rs.getDate("emp_dob"));
             return employee;
         } catch (SQLException e) {
             return null;

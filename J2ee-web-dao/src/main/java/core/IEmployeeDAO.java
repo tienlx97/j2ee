@@ -11,5 +11,10 @@ public interface IEmployeeDAO extends IGenericDAO<EmployeeModel> {
     List<String> getRoles(EmployeeModel employeeModel);
     List<EmployeeModel> getAllEmployee();
     List<FunctionRoleModel> getAllFunctionRole();
+    EmployeeModel getEmployeeById(int id);
 
+    String activeEmployee(String id);
+    String disableEmployee(String id);
+    String removeEmployee(String id);
+    String saveNewPassword(String id,String newpassword);
 }

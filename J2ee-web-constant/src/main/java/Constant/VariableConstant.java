@@ -19,5 +19,7 @@ public class VariableConstant {
     public static final String EMPTY_CATEGORY_ID = "EMPTY_CATEGORY_ID";
     public static final String EMPTY_CATEGORY_NAME = "EMPTY_CATEGORY_NAME";
     public static final String EMPTY_CATEGORY_PARENT = "EMPTY_CATEGORY_PARENT";
+
+    public static final String ROOT_PATH="/J2ee_web_gui_war_exploded/";
 }
 

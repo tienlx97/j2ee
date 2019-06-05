@@ -9,4 +9,10 @@ public interface IEmployeeService {
 
     List<EmployeeDTO> getAllEmployee();
     List<FunctionRole> getAllFunctionRole();
+
+    EmployeeDTO getEmployeeById(int id);
+    String activeEmployee(String id);
+    String disableEmployee(String id);
+    String removeEmployee(String id);
+    String getNewPassword(String id);
 }

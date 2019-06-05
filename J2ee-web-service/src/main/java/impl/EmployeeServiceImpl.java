@@ -10,7 +10,7 @@ import java.util.List;
 
 import javax.enterprise.inject.Default;
 import javax.inject.Inject;
-
+import java.util.Random;
 @Default
 public class EmployeeServiceImpl implements IEmployeeService {
 
@@ -46,4 +46,49 @@ public class EmployeeServiceImpl implements IEmployeeService {
         }
         return functionRoleList;
     }
+
+    public EmployeeDTO getEmployeeById(int id) {
+        iEmployeeDAO = new EmployeeDAOImpl();
+        EmployeeModel employeeModel=iEmployeeDAO.getEmployeeById(id);
+        if(employeeModel==null) {
+            return null;
+        }
+        return EmployeeBeanUtil.convert2DTO(employeeModel, iEmployeeDAO.getRoles(employeeModel));
+    }
+    public String getNewPassword(String id) {
+        iEmployeeDAO = new EmployeeDAOImpl();
+
+        int leftLimit = 97; // letter 'a'
+        int rightLimit = 122; // letter 'z'
+        int targetStringLength = 10;
+        Random random = new Random();
+        StringBuilder buffer = new StringBuilder(targetStringLength);
+        for (int i = 0; i < targetStringLength; i++) {
+            int randomLimitedInt = leftLimit + (int)
+                    (random.nextFloat() * (rightLimit - leftLimit + 1));
+            buffer.append((char) randomLimitedInt);
+        }
+        String password = buffer.toString();
+        String result=iEmployeeDAO.saveNewPassword(id,password);
+        if(!result.equals("1")) {
+            return "0";
+        }
+        return password;
+    }
+
+    public String activeEmployee(String id) {
+        iEmployeeDAO = new EmployeeDAOImpl();
+        return iEmployeeDAO.activeEmployee(id);
+    }
+
+    public String disableEmployee(String id) {
+        iEmployeeDAO = new EmployeeDAOImpl();
+        return iEmployeeDAO.disableEmployee(id);
+    }
+
+    public String removeEmployee(String id) {
+        iEmployeeDAO = new EmployeeDAOImpl();
+        return iEmployeeDAO.removeEmployee(id);
+    }
+
 }

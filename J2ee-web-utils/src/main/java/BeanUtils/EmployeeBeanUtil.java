@@ -32,6 +32,7 @@ public class EmployeeBeanUtil {
         dto.setLastname(model.getLastname());
         dto.setImage(model.getImage());
         dto.setRoles(role);
+        dto.setDob(model.getDob());
         dto.setStatus(model.getStatus());
         return dto;
     }
