@@ -1,6 +1,6 @@
 package controller.admin;
 
-import both.FunctionRole;
+import java.text.SimpleDateFormat;
 import core.IEmployeeService;
 import core.EmployeeDTO;
 import java.io.PrintWriter;
@@ -44,7 +44,26 @@ public class EditEmployeeController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-        System.out.println(req.getParameter(""));
+        EmployeeDTO employee= new EmployeeDTO();
+        employee.setId(req.getParameter("emp_id"));
+        employee.setFirstname(req.getParameter("firstname"));
+        employee.setLastname(req.getParameter("lastname"));
+        employee.setUsername(req.getParameter("username"));
+        employee.setGender(Integer.parseInt(req.getParameter("gender")));
 
+        String roles =req.getParameter("roles");
+        iEmployeeService = new impl.EmployeeServiceImpl();
+        String result = iEmployeeService.updateEmployee(employee,req.getParameter("date_of_birth"),roles);
+        Gson gson = new Gson();
+        String employeeJsonString = gson.toJson(result);
+        PrintWriter out = resp.getWriter();
+        resp.setContentType("application/json");
+        resp.setCharacterEncoding("UTF-8");
+        try {
+            out.println(employeeJsonString);
+            out.flush();
+        } finally {
+            out.close();
+        }
     }
 }

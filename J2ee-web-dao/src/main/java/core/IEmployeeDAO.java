@@ -17,4 +17,9 @@ public interface IEmployeeDAO extends IGenericDAO<EmployeeModel> {
     String disableEmployee(String id);
     String removeEmployee(String id);
     String saveNewPassword(String id,String newpassword);
+    String updateEmployee(EmployeeModel employeeModel,String dob);
+    String addEmployeeRole(String id,String role);
+    String removeEmployeeRole(String id,String role);
+
+
 }

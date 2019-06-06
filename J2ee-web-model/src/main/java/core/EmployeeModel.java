@@ -14,7 +14,7 @@ public class EmployeeModel {
     String image;
     int gender;
     String phone;
-
+    String roles;
     public int getStatus() {
         return status;
     }

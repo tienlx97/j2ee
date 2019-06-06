@@ -74,5 +74,29 @@ public class EmployeeDAOImpl extends AbstractDAO<EmployeeModel> implements IEmpl
 
         return result.isEmpty() ? "0" : result.get(0);
     }
+    public String updateEmployee(EmployeeModel employee,String dob) {
+        StringBuilder query = new StringBuilder("call update_employee(?,?,?,?,?,?)");
 
+        List<String> datas = read2(query.toString(),EmployeeMapper.class,new EmployeeMapper(),"getResult",
+                employee.getId(),employee.getFirstname(),employee.getLastname(),employee.getUsername(),
+                employee.getGender(),dob);
+
+        return datas.isEmpty()? "0" : datas.get(0);
+    }
+    public String addEmployeeRole(String id,String role){
+        StringBuilder query = new StringBuilder("call add_role_employee(?,?)");
+
+        List<String> datas = read2(query.toString(),EmployeeMapper.class,new EmployeeMapper(),"getResult",
+                id,role);
+        return datas.isEmpty()? "0" : datas.get(0);
+
+    }
+    public String removeEmployeeRole(String id,String role){
+        StringBuilder query = new StringBuilder("call remove_role_employee(?,?)");
+
+        List<String> datas = read2(query.toString(),EmployeeMapper.class,new EmployeeMapper(),"getResult",
+                id,role);
+        return datas.isEmpty()? "0" : datas.get(0);
+
+    }
 }

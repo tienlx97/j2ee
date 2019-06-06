@@ -293,8 +293,7 @@
                 <div class="modal-body">
                     <div class="x_content">
                         <br/>
-                        <div method="post" class="form-horizontal form-label-left input_mask" id="edit_form">
-
+                        <div method="post" class="form-horizontal form-label-left input_mask">
                             <div class="row">
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <div class="form-group">
@@ -412,8 +411,8 @@
                             <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3"
                                  style="display:flex;justify-content:flex-end">
                                 <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
-                                <button class="btn btn-primary" type="reset" id="btn_reset">Reset</button>
-                                <button type="submit" class="btn btn-success">Submit</button>
+                                <button class="btn btn-primary" type="reset" id="btn_reset_info">Reset</button>
+                                <button type="submit" class="btn btn-success" id="submit_form" >Submit</button>
                             </div>
                         </div>
 
@@ -527,8 +526,9 @@
             }
         });
     });
-    $('#btn_reset').click(function () {
+    $('#btn_reset_info').click(function () {
         var id = $('#emp-id').val();
+        console.log(id);
         $.ajax({
             url: '<%=VariableConstant.ROOT_PATH%>' + '/admin/edit_info_employee/' + id,
             success: function (response) {
@@ -543,12 +543,24 @@
                 $('#date-created').val(response['date_created']);
                 $('#date-updated').val(response['date_updated']);
                 $('#date-of-birth').val(response['dob']);
+                $('#table-role').empty();
+                $('#function-list').empty();
                 var roles = response['roles'];
+                var temp_role = [0, 0, 0, 0, 0];
                 for (var i = 0; i < roles.length; i++) {
+                    temp_role[roles[i] - 1] = 1;
                     $('#table-role').append($('<option>', {
                         value: roles[i],
-                        text: name_role[roles[i]]
+                        text: name_role[roles[i] - 1]
                     }));
+                }
+                for (var i = 0; i < temp_role.length; i++) {
+                    if (temp_role[i] == 0) {
+                        $('#function-list').append($('<option>', {
+                            value: i + 1,
+                            text: name_role[i]
+                        }));
+                    }
                 }
             }
         });
@@ -590,7 +602,6 @@
                 $('#modal_password').modal();
             }
         });
-        location.reload();
 
     });
 
@@ -634,30 +645,52 @@
         });
 
     });
-    $("#edit_form").submit(function (e) {
+    $("#submit_form").click(function (e) {
         e.preventDefault();
-        form = $(this);
-        requestUrl = "/admin/edit_info_employee/";
-        requestMethod = form.attr('method');
-        requestData = form.serialize();
-        console.log(requestUrl);
-        console.log(requestMethod);
-        console.log(requestData);
+        var id = $('#emp-id').val();
+        var gender=0;
+        if ($("#gender_male").prop("checked")) {
+            gender=1;
+        }
+        var roles=[]
+        $('#table-role > option').each(function() {
+            roles.push($(this).val());
+        });
         $.ajax({
-            url: requestUrl,
-            type: requestMethod,
-            data: requestData,
+            url: '<%=VariableConstant.ROOT_PATH%>' + "admin/edit_info_employee/",
+            type: "POST",
+            data: {emp_id:id,firstname:$('#first-name').val(),lastname:$('#last-name').val(),username:$('#user-name').val(),
+            gender:gender,date_of_birth:$('#date-of-birth').val(), roles:roles.join("-")},
             dataType: 'json',
             beforeSend: function () {
+                new PNotify( {
+                        title:"Update Employee", type:"info", text:"Your actions is being executed", nonblock: {
+                            nonblock: !0
+                        } , addclass:"dark", styling:"bootstrap3",delay: 2000
+                        ,hide: true
+                    }
+                );
+                $('#modal_edit').modal("hide");
+
             },
             success: function (response) {
-                if (response.errors.length > 0) {
-                    console.log("error");
-                } else if (response.success !== null) {
-                    console.log(response.data);
+                if (response!="1") {
+                    new PNotify( {
+                            title:"Update Employee", type:"error", text:"Failed to execute your action", nonblock: {
+                                nonblock: !0
+                            } , addclass:"dark", styling:"bootstrap3",delay: 2000
+                            ,hide: true
+                        }
+                    );
                 } else {
-                    console.log(response.data);
-
+                    new PNotify( {
+                            title:"Update Employee", type:"success", text:"Your employee whose ID is "+id
+                        +" has been updated", nonblock: {
+                                nonblock: !0
+                            } , addclass:"dark", styling:"bootstrap3",delay: 2000
+                            ,hide: true
+                        }
+                    );
                 }
             }
         });

@@ -9,6 +9,11 @@ public class EmployeeBeanUtil {
         EmployeeModel model = new EmployeeModel();
         model.setUsername(dto.getUsername());
         model.setPassword(dto.getPassword());
+        model.setFirstname(dto.getFirstname());
+        model.setLastname(dto.getLastname());
+        model.setDob(dto.getDob());
+        model.setGender(dto.getGender());
+        model.setId(dto.getId());
         return model;
     }
 

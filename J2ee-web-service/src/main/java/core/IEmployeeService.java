@@ -15,4 +15,5 @@ public interface IEmployeeService {
     String disableEmployee(String id);
     String removeEmployee(String id);
     String getNewPassword(String id);
+    String updateEmployee(EmployeeDTO employeeDTO,String dob,String roles);
 }

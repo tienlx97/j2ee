@@ -90,5 +90,26 @@ public class EmployeeServiceImpl implements IEmployeeService {
         iEmployeeDAO = new EmployeeDAOImpl();
         return iEmployeeDAO.removeEmployee(id);
     }
+    public String updateEmployee(EmployeeDTO employeeDTO,String dob,String roles) {
+        EmployeeModel employeeModel = EmployeeBeanUtil.convert2ModelLoginPage(employeeDTO);
+        iEmployeeDAO = new EmployeeDAOImpl();
+        List<String> rolesCur=iEmployeeDAO.getRoles(employeeModel);
+        String[] rolesNew=roles.split("-");
+        List<String> rolesNewList=new ArrayList<>();
+        for(String role : rolesNew){
+            rolesNewList.add(role);
+            if(!rolesCur.contains(role)){
+                String result=iEmployeeDAO.addEmployeeRole(employeeModel.getId(),role);
+                System.out.println("add "+result);
+            }
+        }
 
+        for(String role : rolesCur){
+            if(!rolesNewList.contains(role)){
+                String result=iEmployeeDAO.removeEmployeeRole(employeeModel.getId(),role);
+                System.out.println("remove "+result);
+            }
+        }
+        return iEmployeeDAO.updateEmployee(employeeModel,dob);
+    }
 }
