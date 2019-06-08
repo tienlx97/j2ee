@@ -11,6 +11,7 @@ public class CategoryMapper {
             CategoryModel categories = new CategoryModel();
             categories.setId(rs.getString("cat_id"));
             categories.setName(rs.getString("cat_name"));
+            categories.setDescription(rs.getString("cat_description"));
             return categories;
         } catch (SQLException e) {
             return null;

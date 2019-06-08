@@ -4,8 +4,6 @@ public class CategoryModel {
     String id;
     String name;
     String description;
-    String parent;
-
     public String getId() {
         return id;
     }
@@ -30,12 +28,5 @@ public class CategoryModel {
         this.description = description;
     }
 
-    public String getParent() {
-        return parent;
-    }
-
-    public void setParent(String parent) {
-        this.parent = parent;
-    }
 
 }

@@ -8,6 +8,7 @@ public class CategoryBeanUtil {
         CategoryDTO dto = new CategoryDTO();
         dto.setCatId(model.getId());
         dto.setCatName(model.getName());
+        dto.setCatDescription(model.getDescription());
         return dto;
     }
 
@@ -16,7 +17,6 @@ public class CategoryBeanUtil {
         model.setName(dto.getCatName());
         model.setId(dto.getCatId());
         model.setDescription(dto.getCatDescription());
-        model.setParent(dto.getCatParent());
         return model;
     }
 }

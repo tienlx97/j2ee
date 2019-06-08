@@ -55,8 +55,12 @@
                 <div style="font-size: 26px;">Import</div>
                 <div class="col-sm-12" style="margin-left: 10px; display: flex; align-items: center;" >
                   <input type="text" class="form-control" placeholder="Search product by Id | Name">
-                  <span class="fa fa-pencil-square" style="font-size: x-large; margin-left: 5px;" aria-hidden="true"></span>
-                  <span class="fa fa-filter" style="font-size: x-large; margin-left: 10px;" aria-hidden="true"></span>
+                  <a href="#/PurchaseOrder/new">
+                    <span class="fa fa-pencil-square" style="font-size: x-large; margin-left: 5px;"></span>
+                  </a>
+                  <a href="#/PurchaseOrder/new">
+                    <span class="fa fa-filter" style="font-size: x-large; margin-left: 10px;" aria-hidden="true"></span>
+                  </a>
                   <div class="col-sm-3">
                     <input type="text" class="form-control" placeholder="Quality">
                   </div>

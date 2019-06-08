@@ -24,11 +24,20 @@ public class UrlConstant {
     public static final String URL_ADMIN_PRODUCT = "/admin/products";
     public static final String ADMIN_PRODUCT_JSP = "/views/admin/products.jsp";
 
+    public static final String URL_ADMIN_VIEW_PRODUCT = "/admin/view-product-detail";
+    public static final String ADMIN_VIEW_PRODUCT_JSP = "/views/admin/view-product-detail.jsp";
+
     public static final String URL_ADMIN_PRODUCT_NEW = "/admin/products/new";
     public static final String ADMIN_PRODUCT_NEW_JSP = "/views/admin/products-new.jsp";
 
     public static final String URL_ADMIN_CATEGORY = "/admin/category";
     public static final String ADMIN_CATEGORY_JSP = "/views/admin/category.jsp";
+
+    public static final String ADMIN_EDIT_CATEGORY = "/admin/edit-category";
+    public static final String ADMIN_EDIT_CATEGORY_JSP = "/views/admin/edit-category.jsp";
+
+    public static final String URL_ADMIN_ADD_PRODUCT = "/admin/add-product";
+    public static final String ADMIN_ADD_CATEGORY_JSP = "/views/admin/add-product.jsp";
 
     public static final String URL_ADMIN_EMPLOYEE_DETAIL = "/admin/views/employee";
     public static final String URL_ADMIN_EMPLOYEE_DETAIL_JSP = "/views/admin/detail-employee.jsp";

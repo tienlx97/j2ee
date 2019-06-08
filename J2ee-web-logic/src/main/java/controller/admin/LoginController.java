@@ -1,6 +1,6 @@
 package controller.admin;
 
-import Constant.ErrorConstant;
+import Constant.MsgConstant;
 import Constant.UrlConstant;
 import Constant.VariableConstant;
 import core.EmployeeDTO;
@@ -37,7 +37,7 @@ public class LoginController extends HttpServlet {
         if(user != null) {
             resp.sendRedirect(req.getContextPath() + UrlConstant.URL_ADMIN_DASHBOARD);
         } else {
-            req.setAttribute(VariableConstant.ERROR_PASSWORD, ErrorConstant.ERROR_ADMIN_USERNAME_NOTFOUND);
+            req.setAttribute(VariableConstant.ERROR_PASSWORD, MsgConstant.ERROR_ADMIN_USERNAME_NOTFOUND);
             req.setAttribute(VariableConstant.LOGIN_DTO, employeeDTO);
             req.getRequestDispatcher(UrlConstant.ADMIN_LOGIN_JSP).forward(req,resp);
         }

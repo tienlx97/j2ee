@@ -448,6 +448,13 @@
 <script src="${pageContext.request.contextPath}/resources/admin/vendors/pnotify/dist/pnotify.js"></script>
 <script src="${pageContext.request.contextPath}/resources/admin/vendors/pnotify/dist/pnotify.buttons.js"></script>
 <script src="${pageContext.request.contextPath}/resources/admin/vendors/pnotify/dist/pnotify.nonblock.js"></script>
+
+<script>
+    $(document).ready(function (){
+        $('.ui-pnotify').remove();
+    });
+</script>
+
 <script>
     var name_role = [];
     <%

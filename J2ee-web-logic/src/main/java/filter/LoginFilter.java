@@ -1,7 +1,7 @@
 package filter;
 
 import Constant.CssConstant;
-import Constant.ErrorConstant;
+import Constant.MsgConstant;
 import Constant.UrlConstant;
 import Constant.VariableConstant;
 import core.EmployeeDTO;
@@ -28,13 +28,13 @@ public class LoginFilter implements Filter {
             boolean err = false;
             if(employeeDTO.getUsername().equals("")) {
                 req.setAttribute(VariableConstant.BAD_USERNAME_STYLE, CssConstant.BAD);
-                req.setAttribute(VariableConstant.ERROR_USERNAME, ErrorConstant.ERROR_ADMIN_USERNAME_EMPTY);
+                req.setAttribute(VariableConstant.ERROR_USERNAME, MsgConstant.ERROR_ADMIN_USERNAME_EMPTY);
                 err = true;
             }
 
             if(employeeDTO.getPassword().equals("")) {
                 req.setAttribute(VariableConstant.BAD_PASSWORD_STYLE, CssConstant.BAD);
-                req.setAttribute(VariableConstant.ERROR_PASSWORD,ErrorConstant.ERROR_ADMIN_PASSWORD_EMPTY );
+                req.setAttribute(VariableConstant.ERROR_PASSWORD, MsgConstant.ERROR_ADMIN_PASSWORD_EMPTY );
                 err = true;
             }
 

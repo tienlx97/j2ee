@@ -6,9 +6,9 @@ public class CategoryDTO implements Serializable {
     String catId;
     String catName;
     String catDescription;
-    String catParent;
     String catImgUrl;
-
+    String catSearch;
+    String action;
     public String getCatImgUrl() {
         return catImgUrl;
     }
@@ -41,11 +41,19 @@ public class CategoryDTO implements Serializable {
         this.catDescription = catDescription;
     }
 
-    public String getCatParent() {
-        return catParent;
+    public String getAction() {
+        return action;
     }
 
-    public void setCatParent(String catParent) {
-        this.catParent = catParent;
+    public void setAction(String action) {
+        this.action = action;
+    }
+
+    public String getCatSearch() {
+        return catSearch;
+    }
+
+    public void setCatSearch(String catSearch) {
+        this.catSearch = catSearch;
     }
 }

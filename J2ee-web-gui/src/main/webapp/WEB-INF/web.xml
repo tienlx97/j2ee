@@ -43,4 +43,9 @@
     <url-pattern>/admin/category</url-pattern>
   </filter-mapping>
 
+  <filter-mapping>
+    <filter-name>CategoryFilter</filter-name>
+    <url-pattern>/admin/edit-category</url-pattern>
+  </filter-mapping>
+
 </web-app>

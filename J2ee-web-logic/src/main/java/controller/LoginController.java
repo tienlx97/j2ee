@@ -1,14 +1,12 @@
 package controller;
 
-import Constant.ErrorConstant;
+import Constant.MsgConstant;
 import Constant.UrlConstant;
 import Constant.VariableConstant;
 import core.EmployeeDTO;
 import core.CustomerDTO;
 import core.IEmployeeService;
 import core.ICustomerService;
-import impl.EmployeeServiceImpl;
-import impl.CustomerServiceImpl;
 import utils.FormUtil;
 
 import javax.inject.Inject;
@@ -72,7 +70,7 @@ public class LoginController extends HttpServlet {
                 SessionHelper.storeLoginedUserEmployee(request.getSession(), new UserAccount(user.getLastname() + " "+user.getFirstname(),user.getRoles()));
                 response.sendRedirect(request.getContextPath() + UrlConstant.URL_ADMIN_DASHBOARD);
             } else {
-                request.setAttribute(VariableConstant.ERROR_PASSWORD, ErrorConstant.ERROR_ADMIN_USERNAME_NOTFOUND);
+                request.setAttribute(VariableConstant.ERROR_PASSWORD, MsgConstant.ERROR_ADMIN_USERNAME_NOTFOUND);
                 request.setAttribute(VariableConstant.LOGIN_DTO, employeeDTO);
                 request.getRequestDispatcher(UrlConstant.ADMIN_LOGIN_JSP).forward(request, response);
             }
@@ -87,7 +85,7 @@ public class LoginController extends HttpServlet {
                 SessionHelper.storeLoginedUserCustomer(request.getSession(), new UserAccount(user.getUsername(), null));
                 response.sendRedirect(request.getContextPath() + UrlConstant.URL_CLIENT_HOME);
             } else {
-                request.setAttribute(VariableConstant.ERROR_PASSWORD, ErrorConstant.ERROR_ADMIN_USERNAME_NOTFOUND);
+                request.setAttribute(VariableConstant.ERROR_PASSWORD, MsgConstant.ERROR_ADMIN_USERNAME_NOTFOUND);
                 request.setAttribute(VariableConstant.LOGIN_DTO, customerDTO);
                 response.sendRedirect(request.getContextPath() + UrlConstant.URL_CLIENT_LOGIN);
             }

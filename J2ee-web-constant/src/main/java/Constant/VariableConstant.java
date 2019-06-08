@@ -11,6 +11,8 @@ public class VariableConstant {
     public static final String LOGIN_DTO = "LOGIN_DTO";
 
     public static final String CATEGORIES = "CATEGORIES";
+    public static final String PRODUCTS = "PRODUCTS";
+    public static final String PRODUCTS_VIEW = "PRODUCTS_VIEW";
     public static final String CATEGORY_DTO = "CATEGORY_DTO";
     public static final String CATEGORY_ID = "CATEGORY_ID";
 

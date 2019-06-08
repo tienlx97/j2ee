@@ -17,8 +17,8 @@ public class CategoryServiceImpl implements ICategoryService {
     ICategoryDAO iCategoryDAO;
 
     @Override
-    public List<CategoryDTO> loadCategories() {
-        List<CategoryModel> models = iCategoryDAO.loadCategories();
+    public List<CategoryDTO> loadCategories(String name_id) {
+        List<CategoryModel> models = iCategoryDAO.loadCategories(name_id);
         List<CategoryDTO> dtos = new ArrayList<>();
         for (int i=0; i< models.size(); i++) {
             CategoryDTO dto = CategoryBeanUtil.loadCategories2DTO(models.get(i));
@@ -28,23 +28,26 @@ public class CategoryServiceImpl implements ICategoryService {
     }
 
     @Override
+    public boolean editCategory(CategoryDTO dto) {
+        CategoryModel model = CategoryBeanUtil.convert2Model(dto);
+        boolean rs = iCategoryDAO.editCategory(model);
+        return rs;
+    }
+
+    @Override
+    public CategoryDTO getCAtegoryById(String catId) {
+        CategoryModel model = iCategoryDAO.getCAtegoryById(catId);
+        CategoryDTO dto = CategoryBeanUtil.loadCategories2DTO(model);
+        return dto;
+    }
+
+    @Override
     public boolean addCategory(CategoryDTO dto) {
-
-        // 1. check category is existed in database or not => prevent f12
-       boolean rs =  iCategoryDAO.checkCategory(dto.getCatParent());
-       if(rs == false) {
-           return false;
-       }
-
-        // 2. check current id => prevent f12
-        rs =  iCategoryDAO.checkCategory(dto.getCatId());
-        if(rs == true) {
-            return false;
-        }
-
+        // 1. Generate Id
+        dto.setCatId(Long.toString(generateCategoryId()));
         // 3. add to database
         CategoryModel model = CategoryBeanUtil.convert2Model(dto);
-        rs = iCategoryDAO.addCategory(model);
+        boolean rs = iCategoryDAO.addCategory(model);
         return rs;
     }
 

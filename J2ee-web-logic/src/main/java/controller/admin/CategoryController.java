@@ -1,10 +1,12 @@
 package controller.admin;
 
-import Constant.ErrorConstant;
+import Constant.MsgConstant;
 import Constant.UrlConstant;
 import Constant.VariableConstant;
+import GsonObject.GCategory;
 import core.CategoryDTO;
 import core.ICategoryService;
+import utils.Ajax;
 import utils.FormUtil;
 
 import javax.inject.Inject;
@@ -23,16 +25,14 @@ public class CategoryController extends HttpServlet {
     @Inject
     ICategoryService iCategoryService;
 
-    void commonData(HttpServletRequest req) {
-        List<CategoryDTO> categories = iCategoryService.loadCategories();
-        long catId = iCategoryService.generateCategoryId();
+    void commonData(HttpServletRequest req,String name) {
+        List<CategoryDTO> categories = iCategoryService.loadCategories(name);
         req.setAttribute(VariableConstant.CATEGORIES, categories);
-        req.setAttribute(VariableConstant.CATEGORY_ID, catId);
     }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        commonData(req);
+        commonData(req,null);
         RequestDispatcher rd = req.getRequestDispatcher(UrlConstant.ADMIN_CATEGORY_JSP);
         rd.forward(req, resp);
     }
@@ -42,17 +42,30 @@ public class CategoryController extends HttpServlet {
 
         CategoryDTO dto = FormUtil.toDTO(CategoryDTO.class, req);
 
-        boolean success = iCategoryService.addCategory(dto);
-        commonData(req);
+        if(dto.getAction().equals("ADD_NEW")) {
+            boolean success = iCategoryService.addCategory(dto);
 
-        if(success == false) {
-            req.setAttribute(VariableConstant.ERROR_CATEGORY, ErrorConstant.ERROR_CATEGORY);
-        } else {
-            req.setAttribute(VariableConstant.ERROR_CATEGORY, ErrorConstant.SUCCESS_CATEGORY);
+            GCategory gAddCategory = null;
+            if(success == true) {
+                gAddCategory = new GCategory.GCategoryBuilder()
+                        .setType(true)
+                        .setMsg(MsgConstant.ADD_CATEGORY_SUCCESS)
+                        .build();
+            } else {
+                gAddCategory = new GCategory.GCategoryBuilder()
+                        .setType(false)
+                        .setMsg(MsgConstant.ERROR_CATEGORY)
+                        .build();
+            }
+
+            Ajax.sendData(resp,gAddCategory);
+        } else if(dto.getAction().equals("SEARCH")) {
+            List<CategoryDTO> categories = iCategoryService.loadCategories(dto.getCatSearch());
+            GCategory gSearchCategory = new GCategory.GCategoryBuilder()
+                        .setCategories(categories)
+                        .setType(true)
+                        .build();
+            Ajax.sendData(resp,gSearchCategory);
         }
-
-        RequestDispatcher rd = req.getRequestDispatcher(UrlConstant.ADMIN_CATEGORY_JSP);
-        rd.forward(req, resp);
-
     }
 }
