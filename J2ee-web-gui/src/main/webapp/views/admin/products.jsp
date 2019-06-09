@@ -299,6 +299,21 @@ List<ProductDTO> products = (List<ProductDTO>) request.getAttribute(VariableCons
         });
     });
 
+    $(document).on('click', '.btn_edit', function (event) {
+        event.preventDefault();
+        itemId = $(this).parent().parent().attr('id').split('_')[1];
+        $.ajax({//define object from XML Http Request
+            url: '<%= request.getContextPath() + UrlConstant.URL_ADMIN_EDIT_PRODUCT%>', //action : go to Add Comment controller
+            type: 'GET',
+            data: {id: itemId},
+            // on success do:
+            success: function (response) {
+                $('#item_modal .modal-content ').html(response);
+                $('#item_modal').modal('show');
+            }
+        });
+    });
+
     function AddNotify(title, msg, type) {
         new PNotify( {
                 title:title, type: type, text:msg, nonblock: {
@@ -308,6 +323,41 @@ List<ProductDTO> products = (List<ProductDTO>) request.getAttribute(VariableCons
             }
         );
     }
+
+    $(document).on('submit', '#fEdit', function (e) {
+
+        e.preventDefault();
+        form = $(this);
+
+        addCategoryUrl = '<%=request.getContextPath() + UrlConstant.URL_ADMIN_EDIT_PRODUCT%>';
+        requestMethod = form.attr('method');
+        requestData = form.serialize();
+
+        $.ajax({
+            url: addCategoryUrl,
+            type: requestMethod,
+            data: requestData,
+            dataType: 'json',
+            beforeSend: function(){
+
+            },
+            success: function(response) {
+                if(response.type == false) {
+                    if(response.msg == null) {
+                        // $("#error-cat-name").addClass(response.cError);
+                        // $("#error-cat-name").append(response.eCatName);
+                    } else { // show data when fail
+                        AddNotify("Edit Product", response.msg, "error");
+                    }
+                } else { // show data when success
+                    form.find("input[type=text], textarea").val("");
+                    $('#item_modal').modal('hide');
+                    AddNotify("Edit Product", response.msg, "success");
+                }
+            }
+        });
+
+    });
 
     $(document).on('submit', '#fAdd', function (e) {
 
@@ -336,6 +386,7 @@ List<ProductDTO> products = (List<ProductDTO>) request.getAttribute(VariableCons
                   }
               } else { // show data when success
                   form.find("input[type=text], textarea").val("");
+                  $('#item_modal').modal('hide');
                   AddNotify("Add Product", response.msg, "success");
               }
             }

@@ -16,8 +16,10 @@ public class ProductDAOImpl extends AbstractDAO<ProductModel> implements IProduc
     }
 
     @Override
-    public boolean updateProduct(ProductModel productModel) {
-        return false;
+    public boolean updateProduct(ProductModel model) {
+        StringBuilder query = new StringBuilder("UPDATE j2_product SET prd_name = ? , prd_description = ? , prd_price = ? , prd_quantity = ? , prd_image = ? , prd_detail_images = ? , prd_category = ? where prd_id = ? ;");
+        boolean rs = update(query.toString(),model.getName(), model.getDescription(), model.getSelPrice(), model.getQuantity(), model.getImageUrl(), model.getDetailImageUrl(), model.getCategoryId(), model.getId());
+        return rs;
     }
 
     @Override
@@ -35,7 +37,7 @@ public class ProductDAOImpl extends AbstractDAO<ProductModel> implements IProduc
 
     @Override
     public ProductModel getProduct2View(String id) {
-        StringBuilder query = new StringBuilder("SELECT prd_id, prd_name,prd_price, prd_quantity, prd_image,prd_detail_images, prd_description, prd_created_at, j2_category.cat_name  FROM j2_product, j2_category where prd_id = ? and j2_product.prd_category = j2_category.cat_id;");
+        StringBuilder query = new StringBuilder("SELECT prd_id, prd_name,prd_price, prd_quantity, prd_image,prd_detail_images, prd_description, prd_created_at, j2_category.cat_name, prd_category  FROM j2_product, j2_category where prd_id = ? and j2_product.prd_category = j2_category.cat_id;");
         List<ProductModel> models = read2(query.toString(),ProductMapper.class,new ProductMapper(),"loadProducts2View",id);
         return models.isEmpty() ? null :  models.get(0);
     }

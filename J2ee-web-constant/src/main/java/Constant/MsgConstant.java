@@ -11,6 +11,8 @@ public class MsgConstant {
     public static final String ADD_PRODUCT_SUCCESS= "Add product success !";
     public static final String ERROR_PRODUCT = "There is some error, please reload the website";
 
+    public static final String EDIT_PRODUCT_SUCCESS= "Add product success !";
+
     public static final String EDIT_CATEGORY_SUCCESS= "Edit category success !";
 
     public static final String ERROR_CATEGORY_ID_EMPTY = "Category id is empty, please reload";

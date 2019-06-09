@@ -33,7 +33,19 @@ public class ProductServiceImpl implements IProductService {
 
     @Override
     public boolean updateProduct(ProductDTO productDTO) {
-        return false;
+        String temp = "";
+        for (int i=0; i< productDTO.getDetailImageUrl().length -1; i++) {
+            temp += productDTO.getDetailImageUrl()[i] +"<<<";
+        }
+        temp += productDTO.getDetailImageUrl()[productDTO.getDetailImageUrl().length - 1];
+        productDTO.setImage1(temp);
+
+        productDTO.setCategoryId(productDTO.getCategoryId().split("_")[1]);
+
+        ProductModel model = ProductBeanUtil.editProduct2Model(productDTO);
+
+        return iProductDAO.updateProduct(model);
+
     }
 
     @Override

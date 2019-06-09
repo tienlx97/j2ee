@@ -33,6 +33,7 @@ public class ProductMapper {
             productModel.setDateCraeted(rs.getTimestamp("prd_created_at"));
             productModel.setDetailImageUrl(rs.getString("prd_detail_images"));
             productModel.setCategoryName(rs.getString("cat_name"));
+            productModel.setCategoryId(rs.getString("prd_category"));
 
             return productModel;
         } catch (SQLException e) {

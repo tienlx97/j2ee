@@ -46,7 +46,7 @@ public class CategoryDAOImpl extends AbstractDAO<CategoryModel> implements ICate
 
     @Override
     public boolean editCategory(CategoryModel model) {
-        StringBuilder query = new StringBuilder("UPDATE j2_category SET cat_name = ? and cat_description = ? where cat_id = ? ;");
+        StringBuilder query = new StringBuilder("UPDATE j2_category SET cat_name = ? , cat_description = ? where cat_id = ? ;");
         boolean rs = update(query.toString(),model.getName(), model.getDescription(), model.getId());
         return rs;
     }

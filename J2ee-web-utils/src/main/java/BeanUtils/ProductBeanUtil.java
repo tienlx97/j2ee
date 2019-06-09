@@ -23,10 +23,24 @@ public class ProductBeanUtil {
         dto.setDescription(model.getDescription());
         dto.setImageUrl(model.getImageUrl());
         dto.setCategoryName(model.getCategoryName());
+        dto.setCategoryId(model.getCategoryId());
         return dto;
     }
 
     public static ProductModel addProduct2Model(ProductDTO dto){
+        ProductModel model = new ProductModel();
+        model.setId(dto.getId());
+        model.setDescription(dto.getDescription());
+        model.setImageUrl(dto.getImageUrl());
+        model.setDetailImageUrl(dto.getImage1());
+        model.setName(dto.getName());
+        model.setSelPrice(dto.getSelPrice());
+        model.setQuantity(dto.getQuantity());
+        model.setCategoryId(dto.getCategoryId());
+        return model;
+    }
+
+    public static ProductModel editProduct2Model(ProductDTO dto){
         ProductModel model = new ProductModel();
         model.setId(dto.getId());
         model.setDescription(dto.getDescription());
