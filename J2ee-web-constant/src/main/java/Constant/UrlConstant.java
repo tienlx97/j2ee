@@ -48,6 +48,8 @@ public class UrlConstant {
     public static final String URL_ADMIN_EMPLOYEE_MODIFYING = "/admin/modify/employee";
     public static final String URL_ADMIN_EMPLOYEE_MODIFYING_JSP = "/views/admin/modify-employee.jsp";
 
+    public static final String URL_CLIENT_QUICKVIEW_JSP = "/views/client/QuickViewProduct.jsp";
+
 
 }
 

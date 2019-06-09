@@ -27,6 +27,15 @@ public class ProductBeanUtil {
         return dto;
     }
 
+    public static ProductDTO load12Product2View2DTO(ProductModel model){
+        ProductDTO dto = new ProductDTO();
+        dto.setId(model.getId());
+        dto.setSelPrice(model.getSelPrice());
+        dto.setImageUrl(model.getImageUrl());
+        dto.setName(model.getName());
+        return dto;
+    }
+
     public static ProductModel addProduct2Model(ProductDTO dto){
         ProductModel model = new ProductModel();
         model.setId(dto.getId());

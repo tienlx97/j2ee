@@ -10,4 +10,6 @@ public interface IProductDAO extends IGenericDAO<ProductModel> {
     boolean addProduct(ProductModel productModel);
     List<ProductModel> searchProducts(String idName);
     ProductModel getProduct2View(String id);
+
+    List<ProductModel> load12Products();
 }

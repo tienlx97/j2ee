@@ -84,4 +84,15 @@ public class ProductServiceImpl implements IProductService {
         dto.setDetailImageUrl(model.getDetailImageUrl().split("<<<"));
         return dto;
     }
+
+    @Override
+    public List<ProductDTO> load12Products() {
+        List<ProductModel> models = iProductDAO.load12Products();
+        List<ProductDTO> dtos = new ArrayList<>();
+        for (int i=0; i< models.size(); i++) {
+            ProductDTO dto = ProductBeanUtil.load12Product2View2DTO(models.get(i));
+            dtos.add(dto);
+        }
+        return  dtos;
+    }
 }
