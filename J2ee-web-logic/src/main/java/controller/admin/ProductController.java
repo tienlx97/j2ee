@@ -6,6 +6,7 @@ import GsonObject.GAProduct;
 import core.IProductService;
 import core.ProductDTO;
 import utils.Ajax;
+import utils.FormUtil;
 
 import javax.inject.Inject;
 import javax.servlet.RequestDispatcher;
@@ -33,10 +34,20 @@ public class ProductController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String id = (String) req.getParameter("id");
-        ProductDTO dto = iProductService.getProduct2View(id);
-        req.setAttribute(VariableConstant.PRODUCTS_VIEW,dto);
-        RequestDispatcher rd = req.getRequestDispatcher(UrlConstant.ADMIN_VIEW_PRODUCT_JSP);
-        rd.forward(req, resp);
+
+        ProductDTO productDTO = FormUtil.toDTO(ProductDTO.class, req);
+
+        if(productDTO.getAction() != null) {
+            List<ProductDTO> dtos = iProductService.searchProducts(productDTO);
+            GAProduct gaProduct = new GAProduct.GAProductBuilder().setType(true).setProducts(dtos).build();
+            Ajax.sendData(resp,gaProduct);
+        } else {
+            String id = (String) req.getParameter("id");
+            ProductDTO dto = iProductService.getProduct2View(id);
+            req.setAttribute(VariableConstant.PRODUCTS_VIEW,dto);
+            RequestDispatcher rd = req.getRequestDispatcher(UrlConstant.ADMIN_VIEW_PRODUCT_JSP);
+            rd.forward(req, resp);
+        }
+
     }
 }

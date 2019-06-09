@@ -4,9 +4,10 @@
 <%@ page import="core.ProductDTO" %>
 <%
   List<CategoryDTO> categories = (List<CategoryDTO>) request.getAttribute(VariableConstant.CATEGORIES);
-  ProductDTO dto = (ProductDTO) request.getAttribute(VariableConstant.PRODUCTS);
+  ProductDTO dto2 = (ProductDTO) request.getAttribute(VariableConstant.PRODUCTS2);
 %>
 
+<%if(categories !=null && dto2 != null) {%>
 
 <div class="col-md-12">
   <div class="x_panel" style="padding-left: 3px;">
@@ -36,7 +37,7 @@
                 <label class="control-label col-md-3 col-sm-3 col-xs-12">Product name <span class="required">*</span>
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <input type="text" class="form-control col-md-7 col-xs-12" value="<%=dto.getId()%>" readonly>
+                  <input type="text" class="form-control col-md-7 col-xs-12" value="<%=dto2.getId()%>" readonly>
                 </div>
               </div>
 
@@ -44,7 +45,7 @@
                 <label class="control-label col-md-3 col-sm-3 col-xs-12">Product name <span class="required">*</span>
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <input type="text" id="name" name="name" class="form-control col-md-7 col-xs-12" value="<%=dto.getName()%>">
+                  <input type="text" id="name" name="name" class="form-control col-md-7 col-xs-12" value="<%=dto2.getName()%>">
                 </div>
               </div>
 
@@ -59,7 +60,7 @@
                           CategoryDTO categoryDTO = categories.get(i);
 
                     %>
-                    <option <%= categoryDTO.getCatId().equals(dto.getCategoryId()) ? "selected": " " %> value="cat_<%=categoryDTO.getCatId()%>"><%=categoryDTO.getCatName()%></option>
+                    <option <%= categoryDTO.getCatId().equals(dto2.getCategoryId()) ? "selected": " " %> value="cat_<%=categoryDTO.getCatId()%>"><%=categoryDTO.getCatName()%></option>
                     <%
                         }}
                     %>
@@ -71,7 +72,7 @@
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" >Sell price <span class="required">*</span>
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <input type="text" id="selPrice" name="selPrice" class="form-control col-md-7 col-xs-12" value="<%=dto.getSelPrice()%>">
+                  <input type="text" id="selPrice" name="selPrice" class="form-control col-md-7 col-xs-12" value="<%=dto2.getSelPrice()%>">
                 </div>
               </div>
 
@@ -79,7 +80,7 @@
                 <label class="control-label col-md-3 col-sm-3 col-xs-12">Quality <span class="required">*</span>
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <input type="text" id="quantity" name="quantity" class="form-control col-md-7 col-xs-12" value="<%=dto.getQuantity()%>">
+                  <input type="text" id="quantity" name="quantity" class="form-control col-md-7 col-xs-12" value="<%=dto2.getQuantity()%>">
                 </div>
               </div>
 
@@ -89,7 +90,7 @@
                 <div class="col-sm-12">
                   <div class="form-group">
                     <div>
-                      <textarea name="description" id="description" class="form-control" rows="5"><%=dto.getDescription()%></textarea>
+                      <textarea name="description" id="description" class="form-control" rows="5"><%=dto2.getDescription()%></textarea>
                     </div>
                   </div>
                 </div>
@@ -100,28 +101,28 @@
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="imageUrl">Image main <span class="required">*</span>
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <input type="text" id="imageUrl" name="imageUrl" class="form-control col-md-7 col-xs-12" value="<%=dto.getImageUrl()%>">
+                  <input type="text" id="imageUrl" name="imageUrl" class="form-control col-md-7 col-xs-12" value="<%=dto2.getImageUrl()%>">
                 </div>
               </div>
               <div class="form-group">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12">Image 1 <span class="required">*</span>
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <input type="text"  name="detailImageUrl" class="form-control col-md-7 col-xs-12" value="<%=dto.getDetailImageUrl()[0]%>">
+                  <input type="text"  name="detailImageUrl" class="form-control col-md-7 col-xs-12" value="<%=dto2.getDetailImageUrl()[0]%>">
                 </div>
               </div>
               <div class="form-group">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12">Image 2
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <input type="text" name="detailImageUrl" class="form-control col-md-7 col-xs-12" value="<%=dto.getDetailImageUrl()[1]%>" >
+                  <input type="text" name="detailImageUrl" class="form-control col-md-7 col-xs-12" value="<%=dto2.getDetailImageUrl()[1]%>" >
                 </div>
               </div>
               <div class="form-group">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12">Image 3
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <input type="text" name="detailImageUrl" class="form-control col-md-7 col-xs-12" value="<%=dto.getDetailImageUrl()[2]%>" >
+                  <input type="text" name="detailImageUrl" class="form-control col-md-7 col-xs-12" value="<%=dto2.getDetailImageUrl()[2]%>" >
                 </div>
               </div>
             </div>
@@ -130,7 +131,7 @@
           <div class="form-group">
             <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
               <button type="submit" class="btn btn-success">Submit</button>
-              <input type="hidden" id="id" name="id" value="<%=dto.getId()%>">
+              <input type="hidden" id="id" name="id" value="<%=dto2.getId()%>">
             </div>
           </div>
         </form>
@@ -145,3 +146,5 @@
         // options here
     });
 </script>
+
+<%}%>

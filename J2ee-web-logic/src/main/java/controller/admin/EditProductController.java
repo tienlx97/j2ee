@@ -31,10 +31,11 @@ public class EditProductController  extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String id = req.getParameter("id");
+        ProductDTO dto = iProductService.getProduct2View(id);
         List<CategoryDTO> categories = iCategoryService.loadCategories(null);
         req.setAttribute(VariableConstant.CATEGORIES, categories);
-        ProductDTO dto = iProductService.getProduct2View(req.getParameter("id"));
-        req.setAttribute(VariableConstant.PRODUCTS,dto);
+        req.setAttribute(VariableConstant.PRODUCTS2,dto);
         RequestDispatcher rd = req.getRequestDispatcher(UrlConstant.ADMIN_EDIT_PRODUCT_JSP);
         rd.forward(req, resp);
     }
@@ -50,8 +51,6 @@ public class EditProductController  extends HttpServlet {
         } else {
             gaProduct = new GAProduct.GAProductBuilder().setType(false).setMsg(MsgConstant.ERROR_PRODUCT).build();
         }
-
         Ajax.sendData(resp, gaProduct);
-
     }
 }

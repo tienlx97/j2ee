@@ -92,13 +92,13 @@ List<ProductDTO> products = (List<ProductDTO>) request.getAttribute(VariableCons
               <div class="clearfix"></div>
             </div>
             <div>
-              <form>
+              <div>
 
                 <div class="col-sm-12">
                   Product id | name
                   <div class="form-group">
                     <div>
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" id="idName" name="idName">
                     </div>
                   </div>
                 </div>
@@ -145,12 +145,12 @@ List<ProductDTO> products = (List<ProductDTO>) request.getAttribute(VariableCons
 
                 <div class="form-group">
                   <div class="col-sm-12">
-                    <button class="btn btn-primary" type="reset">Reset</button>
-                    <button type="submit" class="btn btn-success">Submit</button>
+                    <button class="btn btn-success" id="fSearch">Submit</button>
+                    <input type="hidden" name="action" id="action" value="SEARCH">
                   </div>
                 </div>
 
-              </form>
+              </div>
             </div>
           </div>
         </div>
@@ -201,7 +201,7 @@ List<ProductDTO> products = (List<ProductDTO>) request.getAttribute(VariableCons
                   <td><%= dto.getSelPrice() %></td>
                   <td style="display:flex">
                     <button type="button"
-                            class="btn btn-primary btn_edit"
+                            class="btn btn-primary btn_edit_product"
                             data-target=".bs-example-modal-lg" data-toggle="tooltip" title="Edit"><i
                             class="fa fa-edit"></i>
                     </button>
@@ -299,7 +299,7 @@ List<ProductDTO> products = (List<ProductDTO>) request.getAttribute(VariableCons
         });
     });
 
-    $(document).on('click', '.btn_edit', function (event) {
+    $(document).on('click', '.btn_edit_product', function (event) {
         event.preventDefault();
         itemId = $(this).parent().parent().attr('id').split('_')[1];
         $.ajax({//define object from XML Http Request
@@ -323,6 +323,54 @@ List<ProductDTO> products = (List<ProductDTO>) request.getAttribute(VariableCons
             }
         );
     }
+
+    $(document).on('click', '#fSearch', function (e) {
+
+        e.preventDefault();
+        form = $(this);
+
+        searchProductUrl = '<%=request.getContextPath() + UrlConstant.URL_ADMIN_PRODUCT%>';
+        requestMethod = form.attr('method');
+        requestData = $('#idName').serialize() + '&action=SEARCH';
+
+        $.ajax({
+            url: searchProductUrl,
+            type: "POST",
+            data: requestData,
+            dataType: 'json',
+            beforeSend: function(){
+
+            },
+            success: function(response) {
+                if(response.type == false) {
+
+                } else { // show data when success
+                    $("#tb_product tbody").empty();
+
+                    response.products.forEach(function (item, index) {
+                        $("#tb_product tbody").append(
+                            "<tr id='row_" + item.id + "'>" +
+                            "<td>" + item.id + "</td>" +
+                            "<td>" + item.name + "</td>" +
+                            "<td>" + item.quantity + "</td>" +
+                            "<td>" + item.selPrice + "</td>" +
+                            "<td style='display:flex'>" +
+                              "<button type='button' class='btn btn-primary btn_edit_product' data-target='.bs-example-modal-lg' data-toggle='tooltip' title='Edit'>" +
+                              "<i class='fa fa-edit'></i>" +
+                              "</button>" +
+                              "<button name='button' type='button' class='btn btn-warning btn_view' data-toggle='tooltip' title='View'>" +
+                              "<i class='fa fa-minus'></i>" +
+                              "</button>"+
+                            "</td>" +
+                            "</tr>"
+                        );
+                    });
+                }
+            }
+        });
+
+    });
+
 
     $(document).on('submit', '#fEdit', function (e) {
 

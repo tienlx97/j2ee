@@ -1,9 +1,14 @@
 package GsonObject;
+import core.CategoryDTO;
 import core.ProductDTO;
+
+import java.util.List;
+
 public class GAProduct {
     private boolean type;
     private ProductDTO dto;
     String msg;
+    List<ProductDTO> products;
 
     public String getMsg() {
         return msg;
@@ -13,12 +18,19 @@ public class GAProduct {
         this.type = gaProductBuilder.type;
         this.dto = gaProductBuilder.dto;
         this.msg = gaProductBuilder.msg;
+        this.products = gaProductBuilder.products;
     }
 
     public static class GAProductBuilder {
         private boolean type;
         private ProductDTO dto;
         private String msg;
+        private  List<ProductDTO> products;
+
+        public GAProductBuilder setProducts(List<ProductDTO> products) {
+            this.products = products;
+            return this;
+        }
 
         public GAProductBuilder setMsg(String msg) {
             this.msg = msg;
@@ -47,5 +59,9 @@ public class GAProduct {
 
     public ProductDTO getDto() {
         return dto;
+    }
+
+    public List<ProductDTO> getProducts() {
+        return products;
     }
 }

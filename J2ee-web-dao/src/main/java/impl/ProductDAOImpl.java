@@ -31,8 +31,11 @@ public class ProductDAOImpl extends AbstractDAO<ProductModel> implements IProduc
 
 
     @Override
-    public List<ProductModel> searchProducts(ProductModel productModel) {
-        return null;
+    public List<ProductModel> searchProducts(String idName) {
+        StringBuilder query = new StringBuilder("SELECT prd_id, prd_name,prd_price, prd_quantity FROM j2_product WHERE prd_id LIKE  ? OR prd_name LIKE ?;");
+        List<ProductModel> models = read2(query.toString(),ProductMapper.class,new ProductMapper(),"loadProducts","%" + idName + "%", "%" + idName + "%");
+
+        return models;
     }
 
     @Override

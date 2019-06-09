@@ -18,8 +18,25 @@ public class ProductDTO implements Serializable {
     Timestamp dateCraeted;
     String lastEdit;
     String categoryName;
-
+    String action;
+    String idName;
     String image1;
+
+    public String getIdName() {
+        return idName;
+    }
+
+    public void setIdName(String idName) {
+        this.idName = idName;
+    }
+
+    public String getAction() {
+        return action;
+    }
+
+    public void setAction(String action) {
+        this.action = action;
+    }
 
     public String[] getDetailImageUrl() {
         return detailImageUrl;
@@ -36,7 +53,6 @@ public class ProductDTO implements Serializable {
     public void setImage1(String image1) {
         this.image1 = image1;
     }
-
 
     public String getId() {
         return id;

@@ -68,7 +68,13 @@ public class ProductServiceImpl implements IProductService {
 
     @Override
     public List<ProductDTO> searchProducts(ProductDTO productDTO) {
-        return null;
+       List<ProductModel> models = iProductDAO.searchProducts(productDTO.getIdName());
+        List<ProductDTO> dtos = new ArrayList<>();
+        for (int i=0; i< models.size(); i++) {
+            ProductDTO dto = ProductBeanUtil.loadProduct2DTO(models.get(i));
+            dtos.add(dto);
+        }
+        return  dtos;
     }
 
     @Override
