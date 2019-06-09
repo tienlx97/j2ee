@@ -108,21 +108,21 @@
                 <label class="control-label col-md-3 col-sm-3 col-xs-12">Image 1 <span class="required">*</span>
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <input type="text"  name="detailImageUrl" class="form-control col-md-7 col-xs-12" value="<%=dto2.getDetailImageUrl()[0]%>">
+                  <input type="text"  name="detailImageUrl" class="form-control col-md-7 col-xs-12" value="<%= dto2.getDetailImageUrl().length >= 1 ? dto2.getDetailImageUrl()[0] : ""%>">
                 </div>
               </div>
               <div class="form-group">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12">Image 2
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <input type="text" name="detailImageUrl" class="form-control col-md-7 col-xs-12" value="<%=dto2.getDetailImageUrl()[1]%>" >
+                  <input type="text" name="detailImageUrl" class="form-control col-md-7 col-xs-12" value="<%=dto2.getDetailImageUrl().length >= 2 ? dto2.getDetailImageUrl()[1] : ""%>" >
                 </div>
               </div>
               <div class="form-group">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12">Image 3
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <input type="text" name="detailImageUrl" class="form-control col-md-7 col-xs-12" value="<%=dto2.getDetailImageUrl()[2]%>" >
+                  <input type="text" name="detailImageUrl" class="form-control col-md-7 col-xs-12" value="<%= dto2.getDetailImageUrl().length >= 3 ? dto2.getDetailImageUrl()[2] : ""%>" >
                 </div>
               </div>
             </div>
