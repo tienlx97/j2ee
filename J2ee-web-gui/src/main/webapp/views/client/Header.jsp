@@ -22,7 +22,7 @@
             <div class="top_right text-right">
               <ul>
                 <%String name = (String)request.getAttribute("name"); %>
-                <% if(name.length() > 0){ %>
+                <% if( name!= null && name.length() > 0){ %>
                 <li class="top_links"><a href="#"><i class="ion-android-person"></i>Hello <%= request.getAttribute("name") %><i
                         class="ion-ios-arrow-down"></i></a>
                   <ul class="dropdown_links">
@@ -423,3 +423,31 @@
   <!--header bottom end-->
 
 </header>
+
+
+<!-- Plugins JS -->
+<script src="${pageContext.request.contextPath}/resources/admin/vendors/jquery/dist/jquery.min.js"></script>
+
+<%
+  if(name!= null && name.length() > 0){
+%>
+
+<script>
+
+    $.ajax({
+        type: "POST",
+        url: '<%=request.getContextPath()%>' + "/api/add2cart",
+        data: {cv: localStorage.getItem('cv'), mg: "1"},
+        success: function (data) {
+            data = JSON.parse(data);
+            if(data.type == true) {
+                // Code for localStorage/sessionStorage.
+                localStorage.removeItem('cv');
+                alert("login -> clear local storage");
+            }
+        }
+    });
+
+</script>
+
+<%}%>

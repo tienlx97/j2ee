@@ -97,8 +97,8 @@
                   <div class="price_box">
                     <span class="regular_price">$<%=item1.getSelPrice()%></span>
                   </div>
-                  <div class="add_to_cart">
-                    <a href="cart.html" title="add to cart"><span class="lnr lnr-cart"></span></a>
+                  <div class="add_to_cart" id="add_<%=item1.getId()%>">
+                    <a title="add to cart"><span class="lnr lnr-cart"></span></a>
                   </div>
                 </div>
               </div>
@@ -125,8 +125,8 @@
                   <div class="price_box">
                     <span class="regular_price">$<%=item2.getSelPrice()%></span>
                   </div>
-                  <div class="add_to_cart">
-                    <a href="cart.html" title="add to cart"><span class="lnr lnr-cart"></span></a>
+                  <div class="add_to_cart" id="add_<%=item2.getId()%>">
+                    <a title="add to cart"><span class="lnr lnr-cart"></span></a>
                   </div>
                 </div>
               </div>
@@ -153,8 +153,8 @@
                   <div class="price_box">
                     <span class="regular_price">$<%=item3.getSelPrice()%></span>
                   </div>
-                  <div class="add_to_cart">
-                    <a href="cart.html" title="add to cart"><span class="lnr lnr-cart"></span></a>
+                  <div class="add_to_cart" id="add_<%=item3.getId()%>">
+                    <a title="add to cart"><span class="lnr lnr-cart"></span></a>
                   </div>
                 </div>
               </div>
@@ -216,6 +216,48 @@
         });
 
     });
+
+    $('.add_to_cart').click(function () {
+        var id = $(this).attr('id').split('_')[1];
+        $.ajax({
+            type: "POST",
+            url: '<%=request.getContextPath()%>' + "/api/add2cart",
+            data: {id: id, qual: 1, cv: localStorage.getItem('cv')},
+            success: function (data) {
+                data = JSON.parse(data);
+                if(data.type == false) {
+                    console.log(data.carts);
+                  // Code for localStorage/sessionStorage.
+                  localStorage.setItem('cv',JSON.stringify(data.carts));
+                    alert("Add to local storage");
+                } else {
+                    alert("Add to database");
+                }
+            }
+        });
+    })
+
+    $('.btn_add_2cart').click(function () {
+        var id = $(this).parent().attr('id').split('_')[1];
+        var qua = $("#qual_i").val();
+        $.ajax({
+            type: "POST",
+            url: '<%=request.getContextPath()%>' + "/api/add2cart",
+            data: {id: id, qual: qua, cv: localStorage.getItem('cv')},
+            success: function (data) {
+                data = JSON.parse(data);
+                if(data.type == false) {
+                    console.log(data.carts);
+                    // Code for localStorage/sessionStorage.
+                    localStorage.setItem('cv',JSON.stringify(data.carts));
+                    alert("Add to local storage");
+                } else {
+                    alert("Add to database");
+                }
+            }
+        });
+    })
+
 </script>
 
 </body>

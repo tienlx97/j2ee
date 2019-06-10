@@ -27,4 +27,5 @@ public class SessionHelper {
         UserAccount loginedUser = (UserAccount) session.getAttribute("loginedUserEmployee");
         return loginedUser;
     }
+
 }

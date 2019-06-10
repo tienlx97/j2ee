@@ -40,8 +40,29 @@ public class AddProductController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         ProductDTO dto = FormUtil.toDTO(ProductDTO.class,req);
-        boolean success = iProductService.addProduct(dto);
         GAProduct gaProduct = null;
+
+        if(dto.getName().equals("")) {
+            gaProduct = new GAProduct.GAProductBuilder().setType(false).setMsg("product Name is empty").build();
+            Ajax.sendData(resp, gaProduct);
+        }
+
+        if(dto.getCategoryId().equals("")) {
+            gaProduct = new GAProduct.GAProductBuilder().setType(false).setMsg("product category is empty").build();
+            Ajax.sendData(resp, gaProduct);
+        }
+
+        if(dto.getSelPrice() < 0) {
+            gaProduct = new GAProduct.GAProductBuilder().setType(false).setMsg("product sel price is wrong").build();
+            Ajax.sendData(resp, gaProduct);
+        }
+
+        if(dto.getQuantity() <= 0) {
+            gaProduct = new GAProduct.GAProductBuilder().setType(false).setMsg("product quantity is wrong").build();
+            Ajax.sendData(resp, gaProduct);
+        }
+
+        boolean success = iProductService.addProduct(dto);
 
         if(success) {
             gaProduct = new GAProduct.GAProductBuilder().setType(true).setMsg(MsgConstant.ADD_PRODUCT_SUCCESS).build();

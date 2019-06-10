@@ -20,9 +20,9 @@ public class ProductServiceImpl implements IProductService {
     IProductDAO iProductDAO;
 
     @Override
-    public List<ProductDTO> loadAllProducts() {
+    public List<ProductDTO> loadAllProducts(int f, int t) {
 
-        List<ProductModel> models = iProductDAO.loadAllProducts();
+        List<ProductModel> models = iProductDAO.loadAllProducts(f,t);
         List<ProductDTO> dtos = new ArrayList<>();
         for (int i=0; i< models.size(); i++) {
             ProductDTO dto = ProductBeanUtil.loadProduct2DTO(models.get(i));
@@ -67,8 +67,8 @@ public class ProductServiceImpl implements IProductService {
     }
 
     @Override
-    public List<ProductDTO> searchProducts(ProductDTO productDTO) {
-       List<ProductModel> models = iProductDAO.searchProducts(productDTO.getIdName());
+    public List<ProductDTO> searchProducts(ProductDTO productDTO,int f, int t) {
+       List<ProductModel> models = iProductDAO.searchProducts(productDTO.getIdName(),f,t);
         List<ProductDTO> dtos = new ArrayList<>();
         for (int i=0; i< models.size(); i++) {
             ProductDTO dto = ProductBeanUtil.loadProduct2DTO(models.get(i));
@@ -94,5 +94,11 @@ public class ProductServiceImpl implements IProductService {
             dtos.add(dto);
         }
         return  dtos;
+    }
+
+    @Override
+    public int countProductWithCondition(int number) {
+        int pos = (int)iProductDAO.countProduct()/number;
+        return pos;
     }
 }

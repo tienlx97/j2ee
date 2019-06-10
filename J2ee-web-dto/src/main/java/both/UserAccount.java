@@ -11,11 +11,30 @@ public class UserAccount {
     }
 
     private String userName;
+    private String id;
     private TYPEUSER TypeUser;
     private List<String> roles;
 
     public UserAccount(String userName, List<String> roles) {
         this.userName = userName;
+
+        if (roles == null) {
+            TypeUser = TYPEUSER.CUSTOMER;
+            List<String> role = new ArrayList<String>();
+            role.add("FUNC_0");
+            this.roles = role;
+        } else {
+            this.roles=new ArrayList<String>();
+            TypeUser = TYPEUSER.EMPLOYEE;
+            for(String role : roles){
+                this.roles.add("FUNC_"+role);
+            }
+        }
+    }
+
+    public UserAccount(String userName,String id, List<String> roles) {
+        this.userName = userName;
+        this.id = id;
 
         if (roles == null) {
             TypeUser = TYPEUSER.CUSTOMER;
@@ -57,4 +76,11 @@ public class UserAccount {
         this.roles = roles;
     }
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 }

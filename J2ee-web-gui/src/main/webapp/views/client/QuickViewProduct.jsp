@@ -33,17 +33,17 @@
           <h2><%=dto.getName()%></h2>
         </div>
         <div class="modal_price mb-10">
-          <span class="new_price"><%=dto.getSelPrice()%></span>
+          <span class="new_price">$<%=dto.getSelPrice()%></span>
         </div>
         <div class="modal_description mb-15">
           <p><%=dto.getDescription()%> </p>
         </div>
         <div class="variants_selects">
           <div class="modal_add_to_cart">
-            <form action="#">
-              <input min="0" max="100" step="2" value="1" type="number">
-              <button type="submit">add to cart</button>
-            </form>
+            <div id="row_<%=dto.getId()%>">
+              <input min="0" max="100" id="qual_i" step="2" value="1" type="number">
+              <button class="btn_add_2cart">add to cart</button>
+            </div>
           </div>
         </div>
         <div class="modal_social">

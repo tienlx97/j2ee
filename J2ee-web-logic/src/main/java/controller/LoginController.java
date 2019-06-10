@@ -79,16 +79,29 @@ public class LoginController extends HttpServlet {
         // If it is intent on logging with customer role
         if (urlRequest.endsWith("/login")) {
             CustomerDTO customerDTO = FormUtil.toDTO(CustomerDTO.class, request);
-//            iCustomerService = new CustomerServiceImpl(); // fail when using CDI in j2ee, don't know why
-            CustomerDTO user = iCustomerService.checkCustomerLogin(customerDTO);
-            if (user != null) {
-                SessionHelper.storeLoginedUserCustomer(request.getSession(), new UserAccount(user.getUsername(), null));
-                response.sendRedirect(request.getContextPath() + UrlConstant.URL_CLIENT_HOME);
+
+            if(customerDTO.getAction().equals("LOGIN")) {
+                CustomerDTO user = iCustomerService.checkCustomerLogin(customerDTO);
+                if (user != null) {
+                    SessionHelper.storeLoginedUserCustomer(request.getSession(), new UserAccount(user.getUsername(),user.getId(), null));
+                    response.sendRedirect(request.getContextPath() + UrlConstant.URL_CLIENT_HOME);
+                } else {
+                    request.setAttribute(VariableConstant.ERROR_PASSWORD, MsgConstant.ERROR_ADMIN_USERNAME_NOTFOUND);
+//                    request.setAttribute(VariableConstant.LOGIN_DTO, customerDTO);
+                    request.getRequestDispatcher(request.getContextPath() + UrlConstant.URL_CLIENT_LOGIN).forward(request, response);
+                }
             } else {
-                request.setAttribute(VariableConstant.ERROR_PASSWORD, MsgConstant.ERROR_ADMIN_USERNAME_NOTFOUND);
-                request.setAttribute(VariableConstant.LOGIN_DTO, customerDTO);
-                response.sendRedirect(request.getContextPath() + UrlConstant.URL_CLIENT_LOGIN);
+                CustomerDTO user  = iCustomerService.register(customerDTO);
+                if(user == null) {
+                    request.setAttribute(VariableConstant.ERROR_USERNAME_RE, "Register error");
+                } else {
+                    request.setAttribute(VariableConstant.ERROR_USERNAME_RE, "Register success");
+                    request.getRequestDispatcher(UrlConstant.CLIENT_LOGIN_JSP).forward(request, response);
+                }
             }
+
+//            iCustomerService = new CustomerServiceImpl(); // fail when using CDI in j2ee, don't know why
+
         }
 
 

@@ -26,7 +26,9 @@ public class ProductController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        List<ProductDTO> dto = iProductService.loadAllProducts();
+        int number = iProductService.countProductWithCondition(20);
+        List<ProductDTO> dto = iProductService.loadAllProducts(0,20);
+        req.setAttribute("NUMBER_PAGE", Integer.toString(number));
         req.setAttribute(VariableConstant.PRODUCTS, dto);
         RequestDispatcher rd = req.getRequestDispatcher(UrlConstant.ADMIN_PRODUCT_JSP);
         rd.forward(req, resp);
@@ -36,17 +38,28 @@ public class ProductController extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         ProductDTO productDTO = FormUtil.toDTO(ProductDTO.class, req);
+        String page  = req.getParameter("page");
 
-        if(productDTO.getAction() != null) {
-            List<ProductDTO> dtos = iProductService.searchProducts(productDTO);
-            GAProduct gaProduct = new GAProduct.GAProductBuilder().setType(true).setProducts(dtos).build();
-            Ajax.sendData(resp,gaProduct);
-        } else {
+        if(productDTO.getAction() == null) {
             String id = (String) req.getParameter("id");
             ProductDTO dto = iProductService.getProduct2View(id);
             req.setAttribute(VariableConstant.PRODUCTS_VIEW,dto);
             RequestDispatcher rd = req.getRequestDispatcher(UrlConstant.ADMIN_VIEW_PRODUCT_JSP);
             rd.forward(req, resp);
+        } else {
+            if(productDTO.getAction().equals("SEARCH")) {
+
+                int number = iProductService.countProductWithCondition(20);
+                List<ProductDTO> dtos = iProductService.searchProducts(productDTO,page == null ? 0 : 20*Integer.parseInt(page) - 20,20);
+                GAProduct gaProduct = new GAProduct.GAProductBuilder().setType(true).setProducts(dtos).setNumberPage(number).build();
+                Ajax.sendData(resp,gaProduct);
+
+            } else {
+                List<ProductDTO> dtos = iProductService.loadAllProducts(page == null ? 0 : 20*Integer.parseInt(page) - 20,20);
+                GAProduct gaProduct = new GAProduct.GAProductBuilder().setType(true).setProducts(dtos).build();
+                Ajax.sendData(resp,gaProduct);
+            }
+
         }
 
     }
