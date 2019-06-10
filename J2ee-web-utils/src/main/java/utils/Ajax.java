@@ -11,6 +11,8 @@ public class Ajax {
         Gson gson = new Gson();
         String response = gson.toJson(obj);
         PrintWriter out = resp.getWriter();
+        resp.setContentType("application/json");
+        resp.setCharacterEncoding("UTF-8");
         try {
             out.println(response);
             out.flush();

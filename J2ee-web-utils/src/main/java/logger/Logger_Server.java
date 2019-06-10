@@ -1,21 +1,49 @@
 package logger;
-//
-//import org.apache.logging.log4j.LogManager;
-//import org.apache.logging.log4j.Logger;
-import java.util.Date;
+import javax.inject.Inject;
+import javax.servlet.http.HttpServletRequest;
+import both.ServerLogDTO;
+import utils.UrlPatternUtils;
+import java.util.Enumeration;
+import java.util.Map;
+import java.util.HashMap;
 public class Logger_Server {
 
-//    final static Logger log = LogManager.getRootLogger();
+    private static String handleRequest(HttpServletRequest req){
 
-    public static void Server_On(){
-//        log.info("System started at : " + new Date());
-    }
+        Enumeration<String> parameterNames = req.getParameterNames();
+        String parameter="";
+        while (parameterNames.hasMoreElements()) {
 
-    public static void Server_Off(){
-//        log.info("System shutdowned at : " + new Date());
-    }
+            String paramName = parameterNames.nextElement();
+            parameter=parameter+paramName+": ";
 
-    public static void Message(String mess){
-//        log.info("Debug : " + mess);
+            String[] paramValues = req.getParameterValues(paramName);
+            for (int i = 0; i < paramValues.length; i++) {
+                String paramValue = paramValues[i];
+                if((i+1)>= paramValues.length)
+                    parameter=parameter+ paramValue;
+                else
+                    parameter=parameter+ paramValue+", ";
+            }
+            parameter=parameter+"; ";
+        }
+
+       return parameter;
+
     }
+public static ServerLogDTO saveServerLog(HttpServletRequest req, String user,String type){
+    if(UrlPatternUtils.hasServlet(req)){
+        String method=req.getMethod();
+        String parameter=handleRequest(req);
+        String pathinfo=req.getPathInfo();
+        String serverlet=req.getServletPath();
+
+        if(pathinfo!=null){
+            serverlet+=pathinfo;
+        }
+        String action=serverlet;
+        return new ServerLogDTO(user,action,type,parameter,method);
+    }
+    return null;
+}
 }

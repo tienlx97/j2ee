@@ -13,8 +13,7 @@ public class EmployeeMapper {
     public EmployeeModel checkEmployeeLogin(ResultSet rs) {
         try {
             EmployeeModel employee = new EmployeeModel();
-            employee.setFirstname(rs.getString("emp_firstname"));
-            employee.setLastname(rs.getString("emp_lastname"));
+            employee.setUsername(rs.getString("emp_username"));
             employee.setId(rs.getString("emp_id"));
             return employee;
         } catch (SQLException e) {

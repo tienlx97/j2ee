@@ -21,7 +21,6 @@ public class HomeController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         UserAccount user = SessionHelper.getLoginedUserCustomer(request.getSession(false));
         if (user != null) {
-            System.out.println("name "+user.getUserName());
             request.setAttribute("name", user.getUserName());
             request.getRequestDispatcher(UrlConstant.CLIENT_HOME_JSP).forward(request, response);
             return;
