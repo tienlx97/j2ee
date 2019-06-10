@@ -9,4 +9,5 @@ public interface IProductService {
     boolean addProduct(ProductDTO productDTO);
     List<ProductDTO> searchProducts(ProductDTO productDTO);
     ProductDTO getProduct2View(String id);
+    List<ProductDTO> load12Products();
 }

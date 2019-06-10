@@ -40,4 +40,19 @@ public class ProductMapper {
             return null;
         }
     }
+
+    public ProductModel load12Product2View(ResultSet rs) {
+        try {
+            ProductModel productModel = new ProductModel();
+            productModel.setId(rs.getString("prd_id"));
+            productModel.setSelPrice(rs.getDouble("prd_price"));
+            productModel.setName(rs.getString("prd_name"));
+            productModel.setImageUrl(rs.getString("prd_image"));
+
+            return productModel;
+        } catch (SQLException e) {
+            return null;
+        }
+    }
+
 }

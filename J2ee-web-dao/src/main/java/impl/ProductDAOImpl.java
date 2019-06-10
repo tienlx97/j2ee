@@ -44,4 +44,11 @@ public class ProductDAOImpl extends AbstractDAO<ProductModel> implements IProduc
         List<ProductModel> models = read2(query.toString(),ProductMapper.class,new ProductMapper(),"loadProducts2View",id);
         return models.isEmpty() ? null :  models.get(0);
     }
+
+    @Override
+    public List<ProductModel> load12Products() {
+        StringBuilder query = new StringBuilder("SELECT prd_id, prd_name, prd_image, prd_price from j2_product ORDER BY prd_price limit 0, 12");
+        List<ProductModel> models = read2(query.toString(),ProductMapper.class,new ProductMapper(),"load12Product2View");
+        return models;
+    }
 }
