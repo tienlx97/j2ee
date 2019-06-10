@@ -512,13 +512,14 @@
                 $('#date-created').val(response['date_created']);
                 $('#date-updated').val(response['date_updated']);
                 $('#date-of-birth').val(response['dob']);
-                var roles = response['roles'];
+                console.log(response);
+                var roles_res = response['roles'];
                 var temp_role = [0, 0, 0, 0, 0];
-                for (var i = 0; i < roles.length; i++) {
-                    temp_role[roles[i] - 1] = 1;
+                for (var i = 0; i < roles_res.length; i++) {
+                    temp_role[roles_res[i] - 1] = 1;
                     $('#table-role').append($('<option>', {
-                        value: roles[i],
-                        text: name_role[roles[i] - 1]
+                        value: roles_res[i],
+                        text: name_role[roles_res[i] - 1]
                     }));
                 }
                 for (var i = 0; i < temp_role.length; i++) {
@@ -535,7 +536,6 @@
     });
     $('#btn_reset_info').click(function () {
         var id = $('#emp-id').val();
-        console.log(id);
         $.ajax({
             url: '<%=VariableConstant.ROOT_PATH%>' + '/admin/edit_info_employee/' + id,
             success: function (response) {
@@ -619,10 +619,10 @@
             url: '<%=VariableConstant.ROOT_PATH%>' + "admin/custom_action/disable",
             data: {id: id},
             success: function (response) {
-                console.log(response)
+                location.reload();
             }
         });
-        location.reload();
+
 
     });
 
@@ -633,10 +633,10 @@
             url: ' <%=VariableConstant.ROOT_PATH%>' + "admin/custom_action/active",
             data: {id: id},
             success: function (response) {
-                console.log(response)
+                location.reload();
             }
         });
-        location.reload();
+
 
     });
 
@@ -647,7 +647,7 @@
             url: '<%=VariableConstant.ROOT_PATH%>' + 'admin/custom_action/remove',
             data: {id: id},
             success: function (response) {
-                console.log(response)
+                location.reload();
             }
         });
 

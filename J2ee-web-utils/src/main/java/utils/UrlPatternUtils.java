@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 
 public class UrlPatternUtils {
 
-    private static boolean hasUrlPattern(ServletContext servletContext, String urlPattern) {
+    public static boolean hasUrlPattern(ServletContext servletContext, String urlPattern) {
 
         Map<String, ? extends ServletRegistration> map = servletContext.getServletRegistrations();
 
@@ -18,10 +18,11 @@ public class UrlPatternUtils {
             ServletRegistration sr = map.get(servletName);
 
             Collection<String> mappings = sr.getMappings();
-            if (mappings.contains(urlPattern)) {
-                return true;
+            for(String value : mappings){
+                if (value.contains(urlPattern)) {
+                    return true;
+                }
             }
-
         }
         return false;
     }
@@ -58,5 +59,20 @@ public class UrlPatternUtils {
             }
         }
         return "/";
+    }
+    public static boolean hasServlet(HttpServletRequest request){
+        ServletContext servletContext = request.getServletContext();
+        String servletPath = request.getServletPath();
+        String pathInfo = request.getPathInfo();
+
+        String urlPattern = null;
+        if (pathInfo != null) {
+            urlPattern = servletPath + "/*";
+        }
+        urlPattern = servletPath;
+
+        boolean has = hasUrlPattern(servletContext, urlPattern);
+
+        return has;
     }
 }

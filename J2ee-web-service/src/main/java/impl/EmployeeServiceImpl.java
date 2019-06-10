@@ -3,9 +3,11 @@ package impl;
 import BeanUtils.FunctionBeanUtil;
 import BeanUtils.EmployeeBeanUtil;
 import both.FunctionRole;
+import both.ServerLogDTO;
 import core.*;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import javax.enterprise.inject.Default;
@@ -100,16 +102,44 @@ public class EmployeeServiceImpl implements IEmployeeService {
             rolesNewList.add(role);
             if(!rolesCur.contains(role)){
                 String result=iEmployeeDAO.addEmployeeRole(employeeModel.getId(),role);
-                System.out.println("add "+result);
             }
         }
 
         for(String role : rolesCur){
             if(!rolesNewList.contains(role)){
                 String result=iEmployeeDAO.removeEmployeeRole(employeeModel.getId(),role);
-                System.out.println("remove "+result);
             }
         }
         return iEmployeeDAO.updateEmployee(employeeModel,dob);
     }
+
+    public List<EmployeeDTO> getAllEmployeeBySearch(String id,String name, String date_to,String date_from){
+        iEmployeeDAO = new EmployeeDAOImpl();
+        List<EmployeeModel> models = iEmployeeDAO.getAllEmployeeBySearch(id,name,date_to,date_from);
+        List<EmployeeDTO> dtos = new ArrayList<>();
+        for (int i=0; i< models.size(); i++) {
+            EmployeeDTO dto = EmployeeBeanUtil.convert2DTO(models.get(i),iEmployeeDAO.getRoles(models.get(i)));
+            dtos.add(dto);
+        }
+        return  dtos;
+    }
+    public EmployeeDTO addEmployee(EmployeeDTO employeeDTO,String dob,String roles){
+        EmployeeModel employeeModel = EmployeeBeanUtil.convert2ModelLoginPage(employeeDTO);
+        iEmployeeDAO = new EmployeeDAOImpl();
+        String id= iEmployeeDAO.addEmployee(employeeDTO,dob);
+        if(!id.equals("0")) {
+            List<String> roleEmp = new ArrayList<>();
+            String[] rolesNew = roles.split("-");
+            for (String role : rolesNew) {
+                roleEmp.add(role);
+                String result = iEmployeeDAO.addEmployeeRole(id, role);
+            }
+            employeeDTO.setRoles(roleEmp);
+            return employeeDTO;
+        }
+        else{
+            return null;
+        }
+    }
+
 }

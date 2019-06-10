@@ -58,8 +58,10 @@ public class SecurityConfig {
         // Cấu hình cho chức năng 3.
         List<String> urlPatterns3 = new ArrayList<String>();
 
-        urlPatterns3.add("/admin/manager_employee");
-        urlPatterns3.add("/admin/category");
+        urlPatterns3.add("/admin/modify/employee");
+        urlPatterns3.add("/admin/views/employee");
+        urlPatterns3.add("/admin/custom_action/*");
+        urlPatterns3.add("/admin/tracking/employee");
 
         mapConfig.put(FUNC_3, urlPatterns3);
 

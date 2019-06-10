@@ -58,6 +58,8 @@
               <ul class="nav child_menu">
                 <li><a href="<%=request.getContextPath() + UrlConstant.URL_ADMIN_EMPLOYEE_DETAIL%>">Detail</a></li>
                 <li><a href="<%=request.getContextPath() + UrlConstant.URL_ADMIN_EMPLOYEE_MODIFYING%>">Modifying</a></li>
+                <li><a href="<%=request.getContextPath() + UrlConstant.URL_ADMIN_EMPLOYEE_ADD%>">Add new</a></li>
+                <li><a href="<%=request.getContextPath() + UrlConstant.URL_ADMIN_EMPLOYEE_TRACKING%>">Tracking</a></li>
               </ul>
             </li>
           </ul>

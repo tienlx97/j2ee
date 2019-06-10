@@ -64,11 +64,6 @@ public class AdminFilter implements Filter {
             response.sendRedirect(request.getContextPath() + "/login/admin");
             return;
         }
-
-
-
-
-
     }
 
     @Override

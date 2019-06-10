@@ -67,7 +67,7 @@ public class LoginController extends HttpServlet {
 //            iEmployeeService = new EmployeeServiceImpl(); // fail when using CDI in j2ee, don't know why
             EmployeeDTO user = iEmployeeService.checkEmployeeLogin(employeeDTO);
             if (user != null) {
-                SessionHelper.storeLoginedUserEmployee(request.getSession(), new UserAccount(user.getLastname() + " "+user.getFirstname(),user.getRoles()));
+                SessionHelper.storeLoginedUserEmployee(request.getSession(), new UserAccount(user.getUsername(),user.getRoles()));
                 response.sendRedirect(request.getContextPath() + UrlConstant.URL_ADMIN_DASHBOARD);
             } else {
                 request.setAttribute(VariableConstant.ERROR_PASSWORD, MsgConstant.ERROR_ADMIN_USERNAME_NOTFOUND);

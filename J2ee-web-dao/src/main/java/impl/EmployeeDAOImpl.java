@@ -1,9 +1,7 @@
 package impl;
 
-import core.EmployeeModel;
-import core.AbstractDAO;
-import core.FunctionRoleModel;
-import core.IEmployeeDAO;
+import both.ServerLogDTO;
+import core.*;
 
 import java.util.*;
 import java.sql.ResultSet;
@@ -12,7 +10,7 @@ import java.lang.Object.*;
 public class EmployeeDAOImpl extends AbstractDAO<EmployeeModel> implements IEmployeeDAO {
 
     public EmployeeModel checkEmployeeLogin(EmployeeModel employeeModel) {
-        StringBuilder query = new StringBuilder("SELECT emp_firstname, emp_lastname, emp_id FROM j2_employee WHERE emp_username = ? AND emp_password = ? AND emp_status = 1");
+        StringBuilder query = new StringBuilder("SELECT * FROM j2_employee WHERE emp_username = ? AND emp_password = ? AND emp_status = 1");
 
         List<EmployeeModel> employees =  read2(query.toString(),EmployeeMapper.class,new EmployeeMapper(),"checkEmployeeLogin", employeeModel.getUsername(), employeeModel.getPassword());
 
@@ -28,7 +26,7 @@ public class EmployeeDAOImpl extends AbstractDAO<EmployeeModel> implements IEmpl
     public List<EmployeeModel> getAllEmployee(){
         StringBuilder query = new StringBuilder("SELECT * from j2ee.j2_employee");
         List<EmployeeModel> employees = read2(query.toString(),EmployeeMapper.class,new EmployeeMapper(),"getAllEmployee" );
-        return employees.isEmpty() ? null : employees;
+        return  employees;
     }
 
     public List<FunctionRoleModel> getAllFunctionRole(){
@@ -99,4 +97,18 @@ public class EmployeeDAOImpl extends AbstractDAO<EmployeeModel> implements IEmpl
         return datas.isEmpty()? "0" : datas.get(0);
 
     }
+    public List<EmployeeModel> getAllEmployeeBySearch(String id,String name, String date_to,String date_from){
+        StringBuilder query = new StringBuilder("call search_employee(?,?,?,?)");
+        List<EmployeeModel> serverLogModels = read2(query.toString(),EmployeeMapper.class,new EmployeeMapper(),"getAllEmployee" ,id,name,date_to,date_from);
+        return serverLogModels;
+    }
+    public String addEmployee(EmployeeDTO employeeDTO, String dob){
+        StringBuilder query = new StringBuilder("call add_employee(?,?,?,?,?,?)");
+
+        List<String> datas = read2(query.toString(),EmployeeMapper.class,new EmployeeMapper(),"getResult",
+                employeeDTO.getUsername(),employeeDTO.getPassword(),employeeDTO.getLastname(),employeeDTO.getFirstname(),
+                employeeDTO.getGender(),dob);
+        return datas.isEmpty()? "0" : datas.get(0);
+    }
+
 }
