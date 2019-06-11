@@ -4,12 +4,14 @@ import Constant.MsgConstant;
 import Constant.UrlConstant;
 import Constant.VariableConstant;
 import GsonObject.GAProduct;
+import both.UserAccount;
 import core.CategoryDTO;
 import core.ICategoryService;
 import core.IProductService;
 import core.ProductDTO;
 import utils.Ajax;
 import utils.FormUtil;
+import utils.SessionHelper;
 
 import javax.inject.Inject;
 import javax.servlet.RequestDispatcher;
@@ -36,6 +38,10 @@ public class EditProductController  extends HttpServlet {
         List<CategoryDTO> categories = iCategoryService.loadCategories(null);
         req.setAttribute(VariableConstant.CATEGORIES, categories);
         req.setAttribute(VariableConstant.PRODUCTS2,dto);
+        UserAccount user = SessionHelper.getLoginedUserEmployee(req.getSession(false));
+        if (user != null) {
+            req.setAttribute("name", user.getUserName());
+        }
         RequestDispatcher rd = req.getRequestDispatcher(UrlConstant.ADMIN_EDIT_PRODUCT_JSP);
         rd.forward(req, resp);
     }

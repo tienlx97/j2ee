@@ -2,10 +2,12 @@ package controller.admin;
 
 import Constant.UrlConstant;
 import both.FunctionRole;
+import both.UserAccount;
 import com.google.gson.Gson;
 import core.EmployeeDTO;
 import core.IEmployeeService;
 import utils.Ajax;
+import utils.SessionHelper;
 
 import javax.inject.Inject;
 import javax.servlet.RequestDispatcher;
@@ -25,6 +27,10 @@ public class AddEmployeeController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<FunctionRole> functionList = iEmployeeService.getAllFunctionRole();
+        UserAccount user = SessionHelper.getLoginedUserEmployee(req.getSession(false));
+        if (user != null) {
+            req.setAttribute("name", user.getUserName());
+        }
         req.setAttribute("listFunction",functionList);
         RequestDispatcher rd = req.getRequestDispatcher(UrlConstant.URL_ADMIN_EMPLOYEE_ADD_JSP);
         rd.forward(req, resp);
@@ -39,7 +45,7 @@ public class AddEmployeeController extends HttpServlet {
         employee.setGender(Integer.parseInt(req.getParameter("gender")));
         employee.setPassword(req.getParameter("password"));
         String roles =req.getParameter("roles");
-        iEmployeeService = new impl.EmployeeServiceImpl();
+//        iEmployeeService = new impl.EmployeeServiceImpl();
         EmployeeDTO result = iEmployeeService.addEmployee(employee,req.getParameter("date_of_birth"),roles);
         if(result==null)
             Ajax.sendData(resp,"0");

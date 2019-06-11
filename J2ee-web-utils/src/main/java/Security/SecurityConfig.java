@@ -43,7 +43,11 @@ public class SecurityConfig {
         // Cấu hình cho chức năng 1.
         List<String> urlPatterns1 = new ArrayList<String>();
 
-        urlPatterns1.add("/admin/manger_product");
+        urlPatterns1.add("/admin/add-product");
+        urlPatterns1.add("/admin/category");
+        urlPatterns1.add("/admin/edit-category");
+        urlPatterns1.add("/admin/edit-product");
+        urlPatterns1.add("/admin/products");
 
         mapConfig.put(FUNC_1, urlPatterns1);
 
@@ -63,6 +67,8 @@ public class SecurityConfig {
         urlPatterns3.add("/admin/custom_action/*");
         urlPatterns3.add("/admin/tracking/employee");
         urlPatterns3.add("/admin/addnew/employee");
+        urlPatterns3.add("/admin/search/tracking_employee");
+        urlPatterns3.add("/admin/search/employee");
 
         mapConfig.put(FUNC_3, urlPatterns3);
 

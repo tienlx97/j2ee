@@ -32,7 +32,7 @@ public class SearchTrackingEmployee extends HttpServlet {
         String name=req.getParameter("name");
         String date_to=req.getParameter("dateto");
         String date_from=req.getParameter("datefrom");
-        iServerLogService = new impl.ServerLogImpl();
+//        iServerLogService = new impl.ServerLogImpl();
         List<ServerLogDTO> serverLogDTOS = iServerLogService.getAllEmployeeTrackingBySearch(name,date_to,date_from);
         Ajax.sendData(resp,serverLogDTOS);
     }

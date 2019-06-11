@@ -24,7 +24,7 @@ public class SearchEmployee extends HttpServlet {
         String name=req.getParameter("name");
         String date_to=req.getParameter("dateto");
         String date_from=req.getParameter("datefrom");
-        iEmployeeService = new impl.EmployeeServiceImpl();
+//        iEmployeeService = new impl.EmployeeServiceImpl();
         List<EmployeeDTO> serverLogDTOS = iEmployeeService.getAllEmployeeBySearch(id,name,date_to,date_from);
         Ajax.sendData(resp,serverLogDTOS);
     }

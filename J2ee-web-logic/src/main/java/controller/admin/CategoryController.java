@@ -4,10 +4,12 @@ import Constant.MsgConstant;
 import Constant.UrlConstant;
 import Constant.VariableConstant;
 import GsonObject.GCategory;
+import both.UserAccount;
 import core.CategoryDTO;
 import core.ICategoryService;
 import utils.Ajax;
 import utils.FormUtil;
+import utils.SessionHelper;
 
 import javax.inject.Inject;
 import javax.servlet.RequestDispatcher;
@@ -33,6 +35,10 @@ public class CategoryController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         commonData(req,null);
+        UserAccount user = SessionHelper.getLoginedUserEmployee(req.getSession(false));
+        if (user != null) {
+            req.setAttribute("name", user.getUserName());
+        }
         RequestDispatcher rd = req.getRequestDispatcher(UrlConstant.ADMIN_CATEGORY_JSP);
         rd.forward(req, resp);
     }

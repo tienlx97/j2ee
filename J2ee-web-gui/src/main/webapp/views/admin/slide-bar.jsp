@@ -40,7 +40,6 @@
             <li><a><i class="fa fa-home"></i>Products<span class="fa fa-chevron-down"></span></a>
               <ul class="nav child_menu">
                 <li><a href="<%=request.getContextPath() + UrlConstant.URL_ADMIN_PRODUCT%>">Product detail</a></li>
-                <li><a href="<%=request.getContextPath() + UrlConstant.URL_ADMIN_PRODUCT_NEW%>">Add new</a></li>
                 <li><a href="<%=request.getContextPath() + UrlConstant.URL_ADMIN_CATEGORY%>">Categories</a></li>
               </ul>
             </li>

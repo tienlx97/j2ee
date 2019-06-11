@@ -4,10 +4,12 @@ import Constant.MsgConstant;
 import Constant.UrlConstant;
 import Constant.VariableConstant;
 import GsonObject.GCategory;
+import both.UserAccount;
 import core.CategoryDTO;
 import core.ICategoryService;
 import utils.Ajax;
 import utils.FormUtil;
+import utils.SessionHelper;
 
 import javax.inject.Inject;
 import javax.servlet.RequestDispatcher;
@@ -30,6 +32,10 @@ public class EditCategoryController extends HttpServlet {
         String catId = req.getParameter("catId");
         CategoryDTO categoryDTO = iCategoryService.getCAtegoryById(catId);
         req.setAttribute(VariableConstant.CATEGORY_DTO, categoryDTO);
+        UserAccount user = SessionHelper.getLoginedUserEmployee(req.getSession(false));
+        if (user != null) {
+            req.setAttribute("name", user.getUserName());
+        }
         RequestDispatcher rd = req.getRequestDispatcher(UrlConstant.ADMIN_EDIT_CATEGORY_JSP);
         rd.forward(req, resp);
     }

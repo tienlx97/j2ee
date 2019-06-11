@@ -23,7 +23,7 @@ public class CustomEmployeeActionController extends HttpServlet {
         Gson gson = new Gson();
         String urlRequest = req.getRequestURI();
         String match = urlRequest.split("/")[4];
-        iEmployeeService = new impl.EmployeeServiceImpl(); // fail when using CDI in j2ee, don't know why
+//        iEmployeeService = new impl.EmployeeServiceImpl(); // fail when using CDI in j2ee, don't know why
         String id =req.getParameter("id");
         String result="";
         switch(match) {

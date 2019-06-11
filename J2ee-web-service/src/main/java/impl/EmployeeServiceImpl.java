@@ -21,7 +21,7 @@ public class EmployeeServiceImpl implements IEmployeeService {
 
     public EmployeeDTO checkEmployeeLogin(EmployeeDTO employeeDTO) {
         EmployeeModel employeeModel = EmployeeBeanUtil.convert2ModelLoginPage(employeeDTO);
-        iEmployeeDAO = new EmployeeDAOImpl();
+//        iEmployeeDAO = new EmployeeDAOImpl();
         employeeModel=iEmployeeDAO.checkEmployeeLogin(employeeModel);
         if(employeeModel==null) {
             return null;
@@ -31,7 +31,7 @@ public class EmployeeServiceImpl implements IEmployeeService {
     }
 
     public List<EmployeeDTO> getAllEmployee(){
-        iEmployeeDAO = new EmployeeDAOImpl();
+//        iEmployeeDAO = new EmployeeDAOImpl();
         List<EmployeeModel> employeeModel=iEmployeeDAO.getAllEmployee();
         List<EmployeeDTO> employeeDTO= new ArrayList<EmployeeDTO>();
         for(EmployeeModel i : employeeModel){
@@ -40,7 +40,7 @@ public class EmployeeServiceImpl implements IEmployeeService {
         return employeeDTO;
     }
     public List<FunctionRole> getAllFunctionRole(){
-        iEmployeeDAO = new EmployeeDAOImpl();
+//        iEmployeeDAO = new EmployeeDAOImpl();
         List<FunctionRoleModel> functionRoleModelList=iEmployeeDAO.getAllFunctionRole();
         List<FunctionRole> functionRoleList= new ArrayList<FunctionRole>();
         for(FunctionRoleModel i : functionRoleModelList){
@@ -50,7 +50,7 @@ public class EmployeeServiceImpl implements IEmployeeService {
     }
 
     public EmployeeDTO getEmployeeById(int id) {
-        iEmployeeDAO = new EmployeeDAOImpl();
+//        iEmployeeDAO = new EmployeeDAOImpl();
         EmployeeModel employeeModel=iEmployeeDAO.getEmployeeById(id);
         if(employeeModel==null) {
             return null;
@@ -58,7 +58,7 @@ public class EmployeeServiceImpl implements IEmployeeService {
         return EmployeeBeanUtil.convert2DTO(employeeModel, iEmployeeDAO.getRoles(employeeModel));
     }
     public String getNewPassword(String id) {
-        iEmployeeDAO = new EmployeeDAOImpl();
+//        iEmployeeDAO = new EmployeeDAOImpl();
 
         int leftLimit = 97; // letter 'a'
         int rightLimit = 122; // letter 'z'
@@ -79,22 +79,22 @@ public class EmployeeServiceImpl implements IEmployeeService {
     }
 
     public String activeEmployee(String id) {
-        iEmployeeDAO = new EmployeeDAOImpl();
+//        iEmployeeDAO = new EmployeeDAOImpl();
         return iEmployeeDAO.activeEmployee(id);
     }
 
     public String disableEmployee(String id) {
-        iEmployeeDAO = new EmployeeDAOImpl();
+//        iEmployeeDAO = new EmployeeDAOImpl();
         return iEmployeeDAO.disableEmployee(id);
     }
 
     public String removeEmployee(String id) {
-        iEmployeeDAO = new EmployeeDAOImpl();
+//        iEmployeeDAO = new EmployeeDAOImpl();
         return iEmployeeDAO.removeEmployee(id);
     }
     public String updateEmployee(EmployeeDTO employeeDTO,String dob,String roles) {
         EmployeeModel employeeModel = EmployeeBeanUtil.convert2ModelLoginPage(employeeDTO);
-        iEmployeeDAO = new EmployeeDAOImpl();
+//        iEmployeeDAO = new EmployeeDAOImpl();
         List<String> rolesCur=iEmployeeDAO.getRoles(employeeModel);
         String[] rolesNew=roles.split("-");
         List<String> rolesNewList=new ArrayList<>();
@@ -114,7 +114,7 @@ public class EmployeeServiceImpl implements IEmployeeService {
     }
 
     public List<EmployeeDTO> getAllEmployeeBySearch(String id,String name, String date_to,String date_from){
-        iEmployeeDAO = new EmployeeDAOImpl();
+//        iEmployeeDAO = new EmployeeDAOImpl();
         List<EmployeeModel> models = iEmployeeDAO.getAllEmployeeBySearch(id,name,date_to,date_from);
         List<EmployeeDTO> dtos = new ArrayList<>();
         for (int i=0; i< models.size(); i++) {
@@ -125,7 +125,7 @@ public class EmployeeServiceImpl implements IEmployeeService {
     }
     public EmployeeDTO addEmployee(EmployeeDTO employeeDTO,String dob,String roles){
         EmployeeModel employeeModel = EmployeeBeanUtil.convert2ModelLoginPage(employeeDTO);
-        iEmployeeDAO = new EmployeeDAOImpl();
+//        iEmployeeDAO = new EmployeeDAOImpl();
         String id= iEmployeeDAO.addEmployee(employeeDTO,dob);
         if(!id.equals("0")) {
             List<String> roleEmp = new ArrayList<>();

@@ -3,9 +3,11 @@ package controller.admin;
 import Constant.UrlConstant;
 import both.FunctionRole;
 import both.ServerLogDTO;
+import both.UserAccount;
 import core.EmployeeDTO;
 import core.IEmployeeService;
 import core.IServerLogService;
+import utils.SessionHelper;
 
 import javax.inject.Inject;
 import javax.servlet.RequestDispatcher;
@@ -24,8 +26,12 @@ public class TrackingEmloyee extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        iServerLogService = new impl.ServerLogImpl();
+//        iServerLogService = new impl.ServerLogImpl();
         List<ServerLogDTO> serverLogDTOS = iServerLogService.getAllEmployeeTracking();
+        UserAccount user = SessionHelper.getLoginedUserEmployee(req.getSession(false));
+        if (user != null) {
+            req.setAttribute("name", user.getUserName());
+        }
         req.setAttribute("listEmployeeTracking",serverLogDTOS);
         RequestDispatcher rd = req.getRequestDispatcher(UrlConstant.URL_ADMIN_EMPLOYEE_TRACKING_JSP);
         rd.forward(req, resp);

@@ -31,7 +31,6 @@ public class LoginController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
         EmployeeDTO employeeDTO = FormUtil.toDTO(EmployeeDTO.class, req);
-        iEmployeeService = new impl.EmployeeServiceImpl(); // fail when using CDI in j2ee, don't know why
         EmployeeDTO user = iEmployeeService.checkEmployeeLogin(employeeDTO);
 
         if(user != null) {

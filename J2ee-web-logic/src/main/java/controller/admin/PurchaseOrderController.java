@@ -1,6 +1,8 @@
 package controller.admin;
 
 import Constant.UrlConstant;
+import both.UserAccount;
+import utils.SessionHelper;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -15,7 +17,10 @@ public class PurchaseOrderController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
+        UserAccount user = SessionHelper.getLoginedUserEmployee(req.getSession(false));
+        if (user != null) {
+            req.setAttribute("name", user.getUserName());
+        }
         if (req.getRequestURI().endsWith("new")) {
             RequestDispatcher rd = req.getRequestDispatcher(UrlConstant.ADMIN_PURCHASE_ORDER_NEW_JSP);
             rd.forward(req, resp);

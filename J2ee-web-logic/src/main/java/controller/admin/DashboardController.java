@@ -18,13 +18,13 @@ public class DashboardController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//        UserAccount user = SessionHelper.getLoginedUserEmployee(request.getSession(false));
-//        if (user != null) {
-//            request.setAttribute("name", user.getUserName());
-//            request.getRequestDispatcher(UrlConstant.ADMIN_DASHBOARD_JSP).forward(request, response);
-//            return;
-//        }
-//        request.getRequestDispatcher(UrlConstant.ADMIN_LOGIN_JSP).forward(request, response);
+        UserAccount user = SessionHelper.getLoginedUserEmployee(request.getSession(false));
+        if (user != null) {
+            request.setAttribute("name", user.getUserName());
+            request.getRequestDispatcher(UrlConstant.ADMIN_DASHBOARD_JSP).forward(request, response);
+            return;
+        }
+        request.getRequestDispatcher(UrlConstant.ADMIN_LOGIN_JSP).forward(request, response);
         request.getRequestDispatcher(UrlConstant.ADMIN_DASHBOARD_JSP).forward(request, response);
         return;
     }

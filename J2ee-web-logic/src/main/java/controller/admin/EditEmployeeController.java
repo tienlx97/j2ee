@@ -28,7 +28,7 @@ public class EditEmployeeController extends HttpServlet {
         Gson gson = new Gson();
         String urlRequest = req.getRequestURI();
         String id=urlRequest.split("/")[5];
-        iEmployeeService = new impl.EmployeeServiceImpl(); // fail when using CDI in j2ee, don't know why
+//        iEmployeeService = new impl.EmployeeServiceImpl(); // fail when using CDI in j2ee, don't know why
 
         EmployeeDTO user = iEmployeeService.getEmployeeById(Integer.parseInt(id));
         Ajax.sendData(resp,user);
@@ -44,7 +44,7 @@ public class EditEmployeeController extends HttpServlet {
         employee.setGender(Integer.parseInt(req.getParameter("gender")));
 
         String roles =req.getParameter("roles");
-        iEmployeeService = new impl.EmployeeServiceImpl();
+//        iEmployeeService = new impl.EmployeeServiceImpl();
         String result = iEmployeeService.updateEmployee(employee,req.getParameter("date_of_birth"),roles);
         Ajax.sendData(resp,result);
     }

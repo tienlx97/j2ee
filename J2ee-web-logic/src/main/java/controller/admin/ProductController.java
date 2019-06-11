@@ -3,10 +3,12 @@ package controller.admin;
 import Constant.UrlConstant;
 import Constant.VariableConstant;
 import GsonObject.GAProduct;
+import both.UserAccount;
 import core.IProductService;
 import core.ProductDTO;
 import utils.Ajax;
 import utils.FormUtil;
+import utils.SessionHelper;
 
 import javax.inject.Inject;
 import javax.servlet.RequestDispatcher;
@@ -30,6 +32,10 @@ public class ProductController extends HttpServlet {
         List<ProductDTO> dto = iProductService.loadAllProducts(0,20);
         req.setAttribute("NUMBER_PAGE", Integer.toString(number));
         req.setAttribute(VariableConstant.PRODUCTS, dto);
+        UserAccount user = SessionHelper.getLoginedUserEmployee(req.getSession(false));
+        if (user != null) {
+            req.setAttribute("name", user.getUserName());
+        }
         RequestDispatcher rd = req.getRequestDispatcher(UrlConstant.ADMIN_PRODUCT_JSP);
         rd.forward(req, resp);
     }

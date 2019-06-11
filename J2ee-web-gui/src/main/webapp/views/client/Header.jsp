@@ -26,7 +26,6 @@
                 <li class="top_links"><a href="#"><i class="ion-android-person"></i>Hello <%= request.getAttribute("name") %><i
                         class="ion-ios-arrow-down"></i></a>
                   <ul class="dropdown_links">
-                    <li><a href="checkout.html">Checkout </a></li>
                     <li><a href="my-account.html">My Account </a></li>
                     <li><a href="cart.html">Shopping Cart</a></li>
                     <li><a href="wishlist.html">Wishlist</a></li>
@@ -68,7 +67,7 @@
       <div class="row align-items-center">
         <div class="col-lg-3 col-md-3">
           <div class="logo">
-            <a href="index.html"><img src="${pageContext.request.contextPath}/resources/client/img/logo/logo.png" alt=""></a>
+            <a href="home"><img src="${pageContext.request.contextPath}/resources/client/img/logo/logo.png" alt=""></a>
           </div>
         </div>
         <div class="col-lg-9 col-md-9">
@@ -133,12 +132,8 @@
 
                   <div class="mini_cart_footer">
                     <div class="cart_button">
-                      <a href="cart.html">View cart</a>
+                      <a href="cart">View cart</a>
                     </div>
-                    <div class="cart_button">
-                      <a href="checkout.html">Checkout</a>
-                    </div>
-
                   </div>
 
                 </div>
@@ -443,7 +438,7 @@
             if(data.type == true) {
                 // Code for localStorage/sessionStorage.
                 localStorage.removeItem('cv');
-                alert("login -> clear local storage");
+
             }
         }
     });

@@ -94,7 +94,9 @@ public class ICartDAOImpl extends AbstractDAO<CartModel> implements ICartDAO {
             }
         }
 
-        return rs;
+        String cartID = getCartId(cusId);
+        StringBuilder query3 = new StringBuilder("DELETE FROM j2_cart_detail WHERE crd_cart_id = ?");
+        return update(query3.toString(),cartID);
 
     }
 

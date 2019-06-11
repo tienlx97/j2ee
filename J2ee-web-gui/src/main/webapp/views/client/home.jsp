@@ -229,9 +229,9 @@
                     console.log(data.carts);
                   // Code for localStorage/sessionStorage.
                   localStorage.setItem('cv',JSON.stringify(data.carts));
-                    alert("Add to local storage");
+
                 } else {
-                    alert("Add to database");
+
                 }
             }
         });
@@ -250,9 +250,8 @@
                     console.log(data.carts);
                     // Code for localStorage/sessionStorage.
                     localStorage.setItem('cv',JSON.stringify(data.carts));
-                    alert("Add to local storage");
                 } else {
-                    alert("Add to database");
+
                 }
             }
         });

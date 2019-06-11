@@ -130,11 +130,11 @@
                 // cartDetail
                 console.log(data);
 
-                if(data.type == true) { // load from server
-                    alert("check out success");
-                } else {
-                    alert("Login to check out");
-                }
+                // if(data.type == true) { // load from server
+                //     alert("check out success");
+                // } else {
+                //     alert("Login to check out");
+                // }
             }
         });
     })
@@ -209,7 +209,6 @@
             success: function (data) {
                 // data = JSON.parse(data);
                 // cartDetail
-                console.log(data);
 
                 $("#tb_product tbody").empty();
                 data.cartDetail.forEach(function (item, index) {
