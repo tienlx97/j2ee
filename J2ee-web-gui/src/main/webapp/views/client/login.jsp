@@ -1,3 +1,4 @@
+<%@ page import="Constant.VariableConstant" %>
 <!doctype html>
 <html class="no-js" lang="en">
 
@@ -55,7 +56,7 @@
                 <div class="col-lg-6 col-md-6">
                     <div class="account_form">
                         <h2>login</h2>
-                        <form action="login" method="post">
+                        <form action="<%=request.getContextPath()%>/login" method="post">
                             <p>   
                                 <label>Username or email <span>*</span></label>
                                 <input type="text" name="username" id="username">
@@ -63,6 +64,7 @@
                              <p>   
                                 <label>Passwords <span>*</span></label>
                                 <input type="password" name="password" id="password">
+                                <input type="hidden" name="action" value="LOGIN">
                              </p>   
                             <div class="login_submit">
                                <a href="#">Lost your password?</a>
@@ -83,14 +85,15 @@
                 <div class="col-lg-6 col-md-6">
                     <div class="account_form register">
                         <h2>Register</h2>
-                        <form action="#">
-                            <p>   
-                                <label>Email address  <span>*</span></label>
-                                <input type="text">
+                        <form action="<%=request.getContextPath()%>/login" method="post">
+                            <p>
+                                <label>Username  <span>*</span></label>
+                                <input type="text" name="username">
+                                <input type="hidden" name="action" value="REGISTER">
                              </p>
-                             <p>   
+                             <p>
                                 <label>Passwords <span>*</span></label>
-                                <input type="password">
+                                <input name="password" type="password">
                              </p>
                             <div class="login_submit">
                                 <button type="submit">Register</button>
@@ -110,6 +113,14 @@
 <!-- JS
 ============================================ -->
 
+ <%
+ String error = (String) request.getAttribute(VariableConstant.ERROR_USERNAME_RE);
+ %>
+  <%if(error != null){%>
+      <script>
+        alert("<%=error%>")
+      </script>
+  <%}%>
 <!-- Plugins JS -->
 <script src="${pageContext.request.contextPath}/resources/assets/js/plugins.js"></script>
 

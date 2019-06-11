@@ -10,6 +10,7 @@
 
 <%
 List<ProductDTO> products = (List<ProductDTO>) request.getAttribute(VariableConstant.PRODUCTS);
+String numberPage = (String) request.getAttribute("NUMBER_PAGE");
 %>
 
 <head>
@@ -215,6 +216,15 @@ List<ProductDTO> products = (List<ProductDTO>) request.getAttribute(VariableCons
                 <%} }%>
                 </tbody>
               </table>
+              <div style="display: inline;">
+
+              <%
+                if(numberPage != null){
+                for(int i=0;i< Integer.parseInt(numberPage); i++){%>
+                  <input type="button" class="btn_page" value="<%=i+1%>" />
+              <%}}%>
+
+              </div>
             </div>
           </div>
         </div>
@@ -268,6 +278,45 @@ List<ProductDTO> products = (List<ProductDTO>) request.getAttribute(VariableCons
     });
     $('#date-create-to').datetimepicker({
         format: 'DD/MM/YYYY'
+    });
+
+    $(document).on('click', '.btn_page', function (event) {
+        event.preventDefault();
+        $.ajax({
+            url: '<%= request.getContextPath() + UrlConstant.URL_ADMIN_PRODUCT%>',
+            type: 'POST',
+            data: {page: $(this).val(), action: "LOAD"},
+            // on success do:
+            success: function (response) {
+
+                // console.log(response.type);
+               // response = JSON.parse(response);
+                if(response.type == true){
+                    $("#tb_product tbody").empty();
+
+                    response.products.forEach(function (item, index) {
+                        $("#tb_product tbody").append(
+                            "<tr id='row_" + item.id + "'>" +
+                            "<td>" + item.id + "</td>" +
+                            "<td>" + item.name + "</td>" +
+                            "<td>" + item.quantity + "</td>" +
+                            "<td>" + item.selPrice + "</td>" +
+                            "<td style='display:flex'>" +
+                            "<button type='button' class='btn btn-primary btn_edit_product' data-target='.bs-example-modal-lg' data-toggle='tooltip' title='Edit'>" +
+                            "<i class='fa fa-edit'></i>" +
+                            "</button>" +
+                            "<button name='button' type='button' class='btn btn-warning btn_view' data-toggle='tooltip' title='View'>" +
+                            "<i class='fa fa-minus'></i>" +
+                            "</button>"+
+                            "</td>" +
+                            "</tr>"
+                        );
+                    });
+                }
+
+
+            }
+        });
     });
 
     $(document).on('click', '#btn_add', function (event) {
@@ -395,7 +444,7 @@ List<ProductDTO> products = (List<ProductDTO>) request.getAttribute(VariableCons
                         // $("#error-cat-name").addClass(response.cError);
                         // $("#error-cat-name").append(response.eCatName);
                     } else { // show data when fail
-                        AddNotify("Edit Product", response.msg, "error");
+                        AddNotify("error", response.msg, "error");
                     }
                 } else { // show data when success
                     form.find("input[type=text], textarea").val("");
@@ -430,7 +479,7 @@ List<ProductDTO> products = (List<ProductDTO>) request.getAttribute(VariableCons
                       // $("#error-cat-name").addClass(response.cError);
                       // $("#error-cat-name").append(response.eCatName);
                   } else { // show data when fail
-                      AddNotify("Add Product", response.msg, "error");
+                      AddNotify("error", response.msg, "error");
                   }
               } else { // show data when success
                   form.find("input[type=text], textarea").val("");

@@ -9,9 +9,9 @@ import java.util.List;
 
 public class ProductDAOImpl extends AbstractDAO<ProductModel> implements IProductDAO {
     @Override
-    public List<ProductModel> loadAllProducts() {
-        StringBuilder query = new StringBuilder("SELECT prd_id, prd_name,prd_price, prd_quantity FROM j2_product;");
-        List<ProductModel> models = read2(query.toString(),ProductMapper.class,new ProductMapper(),"loadProducts");
+    public List<ProductModel> loadAllProducts(int f, int t) {
+        StringBuilder query = new StringBuilder("SELECT prd_id, prd_name,prd_price, prd_quantity FROM j2_product ord ORDER BY prd_price limit ?, ?;");
+        List<ProductModel> models = read2(query.toString(),ProductMapper.class,new ProductMapper(),"loadProducts",f,t);
         return models;
     }
 
@@ -31,9 +31,9 @@ public class ProductDAOImpl extends AbstractDAO<ProductModel> implements IProduc
 
 
     @Override
-    public List<ProductModel> searchProducts(String idName) {
-        StringBuilder query = new StringBuilder("SELECT prd_id, prd_name,prd_price, prd_quantity FROM j2_product WHERE prd_id LIKE  ? OR prd_name LIKE ?;");
-        List<ProductModel> models = read2(query.toString(),ProductMapper.class,new ProductMapper(),"loadProducts","%" + idName + "%", "%" + idName + "%");
+    public List<ProductModel> searchProducts(String idName,int f, int t) {
+        StringBuilder query = new StringBuilder("SELECT prd_id, prd_name,prd_price, prd_quantity FROM j2_product WHERE prd_id LIKE  ? OR prd_name LIKE ? ORDER BY prd_price limit ?, ?;;");
+        List<ProductModel> models = read2(query.toString(),ProductMapper.class,new ProductMapper(),"loadProducts","%" + idName + "%", "%" + idName + "%", f,t);
 
         return models;
     }
@@ -43,6 +43,12 @@ public class ProductDAOImpl extends AbstractDAO<ProductModel> implements IProduc
         StringBuilder query = new StringBuilder("SELECT prd_id, prd_name,prd_price, prd_quantity, prd_image,prd_detail_images, prd_description, prd_created_at, j2_category.cat_name, prd_category  FROM j2_product, j2_category where prd_id = ? and j2_product.prd_category = j2_category.cat_id;");
         List<ProductModel> models = read2(query.toString(),ProductMapper.class,new ProductMapper(),"loadProducts2View",id);
         return models.isEmpty() ? null :  models.get(0);
+    }
+
+    @Override
+    public int countProduct() {
+        StringBuilder query = new StringBuilder("SELECT count(*) FROM j2_product;");
+        return count(query.toString());
     }
 
     @Override

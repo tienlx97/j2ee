@@ -11,6 +11,15 @@ public class CustomerDTO implements Serializable {
     private String username;
     private String password;
     private Date dob;
+    private String action;
+
+    public String getAction() {
+        return action;
+    }
+
+    public void setAction(String action) {
+        this.action = action;
+    }
 
     public List<String> getRoles() {
         return roles;
