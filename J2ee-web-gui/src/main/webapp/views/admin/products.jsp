@@ -221,7 +221,7 @@ String numberPage = (String) request.getAttribute("NUMBER_PAGE");
               <%
                 if(numberPage != null){
                 for(int i=0;i< Integer.parseInt(numberPage); i++){%>
-                  <input type="button" class="btn_page" value="<%=i%>" />
+                  <input type="button" class="btn_page" value="<%=i+1%>" />
               <%}}%>
 
               </div>
@@ -290,7 +290,7 @@ String numberPage = (String) request.getAttribute("NUMBER_PAGE");
             success: function (response) {
 
                 // console.log(response.type);
-                response = JSON.parse(response);
+               // response = JSON.parse(response);
                 if(response.type == true){
                     $("#tb_product tbody").empty();
 

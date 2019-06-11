@@ -126,7 +126,7 @@
             url: '<%=request.getContextPath()%>' + "/cart",
             data: {type: "cal"},
             success: function (data) {
-                data = JSON.parse(data);
+                // data = JSON.parse(data);
                 // cartDetail
                 console.log(data);
 
@@ -146,7 +146,7 @@
         url: '<%=request.getContextPath()%>' + "/cart",
         data: {type: "load", cv: localStorage.getItem('cv')},
         success: function (data) {
-            data = JSON.parse(data);
+            // data = JSON.parse(data);
             // cartDetail
             console.log(data);
 
@@ -175,7 +175,7 @@
             url: '<%=request.getContextPath()%>' + "/cart",
             data: {type: "del", id: $(this).parent().parent().attr("id").split("_")[1], cv: localStorage.getItem('cv')},
             success: function (data) {
-                data = JSON.parse(data);
+                // data = JSON.parse(data);
                 // cartDetail
                 console.log(data);
 
@@ -207,7 +207,7 @@
             url: '<%=request.getContextPath()%>' + "/cart",
             data: {type: "update", id: $(this).parent().parent().attr("id").split("_")[1],qua: $(this).parent().parent().find("td input").val(), cv: localStorage.getItem('cv')},
             success: function (data) {
-                data = JSON.parse(data);
+                // data = JSON.parse(data);
                 // cartDetail
                 console.log(data);
 

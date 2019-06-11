@@ -224,7 +224,7 @@
             url: '<%=request.getContextPath()%>' + "/api/add2cart",
             data: {id: id, qual: 1, cv: localStorage.getItem('cv')},
             success: function (data) {
-                data = JSON.parse(data);
+                // data = JSON.parse(data);
                 if(data.type == false) {
                     console.log(data.carts);
                   // Code for localStorage/sessionStorage.
@@ -245,7 +245,7 @@
             url: '<%=request.getContextPath()%>' + "/api/add2cart",
             data: {id: id, qual: qua, cv: localStorage.getItem('cv')},
             success: function (data) {
-                data = JSON.parse(data);
+                // data = JSON.parse(data);
                 if(data.type == false) {
                     console.log(data.carts);
                     // Code for localStorage/sessionStorage.

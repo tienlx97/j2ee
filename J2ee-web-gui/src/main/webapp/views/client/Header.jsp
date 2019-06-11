@@ -439,7 +439,7 @@
         url: '<%=request.getContextPath()%>' + "/api/add2cart",
         data: {cv: localStorage.getItem('cv'), mg: "1"},
         success: function (data) {
-            data = JSON.parse(data);
+            // data = JSON.parse(data);
             if(data.type == true) {
                 // Code for localStorage/sessionStorage.
                 localStorage.removeItem('cv');
