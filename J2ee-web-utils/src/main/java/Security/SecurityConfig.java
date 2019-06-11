@@ -69,6 +69,7 @@ public class SecurityConfig {
         urlPatterns3.add("/admin/addnew/employee");
         urlPatterns3.add("/admin/search/tracking_employee");
         urlPatterns3.add("/admin/search/employee");
+        urlPatterns3.add("/admin/edit_info_employee/*");
 
         mapConfig.put(FUNC_3, urlPatterns3);
 
