@@ -51,52 +51,6 @@ public class SecurityFilter implements Filter {
             return;
         }
 
-
-        // Thông tin người dùng đã được lưu trong Session
-        // (Sau khi đăng nhập thành công).
-//        UserAccount loginedUser = SessionHelper.getLoginedUserCustomer(request.getSession());
-//
-//        HttpServletRequest wrapRequest = request;
-//
-//        if (loginedUser != null) {
-//            // User Name
-//            String userName = loginedUser.getUserName();
-//
-//            // Các vai trò (Role).
-//            List<String> roles = loginedUser.getRoles();
-//
-//            // Gói request cũ bởi một Request mới với các thông tin userName và Roles.
-//            wrapRequest = new UserRoleRequestWrapper(userName, roles, request);
-//        }
-//
-//        // Các trang bắt buộc phải đăng nhập.
-//        if (SecurityUtils.isSecurityPage(request)) {
-//
-//            // Nếu người dùng chưa đăng nhập,
-//            // Redirect (chuyển hướng) tới trang đăng nhập.
-//            if (loginedUser == null) {
-//
-//                String requestUri = request.getRequestURI();
-//
-//                // Lưu trữ trang hiện tại để redirect đến sau khi đăng nhập thành công.
-////                int redirectId = AppUtils.storeRedirectAfterLoginUrl(request.getSession(), requestUri);
-//
-//                response.sendRedirect(wrapRequest.getContextPath() + "/login");
-//                return;
-//            }
-//
-//            // Kiểm tra người dùng có vai trò hợp lệ hay không?
-//            boolean hasPermission = SecurityUtils.hasPermission(wrapRequest);
-//            if (!hasPermission) {
-//
-//                RequestDispatcher dispatcher //
-//                        = request.getServletContext().getRequestDispatcher(UrlConstant.ACCESS_DENIED);
-//
-//                dispatcher.forward(request, response);
-//                return;
-//            }
-//        }
-
         chain.doFilter(request, response);
     }
 
