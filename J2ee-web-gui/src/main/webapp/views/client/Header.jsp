@@ -88,53 +88,10 @@
               </div>
               <div class="mini_cart_wrapper">
                 <a href="javascript:void(0)"><span class="lnr lnr-cart"></span>My Cart </a>
-                <span class="cart_quantity">2</span>
+                <%--<span class="cart_quantity">2</span>--%>
                 <!--mini cart-->
                 <div class="mini_cart">
-                  <div class="cart_item">
-                    <div class="cart_img">
-                      <a href="#"><img src="${pageContext.request.contextPath}/resources/client/img/s-product/product.jpg" alt=""></a>
-                    </div>
-                    <div class="cart_info">
-                      <a href="#">JBL Flip 3 Splasroof Portable Bluetooth 2</a>
 
-                      <span class="quantity">Qty: 1</span>
-                      <span class="price_cart">$60.00</span>
-
-                    </div>
-                    <div class="cart_remove">
-                      <a href="#"><i class="ion-android-close"></i></a>
-                    </div>
-                  </div>
-                  <div class="cart_item">
-                    <div class="cart_img">
-                      <a href="#"><img src="${pageContext.request.contextPath}/resources/client/img/s-product/product2.jpg" alt=""></a>
-                    </div>
-                    <div class="cart_info">
-                      <a href="#">Koss Porta Pro On Ear Headphones </a>
-                      <span class="quantity">Qty: 1</span>
-                      <span class="price_cart">$69.00</span>
-                    </div>
-                    <div class="cart_remove">
-                      <a href="#"><i class="ion-android-close"></i></a>
-                    </div>
-                  </div>
-                  <div class="mini_cart_table">
-                    <div class="cart_total">
-                      <span>Sub total:</span>
-                      <span class="price">$138.00</span>
-                    </div>
-                    <div class="cart_total mt-10">
-                      <span>total:</span>
-                      <span class="price">$138.00</span>
-                    </div>
-                  </div>
-
-                  <div class="mini_cart_footer">
-                    <div class="cart_button">
-                      <a href="cart">View cart</a>
-                    </div>
-                  </div>
 
                 </div>
                 <!--mini cart end-->
@@ -446,3 +403,55 @@
 </script>
 
 <%}%>
+
+
+<script>
+    /*---slide toggle activation---*/
+    $('.mini_cart_wrapper > a').on('mouseover', function (event) {
+
+        $.ajax({
+            type: "POST",
+            url: '<%=request.getContextPath()%>' + "/cart",
+            data: {type: "load", cv: localStorage.getItem('cv')},
+            success: function (data) {
+                // data = JSON.parse(data);
+                // cartDetail
+                console.log(data);
+
+                if(data.type == true) { // load from server
+                    $(".mini_cart").empty();
+                    data.cartDetail.forEach(function (item, index) {
+                        $(".mini_cart").append(
+                            "<div class='cart_item'>"+
+                            "<div class='cart_img'>" +
+                            "<img src='" + item.prdImage + "'>"+
+                            "</div>" +
+                            "<div class='cart_info'>"+
+                            "<a>" + item.prdName + "</a>"+
+                            "<span class='quantity'>Qty:" + item.qua + "</span>"+
+                            "<span class='price_cart'>$"+ item.prdPrice +"</span>"+
+                            "</div>"+
+                            "<div id='row_" + item.prdId + "' class='cart_remove'>"+
+                            "<a><i class='ion-android-close'></i></a>"+
+                            "</div>"+
+                            "</div>"
+                        );
+                    });
+
+                    $(".mini_cart").append( "                  " +
+                        "<div class='mini_cart_table'>" +
+                        "                  <div class='mini_cart_footer'>" +
+                        "                    <div class='cart_button'>" +
+                        "                      <a href='cart'>View cart</a>" +
+                        "                    </div>" +
+                        "                  </div>")
+                }
+            }
+        });
+
+        if ($(window).width() < 991) {
+            $('.mini_cart').slideToggle('medium');
+        }
+    });
+
+</script>

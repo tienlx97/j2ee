@@ -520,11 +520,11 @@
   });
 
   /*---slide toggle activation---*/
-  $('.mini_cart_wrapper > a').on('click', function (event) {
-    if ($(window).width() < 991) {
-      $('.mini_cart').slideToggle('medium');
-    }
-  });
+  // $('.mini_cart_wrapper > a').on('click', function (event) {
+  //   if ($(window).width() < 991) {
+  //     $('.mini_cart').slideToggle('medium');
+  //   }
+  // });
 
   /*categories slideToggle*/
   $(".categories_title").on("click", function () {

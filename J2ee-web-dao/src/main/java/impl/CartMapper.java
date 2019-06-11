@@ -56,6 +56,7 @@ public class CartMapper {
             model.setQua(rs.getInt("crd_quantity"));
             model.setPrdName(rs.getString("prd_name"));
             model.setPrdPrice(rs.getDouble("prd_price"));
+            model.setImage(rs.getString("prd_image"));
             model.calTotal();
             return model;
         } catch (SQLException e) {

@@ -45,7 +45,7 @@ public class ICartDAOImpl extends AbstractDAO<CartModel> implements ICartDAO {
 
     @Override
     public List<CartDetailModel> getCart(String cartId) {
-        StringBuilder query = new StringBuilder("SELECT j2_cart_detail.crd_prd_id, j2_cart_detail.crd_quantity, j2_product.prd_name, j2_product.prd_price\n" +
+        StringBuilder query = new StringBuilder("SELECT j2_cart_detail.crd_prd_id, j2_cart_detail.crd_quantity, j2_product.prd_name,j2_product.prd_image, j2_product.prd_price\n" +
                 "FROM j2_cart_detail \n" +
                 "\tINNER JOIN j2_cart ON j2_cart.cart_id = j2_cart_detail.crd_cart_id \n" +
                 "    INNER JOIN j2_product ON j2_product.prd_id = j2_cart_detail.crd_prd_id \n" +

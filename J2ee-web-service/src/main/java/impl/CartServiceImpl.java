@@ -74,6 +74,7 @@ public class CartServiceImpl implements ICartService {
             m.setQua(jsonCarts.get(i).getQual());
             m.setPrdPrice(model.getSelPrice());
             m.setPrdName(model.getName());
+            m.setImage(model.getImageUrl());
             m.calTotal();
             cartDetailModels.add(m);
         }

@@ -5,13 +5,22 @@ public class CartDetailModel {
     String cartId;
     String prdId;
     int qua;
-    String prdName;
+    String prdName,prdImage;
     double prdPrice;
     double total;
 
     public void calTotal(){
         this.total = prdPrice * qua;
     }
+
+    public String getImage() {
+        return prdImage;
+    }
+
+    public void setImage(String prdImage) {
+        this.prdImage = prdImage;
+    }
+
 
     public String getPrdName() {
         return prdName;
