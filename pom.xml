@@ -22,7 +22,7 @@
   <properties>
     <servlet.api.version>3.1.0</servlet.api.version>
     <jsp.api.version>2.3.1</jsp.api.version>
-    <mysql.connector.version>5.1.31</mysql.connector.version>
+    <mysql.connector.version>8.0.16</mysql.connector.version>
     <jstl.version>1.2</jstl.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
